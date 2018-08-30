@@ -1,19 +1,28 @@
-# WordyWorld :earth_americas:
-2D mobile video game as a React Native app :iphone:
+# WordyWorld
+:earth_americas: 2D mobile video game as a React Native app :iphone:
 
-## Git workflow :cop:
+## Targeted Platforms
+
+|Platform|Supported|Notes|
+|-|-|-|
+|iOS|:white_check_mark:|Will be the first and only targeted platform at the beginning|
+|Android|:white_check_mark:|Will come once iOS version is good enough|
+|Desktop Web|:white_check_mark:|Would be nice to have but I'd rather focus on mobile versions|
+|Windows Phone|:x:|React Native's Documentation is mostly focused on Android and iOS, Windows Phone has been [discontinued](https://www.cnet.com/news/windows-10-mobile-features-hardware-death-sentence-microsoft/)|
+
+## Git workflow
 
 ### Commits
 
-Commit messages should be semantic thanks to this [rigid format](https://seesparkbox.com/foundry/semantic_commit_messages), i.e. they should start with one of these values:
+:cop: Commit messages should be semantic thanks to this [rigid format](https://seesparkbox.com/foundry/semantic_commit_messages), i.e. they should start with one of these values:
 `['chore:', 'docs:', 'feat:', 'fix:', 'refactor:', 'style:', 'test:']`
 
 The next part should be an action, starting with a verb in present tense.
 Complete example: `docs: update readme`
 
-## License :copyright:
+## License
 
-This repository does not contain any license for now (i.e. there is no `LICENSE.md`). It means that, **for now**, this project does **not** accept contributions.
+:copyright: This repository does not contain any license for now (i.e. there is no `LICENSE.md`). It means that, **for now**, this project does **not** accept contributions.
 For more information about it, please read the following [documentation](https://help.github.com/articles/licensing-a-repository/#choosing-the-right-license) stating:
 > You're under no obligation to choose a license. However, without a license, the default copyright laws apply, meaning that you retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work.
 
@@ -27,11 +36,12 @@ Having a license in order to encourage contributions is definitely part of my fu
 > - I'm learning React Native from scratch (although I know React) at the moment and would like to play around with it by myself by writing some code
 > - I think that expecting contributions at this point is too early anyway, I would like to have a solid base (i.e. a proof of concept or a beta version) before people can contribute to the code
 
-## Documentation :book:
+## Documentation
 
 ### Internal Documentation
 
-This [gist](https://gist.github.com/rxaviers/7360908) displays a list of emoji that can be used on GitHub.
+:book: This [gist](https://gist.github.com/rxaviers/7360908) displays a list of emoji that can be used on GitHub.
+- Please don't use emoji in titles though, as they would be part of the URL otherwise.
 
 ### External Documentation
 
@@ -65,7 +75,7 @@ This [gist](https://gist.github.com/rxaviers/7360908) displays a list of emoji t
 ||[Improving User Experience](https://facebook.github.io/react-native/docs/0.56/improvingux)|August 2018|
 ||[Timers](https://facebook.github.io/react-native/docs/0.56/timers)|August 2018|
 ||[Debugging](https://facebook.github.io/react-native/docs/0.56/debugging)|August 2018|
-||[Performance](https://facebook.github.io/react-native/docs/0.56/performance)|Not read yet (last but not least...) :eyes:|
+||[Performance](https://facebook.github.io/react-native/docs/0.56/performance)|August 2018|
 ||[Gesture Responder System](https://facebook.github.io/react-native/docs/0.56/gesture-responder-system)|August 2018|
 ||[JavaScript Environment](https://facebook.github.io/react-native/docs/0.56/javascript-environment)|August 2018|
 ||[Direct Manipulation](https://facebook.github.io/react-native/docs/0.56/direct-manipulation)|August 2018|
