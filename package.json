@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "csv-parse": "^3.0.0",
     "jest-expo": "~27.0.0",
     "pre-commit": "^1.2.2",
     "react-native-scripts": "1.14.0",

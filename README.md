@@ -53,7 +53,7 @@ In order to add new couples of english-french words, follow these steps:
 
 - Edit the Google Spreadsheet (note: not public yet)
 - Download it as `.csv`
-- Execute `update-words.sh` script by going into `/scripts` folder and running `./update-words.sh`
+- Execute `update_words.sh` script by going into `/scripts` folder and running `./update_words.sh`
 
 ## License
 
