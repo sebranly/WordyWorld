@@ -10,9 +10,36 @@
 |Desktop Web|:white_check_mark:|Would be nice to have but I'd rather focus on mobile versions|
 |Windows Phone|:x:|React Native's Documentation is mostly focused on Android and iOS, Windows Phone has been [discontinued](https://www.cnet.com/news/windows-10-mobile-features-hardware-death-sentence-microsoft/)|
 
-## Git workflow
+## Development
 
-### Commits
+This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+
+### Git workflow
+
+In order to add a new feature/bug fix, follow these steps:
+
+- Get the latest updates
+
+```
+git fetch origin
+git checkout master
+git pull origin master
+```
+
+- Create your own branch
+
+```
+git checkout -b your-branch-name
+```
+
+- Work, work, work on it by editing the code locally then pushing it to your branch
+- Once the feature/bug fix looks correct, create a Pull Request to merge your commits into `master` from `your-branch-name`
+
+#### Branches
+
+Branches should have a clear name, be short and only use `a-z` and `-`.
+
+#### Commits
 
 :cop: Commit messages should be semantic thanks to this [rigid format](https://seesparkbox.com/foundry/semantic_commit_messages), i.e. they should start with one of these values:
 `['chore:', 'docs:', 'feat:', 'fix:', 'refactor:', 'style:', 'test:']`
