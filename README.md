@@ -47,6 +47,18 @@ Branches should have a clear name, be short and only use `a-z` and `-`.
 The next part should be an action, starting with a verb in present tense.
 Complete example: `docs: update readme`
 
+#### Dependencies
+
+When adding dependencies to this project by running `npm install` please make sure to include `--save-dev` option if applicable (`--save` does not exist anymore as it's done by default according to the [documentation](https://docs.npmjs.com/cli/install#description) now). Make sure to commit `package-lock.json` file as well, [it's expected](https://docs.npmjs.com/files/package-lock.json#description).
+
+#### Add new words
+
+In order to add new couples of english-french words, follow these steps:
+
+- Edit the Google Spreadsheet (note: not public yet)
+- Download it as `.csv`
+- Execute `update_words.sh` script by going into `/scripts` folder and running `./update_words.sh`
+
 ## License
 
 :copyright: This repository does not contain any license for now (i.e. there is no `LICENSE.md`). It means that, **for now**, this project does **not** accept contributions.
@@ -126,3 +138,9 @@ Having a license in order to encourage contributions is definitely part of my fu
 
 :question: Why is there such a table here?
 > Documentation is a really important part of any project. Thanks to this table I can keep track of what I read and more importantly when I read it. Also, it's publicly available so that people can let me know if I missed an update that includes drastic changes (e.g. the documentation page about Performance changed so much that I should take a look at it again).
+
+## To Do List
+
+|Title|Description|
+|-|-|
+|Make the words' spreadsheet public|Do it after a while, once the project is good enough|
