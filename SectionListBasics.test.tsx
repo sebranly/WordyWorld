@@ -1,5 +1,5 @@
 import React from "react";
-import SectionListBasics from "./SectionListBasics";
+import { SectionListBasics } from "./SectionListBasics";
 
 import renderer from "react-test-renderer";
 
