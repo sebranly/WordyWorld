@@ -3,7 +3,7 @@ import App from "./App";
 
 import renderer from "react-test-renderer";
 
-it.skip("renders without crashing", () => {
+it("renders without crashing", () => {
   const rendered = renderer.create(<App />).toJSON();
   expect(rendered).toBeTruthy();
 });
