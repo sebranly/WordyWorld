@@ -24,7 +24,6 @@ export default class SectionListBasics extends React.Component {
     const { isSearch, searchText } = this.state;
 
     const getXLetterWordsSections = jsonObject => {
-      console.log(jsonObject);
       const allMixedUpWords = isSearch
         ? jsonObject.filter(wordObject =>
             wordObject.englishWord.toLowerCase().includes(searchText)
@@ -51,7 +50,6 @@ export default class SectionListBasics extends React.Component {
       }
 
       return allSortedWords.map(groupOfWords => {
-        console.log(groupOfWords);
         const letterSection = groupOfWords[0][0].toUpperCase();
         return {
           title: `${letterSection} (${pluralize("word", groupOfWords.length)})`,

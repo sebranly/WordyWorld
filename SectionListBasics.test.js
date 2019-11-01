@@ -1,9 +1,9 @@
 import React from "react";
-import SectionListBasics from "./App";
+import SectionListBasics from "./SectionListBasics";
 
 import renderer from "react-test-renderer";
 
-it.skip("renders without crashing", () => {
+it("renders without crashing", () => {
   const rendered = renderer.create(<SectionListBasics />).toJSON();
   expect(rendered).toBeTruthy();
 });
