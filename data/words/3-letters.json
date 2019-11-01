@@ -1,0 +1,954 @@
+[
+  {
+    "englishWord": "ace",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "act",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "add",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "AFK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "age",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ago",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "aid",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "aim",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "air",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "AKA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "all",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "and",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ape",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "arc",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "arm",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "art",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ask",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bad",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bag",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bat",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bay",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bby",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bed",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bee",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "beg",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bet",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BFF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bid",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "big",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bot",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bow",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "box",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "boy",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bra",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BRB",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BTW",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bug",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bus",
+    "frenchWord": "bus"
+  },
+  {
+    "englishWord": "but",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "buy",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bye",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cab",
+    "frenchWord": "taxi"
+  },
+  {
+    "englishWord": "can",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cap",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "car",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cat",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cop",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cot",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cow",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cry",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cup",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cut",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "dad",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "day",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "die",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "dig",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DIY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DOA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DOB",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "dog",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "dot",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "dry",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "dye",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ear",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "eat",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "egg",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "end",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "EOF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "EOY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "era",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ETA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "eye",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "F2F",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fag",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "FAQ",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "far",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fat",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fee",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "few",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fit",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fix",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fkn",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "flu",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fly",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fog",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "for",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fox",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fun",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "FYI",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "gag",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "gap",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "gas",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "gay",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "get",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "gin",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "gob",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "god",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "gun",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "gut",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "guy",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "hat",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "her",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "hey",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "him",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "his",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "hit",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "hot",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "how",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "hug",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ice",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "icy",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "IDK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ill",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ILY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ink",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "inn",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "its",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "jam",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "job",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "joy",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "key",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "kid",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "kit",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "lag",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "law",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "lay",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "leg",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "let",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "lid",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "lie",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "lip",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "LMK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "lot",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "low",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mad",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "man",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "map",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "maw",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "may",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "May",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "men",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mix",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mob",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mom",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mow",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mug",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mum",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "net",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "new",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "now",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "nvm",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "oaf",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "oil",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "old",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "OMG",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "OMW",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "one",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "our",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "out",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "own",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "pan",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "pay",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "pen",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "per",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "pet",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "pie",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "pig",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "pot",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "pub",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "put",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "rat",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ray",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "red",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "rev",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "rid",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "rod",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "run",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sad",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "saw",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "say",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sea",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "see",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "set",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sew",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sex",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "she",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "shy",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sin",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sir",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sit",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "six",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ski",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sky",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sly",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "son",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sow",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "spy",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sum",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sun",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tag",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tan",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tap",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tax",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBC",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBH",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tea",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tee",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ten",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "the",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "thx",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tie",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tip",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tom",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "too",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "top",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "toy",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "try",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TTL",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tub",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "two",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "UFO",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "USA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "use",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "van",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "war",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "way",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "wbu",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "web",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "wet",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "who",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "why",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "win",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "yes",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "yet",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "you",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "zip",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "zoo",
+    "frenchWord": ""
+  }
+]
