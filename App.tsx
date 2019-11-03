@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export { App };
+export default App;
