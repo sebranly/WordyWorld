@@ -1,10 +1,10 @@
 import * as parse from "csv-parse";
 import * as fs from "fs";
 
-function pickColumns(data: any) {
+const pickColumns = (data: any) => {
   const { ENGLISH: englishWord, FRENCH: frenchWord } = data;
   return { englishWord, frenchWord };
-}
+};
 
 const parser = (parse as any)(
   { columns: true, skip_empty_lines: true },
