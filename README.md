@@ -59,22 +59,6 @@ In order to add new couples of english-french words, follow these steps:
 - Download it as `.csv`
 - Execute `update_words.sh` script by going into `/scripts` folder and running `./update_words.sh`
 
-## License
-
-:copyright: This repository does not contain any license for now (i.e. there is no `LICENSE.md`). It means that, **for now**, this project does **not** accept contributions.
-For more information about it, please read the following [documentation](https://help.github.com/articles/licensing-a-repository/#choosing-the-right-license) stating:
-> You're under no obligation to choose a license. However, without a license, the default copyright laws apply, meaning that you retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work.
-
-The same link also mentions:
-> If you're creating an open source project, we strongly encourage you to include an open source license.
-
-Having a license in order to encourage contributions is definitely part of my future plans for this repository. I will probably choose [MIT License](https://choosealicense.com/licenses/mit/) when doing so (this is subject to change).
-
-:question: Why not having a license directly at the beginning of the project?
-> There are two reasons behind this personal decision:
-> - I'm learning React Native from scratch (although I know React) at the moment and would like to play around with it by myself by writing some code
-> - I think that expecting contributions at this point is too early anyway, I would like to have a solid base (i.e. a proof of concept or a beta version) before people can contribute to the code
-
 ## Documentation
 
 ### Internal Documentation
