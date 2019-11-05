@@ -116,8 +116,7 @@ SectionListBasics.defaultProps = {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: 22
+    flex: 1
   },
   searchBar: {
     fontSize: 16,
