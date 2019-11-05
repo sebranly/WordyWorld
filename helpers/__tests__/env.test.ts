@@ -9,5 +9,10 @@ describe("env helper", () => {
       result = getFromEnv("NODE_ENV");
       expect(result).toBe("test");
     });
+
+    it("returns empty string otherwise", () => {
+      result = getFromEnv("UNKNOWN");
+      expect(result).toBe("");
+    });
   });
 });
