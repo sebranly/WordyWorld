@@ -1,6 +1,10 @@
 {
   "name": "wordy-world",
   "version": "0.1.0",
+  "author": "sebranly",
+  "description": "React-Native Wordy World App",
+  "keywords": [],
+  "license": "MIT",
   "private": true,
   "devDependencies": {
     "@types/jest": "^24.0.21",
@@ -15,6 +19,13 @@
     "react-test-renderer": "16.8.3"
   },
   "main": "node_modules/expo/AppEntry.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebranly/WordyWorld.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sebranly/WordyWorld/issues"
+  },
   "scripts": {
     "start": "expo start",
     "eject": "expo eject",
