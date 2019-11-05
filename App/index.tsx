@@ -38,28 +38,15 @@ const App: React.FC<AppProps> = _props => {
   if (!isReady && !IS_TEST) return <AppLoading />;
 
   // Handlers
-  const changeScreenAbout = () => {
-    setScreen(Screen.About);
-  };
-
-  const changeScreenConfig = () => {
-    setScreen(Screen.Config);
-  };
-
-  const changeScreenExplore = () => {
-    setScreen(Screen.Explore);
+  const changeScreen = (screen: Screen) => {
+    setScreen(screen);
   };
 
   // Markup
   return (
     <Container style={styles.container}>
       <SectionListBasics letterCount={3} />
-      <Footer
-        changeScreenAbout={changeScreenAbout}
-        changeScreenConfig={changeScreenConfig}
-        changeScreenExplore={changeScreenExplore}
-        screen={screen}
-      />
+      <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );
 };
