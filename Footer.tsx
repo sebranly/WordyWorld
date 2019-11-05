@@ -1,4 +1,7 @@
+// Vendor
 import * as React from "react";
+
+// Internal
 import {
   FooterTab,
   Footer as FooterNativeBase,
