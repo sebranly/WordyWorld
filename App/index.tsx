@@ -17,6 +17,7 @@ export interface AppProps {}
 const App: React.FC<AppProps> = _props => {
   // Hooks
   const [isReady, setIsReady] = React.useState(false);
+  const [screen, setScreen] = React.useState(Screen.Explore);
 
   // Life-cycle
   React.useEffect(() => {
@@ -36,11 +37,29 @@ const App: React.FC<AppProps> = _props => {
   // Short-circuit
   if (!isReady && !IS_TEST) return <AppLoading />;
 
+  // Handlers
+  const changeScreenAbout = () => {
+    setScreen(Screen.About);
+  };
+
+  const changeScreenConfig = () => {
+    setScreen(Screen.Config);
+  };
+
+  const changeScreenExplore = () => {
+    setScreen(Screen.Explore);
+  };
+
+  // Markup
   return (
     <Container style={styles.container}>
-      <Text>native-base</Text>
       <SectionListBasics letterCount={3} />
-      <Footer screen={Screen.About} />
+      <Footer
+        changeScreenAbout={changeScreenAbout}
+        changeScreenConfig={changeScreenConfig}
+        changeScreenExplore={changeScreenExplore}
+        screen={screen}
+      />
     </Container>
   );
 };
