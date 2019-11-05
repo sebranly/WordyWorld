@@ -14,6 +14,7 @@ const SelectedLettersText: React.FC<SelectedLettersTextProps> = props => {
   if (!letters) {
     return <Text style={style}>{text}</Text>;
   }
+
   const firstIndex = text.toLowerCase().indexOf(letters.toLowerCase());
   if (firstIndex === -1) {
     return <Text style={style}>{text}</Text>;

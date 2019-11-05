@@ -48,6 +48,7 @@ const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
         currentLetter = firstEnglishLetter.charCodeAt(0);
       }
     });
+
     if (currentGroupOfWords.length > 0) {
       allSortedWords.push(currentGroupOfWords);
     }
