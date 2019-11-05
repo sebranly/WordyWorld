@@ -1,7 +1,5 @@
 // Vendor
 import * as React from "react";
-
-// Internal
 import {
   FooterTab,
   Footer as FooterNativeBase,
@@ -10,6 +8,7 @@ import {
   Button
 } from "native-base";
 
+// Internal
 import { Screen } from "./types/enum";
 import { IS_TEST } from "./config/settings";
 
