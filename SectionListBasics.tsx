@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
-import { pluralize } from "./helpers/stringHelper";
+import { pluralize } from "./helpers/strings";
 import { SelectedLettersText } from "./SelectedLettersText";
 
 /*
