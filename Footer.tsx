@@ -19,38 +19,50 @@ const Footer: React.FC<FooterProps> = props => {
   // Setup
   const { changeScreen, screen } = props;
 
-  const isAbout = screen === Screen.About;
-  const isConfig = screen === Screen.Config;
-  const isExplore = screen === Screen.Explore;
+  const renderButton = (buttonScreen: Screen) => {
+    const isActive = buttonScreen === screen;
+
+    let iconName = "";
+    let text = "";
+
+    switch (buttonScreen) {
+      case Screen.About:
+        iconName = "ios-information-circle";
+        text = "About";
+        break;
+
+      case Screen.Config:
+        iconName = "ios-settings";
+        text = "Configuration";
+        break;
+
+      case Screen.Explore:
+      default:
+        iconName = "md-globe";
+        text = "Explore";
+        break;
+    }
+
+    return (
+      <Button
+        key={buttonScreen}
+        vertical
+        active={isActive}
+        onPress={() => changeScreen(buttonScreen)}
+      >
+        {!IS_TEST && <Icon name={iconName} />}
+        <Text>{text}</Text>
+      </Button>
+    );
+  };
+
+  const buttons = [Screen.Config, Screen.Explore, Screen.About].map(v =>
+    renderButton(v)
+  );
 
   return (
     <FooterNativeBase>
-      <FooterTab>
-        <Button
-          vertical
-          active={isConfig}
-          onPress={() => changeScreen(Screen.Config)}
-        >
-          {!IS_TEST && <Icon name="ios-settings" />}
-          <Text>Configuration</Text>
-        </Button>
-        <Button
-          vertical
-          active={isExplore}
-          onPress={() => changeScreen(Screen.Explore)}
-        >
-          {!IS_TEST && <Icon name="md-globe" />}
-          <Text>Explore</Text>
-        </Button>
-        <Button
-          vertical
-          active={isAbout}
-          onPress={() => changeScreen(Screen.About)}
-        >
-          {!IS_TEST && <Icon name="ios-information-circle" />}
-          <Text>About</Text>
-        </Button>
-      </FooterTab>
+      <FooterTab>{buttons}</FooterTab>
     </FooterNativeBase>
   );
 };

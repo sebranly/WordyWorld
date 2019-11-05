@@ -45,7 +45,7 @@ const App: React.FC<AppProps> = _props => {
   // Markup
   return (
     <Container style={styles.container}>
-      <SectionListBasics letterCount={3} />
+      <SectionListBasics letterCount={2} />
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );
