@@ -1,3 +1,4 @@
+// Vendor
 import * as Font from "expo-font";
 import * as React from "react";
 import { AppLoading } from "expo";
@@ -5,6 +6,9 @@ import { Container, Text } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
 
+// Internal
+import { Footer } from "../Footer";
+import { Screen } from "../types/enum";
 import { SectionListBasics } from "../SectionListBasics";
 import { IS_TEST } from "../config/settings";
 
@@ -36,6 +40,7 @@ const App: React.FC<AppProps> = _props => {
     <Container style={styles.container}>
       <Text>native-base</Text>
       <SectionListBasics letterCount={3} />
+      <Footer screen={Screen.About} />
     </Container>
   );
 };
