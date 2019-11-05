@@ -3,7 +3,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 // Internal
-import { SelectedLettersText } from "./SelectedLettersText";
+import { SelectedLettersText } from "../SelectedLettersText";
 
 it("renders without crashing", () => {
   const props = { style: {}, text: "" };

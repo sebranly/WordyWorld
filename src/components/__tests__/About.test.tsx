@@ -3,9 +3,10 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 // Internal
-import { SectionListBasics } from "./SectionListBasics";
+import { About } from "../About";
 
 it("renders without crashing", () => {
-  const rendered = renderer.create(<SectionListBasics />).toJSON();
+  const props = {};
+  const rendered = renderer.create(<About {...props} />).toJSON();
   expect(rendered).toBeTruthy();
 });

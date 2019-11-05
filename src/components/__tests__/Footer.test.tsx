@@ -3,8 +3,8 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 // Internal
-import { Footer } from "./Footer";
-import { Screen } from "./types/enum";
+import { Footer } from "../Footer";
+import { Screen } from "../../types/enum";
 
 it("renders without crashing", () => {
   const props = { changeScreen: jest.fn(), screen: Screen.About };

@@ -9,8 +9,8 @@ import {
 } from "native-base";
 
 // Internal
-import { Screen } from "./types/enum";
-import { IS_TEST } from "./config/settings";
+import { Screen } from "../types/enum";
+import { IS_TEST } from "../config/settings";
 
 export interface FooterProps {
   changeScreen: (screen: Screen) => void;
