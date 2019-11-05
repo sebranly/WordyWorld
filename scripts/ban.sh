@@ -5,9 +5,26 @@ EXCLUSION_FILE_1='package-lock.json'
 
 EXCLUSION_HTTPS='https'
 EXCLUSION_SUBSTRING='substring'
+EXCLUSION_TO_BE_GREATER='toBeGreater'
+EXCLUSION_TO_BE_LESS='toBeLess'
 
 FORBIDDEN=(
   "delete props"
+  "Equal(0"
+  "Equal(1"
+  "Equal(2"
+  "Equal(3"
+  "Equal(4"
+  "Equal(5"
+  "Equal(6"
+  "Equal(7"
+  "Equal(8"
+  "Equal(9"
+  "Equal('"
+  'Equal("'
+  'Equal(`'
+  "Equal(false"
+  "Equal(true"
   "expect(false)"
   "expect(true)"
   "from 'lodash'"
@@ -17,6 +34,9 @@ FORBIDDEN=(
   "it('should"
   'it("should'
   'it(`should'
+  "length).to"
+  "not.toBeDefined()"
+  "not.toBeUndefined()"
   substr
   "'./.."
   \"./..
@@ -27,10 +47,8 @@ FORBIDDEN=(
   "toBeCalledTimes(0)"
   toBeFalsy
   toBeTruthy
-  "toEqual('"
-  'toEqual("'
-  'toEqual(`'
-  toHaveBeenCalled
+  toEqual
+  toHaveBeen
 )
 
 # Test against these file types
@@ -53,6 +71,8 @@ do
   echo "$files" | \
     xargs grep -v $EXCLUSION_HTTPS | \
     grep -v $EXCLUSION_SUBSTRING | \
+    grep -v $EXCLUSION_TO_BE_GREATER | \
+    grep -v $EXCLUSION_TO_BE_LESS | \
     # Add new ones here like line above (i.e. `grep` without `xargs`)
     grep --color --with-filename -n -F "$i" && \
     echo "\n\033[0;31mFound $i references. Please remove them before committing\n" && exit 1
