@@ -8,5 +8,5 @@ import { SelectedLettersText } from "../SelectedLettersText";
 it("renders without crashing", () => {
   const props = { style: {}, text: "" };
   const rendered = renderer.create(<SelectedLettersText {...props} />).toJSON();
-  expect(rendered).toBeTruthy();
+  expect(rendered).not.toBeNull();
 });

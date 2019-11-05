@@ -9,5 +9,5 @@ import { Screen } from "../../types/enum";
 it("renders without crashing", () => {
   const props = { changeScreen: jest.fn(), screen: Screen.About };
   const rendered = renderer.create(<Footer {...props} />).toJSON();
-  expect(rendered).toBeTruthy();
+  expect(rendered).not.toBeNull();
 });

@@ -8,5 +8,5 @@ import { About } from "../About";
 it("renders without crashing", () => {
   const props = {};
   const rendered = renderer.create(<About {...props} />).toJSON();
-  expect(rendered).toBeTruthy();
+  expect(rendered).not.toBeNull();
 });

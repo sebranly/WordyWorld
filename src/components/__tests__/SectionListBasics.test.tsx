@@ -7,5 +7,5 @@ import { SectionListBasics } from "../SectionListBasics";
 
 it("renders without crashing", () => {
   const rendered = renderer.create(<SectionListBasics />).toJSON();
-  expect(rendered).toBeTruthy();
+  expect(rendered).not.toBeNull();
 });
