@@ -3,7 +3,7 @@ import * as React from "react";
 import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Internal
-import { pluralize } from "./helpers/strings";
+import { pluralize } from "../helpers/strings";
 import { SelectedLettersText } from "./SelectedLettersText";
 
 /*
@@ -11,8 +11,8 @@ import { SelectedLettersText } from "./SelectedLettersText";
   See https://github.com/facebook/react-native/issues/2481#issuecomment-299074154
 */
 const DATA: any = {
-  letterCountIs2: require("./data/words/2-letters.json"),
-  letterCountIs3: require("./data/words/3-letters.json")
+  letterCountIs2: require("../data/words/2-letters.json"),
+  letterCountIs3: require("../data/words/3-letters.json")
 };
 
 export interface SectionListBasicsProps {

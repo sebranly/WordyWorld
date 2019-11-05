@@ -2,16 +2,16 @@
 import * as Font from "expo-font";
 import * as React from "react";
 import { AppLoading } from "expo";
-import { Container, Text } from "native-base";
+import { Container } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
 
 // Internal
-import { About } from "../About";
-import { Footer } from "../Footer";
-import { Screen } from "../types/enum";
-import { SectionListBasics } from "../SectionListBasics";
-import { HEADER_Y, IS_TEST } from "../config/settings";
+import { About } from "../src/components/About";
+import { Footer } from "../src/components/Footer";
+import { Screen } from "../src/types/enum";
+import { SectionListBasics } from "../src/components/SectionListBasics";
+import { HEADER_Y, IS_TEST } from "../src/config/settings";
 
 export interface AppProps {}
 
@@ -45,7 +45,7 @@ const App: React.FC<AppProps> = _props => {
 
   // Setup
   const isAbout = screen === Screen.About;
-  const Component = isAbout ? <About /> : <SectionListBasics letterCount={2} />;
+  const Component = isAbout ? <About /> : <SectionListBasics letterCount={3} />;
 
   // Markup
   return (

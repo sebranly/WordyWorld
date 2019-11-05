@@ -15,7 +15,7 @@ import {
 import { Linking, StyleSheet } from "react-native";
 
 // Internal
-import { IS_TEST } from "./config/settings";
+import { IS_TEST } from "../config/settings";
 
 export interface AboutProps {}
 
