@@ -7,17 +7,18 @@ import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
 
 // Internal
+import { About } from "../About";
 import { Footer } from "../Footer";
 import { Screen } from "../types/enum";
 import { SectionListBasics } from "../SectionListBasics";
-import { IS_TEST } from "../config/settings";
+import { HEADER_Y, IS_TEST } from "../config/settings";
 
 export interface AppProps {}
 
 const App: React.FC<AppProps> = _props => {
   // Hooks
   const [isReady, setIsReady] = React.useState(false);
-  const [screen, setScreen] = React.useState(Screen.Explore);
+  const [screen, setScreen] = React.useState(Screen.About);
 
   // Life-cycle
   React.useEffect(() => {
@@ -42,10 +43,14 @@ const App: React.FC<AppProps> = _props => {
     setScreen(screen);
   };
 
+  // Setup
+  const isAbout = screen === Screen.About;
+  const Component = isAbout ? <About /> : <SectionListBasics letterCount={2} />;
+
   // Markup
   return (
     <Container style={styles.container}>
-      <SectionListBasics letterCount={2} />
+      {Component}
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );
@@ -53,8 +58,9 @@ const App: React.FC<AppProps> = _props => {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#fff",
     flex: 1,
-    backgroundColor: "#fff"
+    paddingTop: HEADER_Y
   }
 });
 

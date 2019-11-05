@@ -7,7 +7,7 @@ import { Footer } from "./Footer";
 import { Screen } from "./types/enum";
 
 it("renders without crashing", () => {
-  const props = { screen: Screen.About };
+  const props = { changeScreen: jest.fn(), screen: Screen.About };
   const rendered = renderer.create(<Footer {...props} />).toJSON();
   expect(rendered).toBeTruthy();
 });
