@@ -28,7 +28,7 @@ const About: React.FC<AboutProps> = _props => {
 
   const renderLibrary = (library: string) => {
     return (
-      <ListItem>
+      <ListItem key={library}>
         <Text>{library}</Text>
       </ListItem>
     );
