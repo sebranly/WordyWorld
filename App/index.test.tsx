@@ -7,5 +7,5 @@ import App from "./index";
 
 it("renders without crashing", () => {
   const rendered = renderer.create(<App />).toJSON();
-  expect(rendered).toBeTruthy();
+  expect(rendered).not.toBeNull();
 });
