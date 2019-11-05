@@ -8,6 +8,7 @@ import {
 } from "native-base";
 
 import { Screen } from "./types/enum";
+import { IS_TEST } from "./config/settings";
 
 export interface FooterProps {
   screen: Screen;
@@ -25,15 +26,15 @@ const Footer: React.FC<FooterProps> = props => {
     <FooterNativeBase>
       <FooterTab>
         <Button vertical active={isConfig}>
-          <Icon name="ios-settings" />
-          <Text>Config</Text>
+          {!IS_TEST && <Icon name="ios-settings" />}
+          <Text>Configuration</Text>
         </Button>
         <Button vertical active={isExplore}>
-          <Icon name="md-globe" />
+          {!IS_TEST && <Icon name="md-globe" />}
           <Text>Explore</Text>
         </Button>
         <Button vertical active={isAbout}>
-          <Icon name="ios-information-circle" />
+          {!IS_TEST && <Icon name="ios-information-circle" />}
           <Text>About</Text>
         </Button>
       </FooterTab>
