@@ -1,9 +1,9 @@
 // Vendor
-import * as emoji from "node-emoji";
 import * as React from "react";
 import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Internal
+import { Emoji } from "./Emoji";
 import { pluralize } from "../helpers/strings";
 import { SelectedLettersText } from "./SelectedLettersText";
 
@@ -89,12 +89,9 @@ const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
         <SectionList
           sections={xLetterWordsSections}
           renderItem={({ item }) => {
-            const emojiObject = emoji.find(item);
-            const emojiIcon = emojiObject ? emojiObject.emoji : undefined;
-
             return (
               <View style={styles.inlineWrapper}>
-                {emojiIcon && <Text style={styles.emoji}>{emojiIcon}</Text>}
+                <Emoji style={styles.emoji} text={item} />
                 <SelectedLettersText
                   letters={occurrencesLetters}
                   style={styles.item}
