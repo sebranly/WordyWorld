@@ -18,7 +18,7 @@ export interface AppProps {}
 const App: React.FC<AppProps> = _props => {
   // Hooks
   const [isReady, setIsReady] = React.useState(false);
-  const [screen, setScreen] = React.useState(Screen.About);
+  const [screen, setScreen] = React.useState(Screen.Explore);
 
   // Life-cycle
   React.useEffect(() => {

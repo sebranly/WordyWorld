@@ -1,4 +1,5 @@
 // Vendor
+import * as emoji from "node-emoji";
 import * as React from "react";
 import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
@@ -32,6 +33,7 @@ const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
           wordObject.englishWord.toLowerCase().includes(searchText)
         )
       : jsonObject;
+
     const allSortedWords: any[] = [];
     let currentGroupOfWords: any = [];
     let currentLetter = 97;
@@ -86,13 +88,21 @@ const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
       {xLetterWordsSections.length ? (
         <SectionList
           sections={xLetterWordsSections}
-          renderItem={({ item }) => (
-            <SelectedLettersText
-              letters={occurrencesLetters}
-              style={styles.item}
-              text={item}
-            />
-          )}
+          renderItem={({ item }) => {
+            const emojiObject = emoji.find(item);
+            const emojiIcon = emojiObject ? emojiObject.emoji : undefined;
+
+            return (
+              <View style={styles.inlineWrapper}>
+                {emojiIcon && <Text style={styles.emoji}>{emojiIcon}</Text>}
+                <SelectedLettersText
+                  letters={occurrencesLetters}
+                  style={styles.item}
+                  text={item}
+                />
+              </View>
+            );
+          }}
           renderSectionHeader={({ section }) => (
             <Text style={styles.sectionHeader}>{section.title}</Text>
           )}
@@ -118,6 +128,13 @@ SectionListBasics.defaultProps = {
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+  emoji: {
+    paddingTop: 4
+  },
+  inlineWrapper: {
+    flex: 1,
+    flexDirection: "row"
   },
   searchBar: {
     fontSize: 16,
@@ -146,9 +163,7 @@ const styles = StyleSheet.create({
     backgroundColor: "black"
   },
   item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44
+    fontSize: 18
   }
 });
 

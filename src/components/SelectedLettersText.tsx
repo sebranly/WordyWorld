@@ -39,11 +39,11 @@ const styles = StyleSheet.create({
   },
   inlineWrapper: {
     flex: 1,
-    flexDirection: "row"
+    flexDirection: "row",
+    fontSize: 18
   },
   textStyle: {
-    fontSize: 18,
-    height: 44
+    fontSize: 18
   }
 });
 
