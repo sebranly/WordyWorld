@@ -1,5 +1,57 @@
 [
   {
+    "englishWord": "ASAP",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BYOB",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "IMHO",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "JSYK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "July",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "June",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "NSFW",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "RSVP",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "RTFM",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TGIF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TRUE",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TTYL",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "YOLO",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "able",
     "frenchWord": ""
   },
@@ -24,6 +76,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "arch",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "area",
     "frenchWord": ""
   },
@@ -33,6 +89,10 @@
   },
   {
     "englishWord": "aunt",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "auto",
     "frenchWord": ""
   },
   {
@@ -73,6 +133,10 @@
   },
   {
     "englishWord": "bath",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bays",
     "frenchWord": ""
   },
   {
@@ -204,6 +268,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "cart",
+    "frenchWord": "charrette"
+  },
+  {
     "englishWord": "case",
     "frenchWord": ""
   },
@@ -296,7 +364,15 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "cuff",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "cute",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cyan",
     "frenchWord": ""
   },
   {
@@ -364,6 +440,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "dish",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "disk",
     "frenchWord": ""
   },
@@ -425,6 +505,10 @@
   },
   {
     "englishWord": "earn",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "east",
     "frenchWord": ""
   },
   {
@@ -644,6 +728,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "grin",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "grow",
     "frenchWord": ""
   },
@@ -808,6 +896,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "jeep",
+    "frenchWord": "jeep"
+  },
+  {
     "englishWord": "jerk",
     "frenchWord": ""
   },
@@ -881,6 +973,10 @@
   },
   {
     "englishWord": "lamb",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "lame",
     "frenchWord": ""
   },
   {
@@ -1148,6 +1244,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "navy",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "near",
     "frenchWord": ""
   },
@@ -1192,6 +1292,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "nude",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "nuke",
     "frenchWord": ""
   },
@@ -1221,6 +1325,10 @@
   },
   {
     "englishWord": "open",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "oval",
     "frenchWord": ""
   },
   {
@@ -1340,6 +1448,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "quad",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "quit",
     "frenchWord": ""
   },
@@ -1420,6 +1532,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "robe",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "rock",
     "frenchWord": ""
   },
@@ -1441,6 +1557,10 @@
   },
   {
     "englishWord": "root",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "rose",
     "frenchWord": ""
   },
   {
@@ -1580,6 +1700,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "soar",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "soft",
     "frenchWord": ""
   },
@@ -1684,6 +1808,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "teal",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "team",
     "frenchWord": ""
   },
@@ -1725,6 +1853,10 @@
   },
   {
     "englishWord": "thin",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "thks",
     "frenchWord": ""
   },
   {
@@ -1784,10 +1916,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "TRUE",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "tube",
     "frenchWord": ""
   },
@@ -1829,6 +1957,14 @@
   },
   {
     "englishWord": "very",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ves*",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "vest",
     "frenchWord": ""
   },
   {
@@ -1896,11 +2032,19 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "west",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "what",
     "frenchWord": ""
   },
   {
     "englishWord": "when",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "whim",
     "frenchWord": ""
   },
   {
@@ -1985,150 +2129,6 @@
   },
   {
     "englishWord": "zoom",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "bays",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "lame",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "soar",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "grin",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "quad",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "nude",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "cyan",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "teal",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "navy",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "rose",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "arch",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "oval",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "whim",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "IMHO",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "JSYK",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "thks",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "TTYL",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "NSFW",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "YOLO",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "BYOB",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "ASAP",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "RSVP",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "RTFM",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "TGIF",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "June",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "July",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "auto",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "cart",
-    "frenchWord": "charrette"
-  },
-  {
-    "englishWord": "robe",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "jeep",
-    "frenchWord": "jeep"
-  },
-  {
-    "englishWord": "vest",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "ves*",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "cuff",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "west",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "east",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "dish",
     "frenchWord": ""
   }
 ]

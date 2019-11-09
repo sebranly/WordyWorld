@@ -4,12 +4,12 @@
 
 ## Targeted Platforms
 
-| Platform      | Supported          | Notes                                                                                                                                                                                             |
-| ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| iOS           | :white_check_mark: | Will be the first and only targeted platform at the beginning                                                                                                                                     |
-| Android       | :white_check_mark: | Will come once iOS version is good enough                                                                                                                                                         |
-| Desktop Web   | :white_check_mark: | Would be nice to have but I'd rather focus on mobile versions                                                                                                                                     |
-| Windows Phone | :x:                | React Native's Documentation is mostly focused on Android and iOS, Windows Phone has been [discontinued](https://www.cnet.com/news/windows-10-mobile-features-hardware-death-sentence-microsoft/) |
+| Platform      | Supported | Notes                                                                                                                                                                                             |
+| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| iOS           | ✅        | Will be the first and only targeted platform at the beginning                                                                                                                                     |
+| Android       | 🕒        | Will come once iOS version is good enough                                                                                                                                                         |
+| Desktop Web   | 🕒        | Would be nice to have but I'd rather focus on mobile versions                                                                                                                                     |
+| Windows Phone | ❌        | React Native's Documentation is mostly focused on Android and iOS, Windows Phone has been [discontinued](https://www.cnet.com/news/windows-10-mobile-features-hardware-death-sentence-microsoft/) |
 
 ## Development
 
@@ -17,11 +17,11 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 #### Add new words
 
-In order to add new couples of english-french words, follow these steps:
+In order to add new pairs of english-french words, follow these steps:
 
 - Edit the Google Spreadsheet (note: not public yet)
 - Download it as `.csv`
-- Execute `update_words.sh` script by going into `/scripts` folder and running `./update_words.sh`
+- Execute `update_words.sh` script by running `./scripts/update_words.sh <digit>` from the root of the repository (replace `<digit>` with the number of letters e.g. if you want to generate the 2-letter words, run `./scripts/update_words.sh 2`)
 
 ## Documentation
 
