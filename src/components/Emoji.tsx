@@ -14,9 +14,7 @@ const Emoji: React.FC<EmojiProps> = props => {
   const { text } = props;
 
   const emojiObject = emoji.find(text);
-  const fallbackEmojiObject = emoji.search(text);
-  const fallbackEmojiIcon = get(fallbackEmojiObject, "[0].emoji", null);
-  const emojiIcon = emojiObject ? emojiObject.emoji : fallbackEmojiIcon;
+  const emojiIcon = emojiObject ? emojiObject.emoji : null;
 
   // Short-circuit
   if (!emojiIcon) return null;
