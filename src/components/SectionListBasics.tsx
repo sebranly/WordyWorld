@@ -3,16 +3,19 @@ import * as React from "react";
 import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Internal
+import { Emoji } from "./Emoji";
 import { pluralize } from "../helpers/strings";
 import { SelectedLettersText } from "./SelectedLettersText";
 
 /*
+  TODO: fix if possible
   React-native does not support dynamic imports apparently
   See https://github.com/facebook/react-native/issues/2481#issuecomment-299074154
 */
 const DATA: any = {
   letterCountIs2: require("../data/words/2-letters.json"),
-  letterCountIs3: require("../data/words/3-letters.json")
+  letterCountIs3: require("../data/words/3-letters.json"),
+  letterCountIs4: require("../data/words/4-letters.json")
 };
 
 export interface SectionListBasicsProps {
@@ -32,6 +35,7 @@ const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
           wordObject.englishWord.toLowerCase().includes(searchText)
         )
       : jsonObject;
+
     const allSortedWords: any[] = [];
     let currentGroupOfWords: any = [];
     let currentLetter = 97;
@@ -86,13 +90,18 @@ const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
       {xLetterWordsSections.length ? (
         <SectionList
           sections={xLetterWordsSections}
-          renderItem={({ item }) => (
-            <SelectedLettersText
-              letters={occurrencesLetters}
-              style={styles.item}
-              text={item}
-            />
-          )}
+          renderItem={({ item }) => {
+            return (
+              <View style={styles.inlineWrapper}>
+                <Emoji style={styles.emoji} text={item} />
+                <SelectedLettersText
+                  letters={occurrencesLetters}
+                  style={styles.item}
+                  text={item}
+                />
+              </View>
+            );
+          }}
           renderSectionHeader={({ section }) => (
             <Text style={styles.sectionHeader}>{section.title}</Text>
           )}
@@ -118,6 +127,13 @@ SectionListBasics.defaultProps = {
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+  emoji: {
+    paddingTop: 4
+  },
+  inlineWrapper: {
+    flex: 1,
+    flexDirection: "row"
   },
   searchBar: {
     fontSize: 16,
@@ -146,9 +162,7 @@ const styles = StyleSheet.create({
     backgroundColor: "black"
   },
   item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44
+    fontSize: 18
   }
 });
 

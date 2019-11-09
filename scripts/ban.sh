@@ -28,7 +28,7 @@ FORBIDDEN=(
   "expect(false)"
   "expect(true)"
   "from 'lodash'"
-  'from "lodash'
+  'from "lodash"'
   FunctionComponent
   http
   "it('should"
