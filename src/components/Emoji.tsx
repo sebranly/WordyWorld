@@ -1,7 +1,8 @@
 // Vendor
 import * as emoji from "node-emoji";
-import emojiFromText from "emoji-from-text";
 import * as React from "react";
+import emojiFromText from "emoji-from-text";
+import get from "lodash/get";
 import { Text } from "react-native";
 
 export interface EmojiProps {
@@ -19,19 +20,8 @@ const Emoji: React.FC<EmojiProps> = props => {
   // Short-circuit
   if (emojiIcon) return <Text>{emojiIcon}</Text>;
 
-  const emojiFallbackTemp = (emojiFromText as any)(text, true);
-  const emojiFallbackTemp2 = emojiFallbackTemp ? emojiFallbackTemp.match : null;
-  const emojiFallbackTemp3 = emojiFallbackTemp2
-    ? emojiFallbackTemp2.toString()
-    : null;
-
-  const emojiFallbackTemp4 = emojiFallbackTemp3
-    ? emoji.find(emojiFallbackTemp3)
-    : null;
-
-  const emojiFallbackIcon = emojiFallbackTemp4
-    ? emojiFallbackTemp4.emoji
-    : null;
+  const emojiFallbackTemp = emojiFromText(text, true);
+  const emojiFallbackIcon = get(emojiFallbackTemp, "match.emoji.char");
 
   return emojiFallbackIcon ? <Text>{emojiFallbackIcon}</Text> : null;
 };
