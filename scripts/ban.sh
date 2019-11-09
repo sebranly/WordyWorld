@@ -9,6 +9,7 @@ EXCLUSION_TO_BE_GREATER='toBeGreater'
 EXCLUSION_TO_BE_LESS='toBeLess'
 
 FORBIDDEN=(
+  # Code
   "delete props"
   "Equal(0"
   "Equal(1"
@@ -49,6 +50,17 @@ FORBIDDEN=(
   toBeTruthy
   toEqual
   toHaveBeen
+
+  # Offensive/racist words
+  #
+  # These words only appear once, in this script, in order to ban them from the whole codebase,
+  # that includes words being automatically generated through a spreadsheet, that can be automatically
+  # generated as well by adding words appearing from different sources (movies' subtitles, books, rap songs'
+  # lyrics, etc.) that might depict shameful past events
+  fag
+  negro
+  nigga
+  nigger
 )
 
 # Test against these file types
@@ -56,7 +68,7 @@ FILES_PATTERN='\.(css|js|json|md|ts|tsx)$'
 
 for i in "${FORBIDDEN[@]}"
 do
-  files=$(git ls-tree -r HEAD --name-only | \
+  files=$(git ls-files | \
     grep -v "$EXCLUSION_FILE_1" | \
     # Add new ones here like line above (i.e. `grep`)
     grep -E $FILES_PATTERN
@@ -74,7 +86,7 @@ do
     grep -v $EXCLUSION_TO_BE_GREATER | \
     grep -v $EXCLUSION_TO_BE_LESS | \
     # Add new ones here like line above (i.e. `grep` without `xargs`)
-    grep --color --with-filename -n -F "$i" && \
+    grep --color --with-filename -n -i -F "$i" && \
     echo "\n\033[0;31mFound $i references. Please remove them before committing\n" && exit 1
 done
 
