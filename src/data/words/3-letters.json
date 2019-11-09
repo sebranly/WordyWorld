@@ -1,5 +1,109 @@
 [
   {
+    "englishWord": "AFK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "AKA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BFF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BRB",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BTW",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DIY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DOA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DOB",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "EOF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "EOY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ETA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "F2F",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "FAQ",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "FYI",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "IDK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ILY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "LMK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "May",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "OMG",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "OMW",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBC",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBH",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TTL",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "UFO",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "USA",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "ace",
     "frenchWord": ""
   },
@@ -9,10 +113,6 @@
   },
   {
     "englishWord": "add",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "AFK",
     "frenchWord": ""
   },
   {
@@ -33,10 +133,6 @@
   },
   {
     "englishWord": "air",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "AKA",
     "frenchWord": ""
   },
   {
@@ -104,10 +200,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "BFF",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "bid",
     "frenchWord": ""
   },
@@ -133,14 +225,6 @@
   },
   {
     "englishWord": "bra",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "BRB",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "BTW",
     "frenchWord": ""
   },
   {
@@ -224,18 +308,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "DIY",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "DOA",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "DOB",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "dog",
     "frenchWord": ""
   },
@@ -268,19 +340,7 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "EOF",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "EOY",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "era",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "ETA",
     "frenchWord": ""
   },
   {
@@ -288,15 +348,7 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "F2F",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "fag",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "FAQ",
     "frenchWord": ""
   },
   {
@@ -349,10 +401,6 @@
   },
   {
     "englishWord": "fun",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "FYI",
     "frenchWord": ""
   },
   {
@@ -444,15 +492,7 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "IDK",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "ill",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "ILY",
     "frenchWord": ""
   },
   {
@@ -524,10 +564,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "LMK",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "lot",
     "frenchWord": ""
   },
@@ -553,10 +589,6 @@
   },
   {
     "englishWord": "may",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "May",
     "frenchWord": ""
   },
   {
@@ -613,14 +645,6 @@
   },
   {
     "englishWord": "old",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "OMG",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "OMW",
     "frenchWord": ""
   },
   {
@@ -812,18 +836,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "TBA",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "TBC",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "TBH",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "tea",
     "frenchWord": ""
   },
@@ -872,23 +884,11 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "TTL",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "tub",
     "frenchWord": ""
   },
   {
     "englishWord": "two",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "UFO",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "USA",
     "frenchWord": ""
   },
   {
