@@ -1,21 +1,5 @@
 [
   {
-    "englishWord": "AF",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "BF",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "GF",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "UK",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "am",
     "frenchWord": ""
   },
@@ -32,10 +16,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "bc",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "be",
     "frenchWord": ""
   },
@@ -45,10 +25,6 @@
   },
   {
     "englishWord": "do",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "ex",
     "frenchWord": ""
   },
   {
@@ -120,6 +96,10 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "UK",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "up",
     "frenchWord": ""
   },
@@ -129,6 +109,26 @@
   },
   {
     "englishWord": "we",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "AF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "GF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bc",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ex",
     "frenchWord": ""
   }
 ]

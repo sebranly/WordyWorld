@@ -12,7 +12,7 @@ const parser = csvParse(
   (_err, data) => {
     console.log("File was parsed.");
     const rows = data.map(row => pickColumns(row));
-    const orderedRows = lodash.sortBy(rows, ["englishWord"]);
+    const orderedRows = rows; // lodash.sortBy(rows, ["englishWord"]);
     const jsonObject = JSON.stringify(orderedRows, null, 2);
 
     const numberLetters = process.argv[2];

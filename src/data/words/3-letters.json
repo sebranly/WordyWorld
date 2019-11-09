@@ -1,109 +1,5 @@
 [
   {
-    "englishWord": "AFK",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "AKA",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "BFF",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "BRB",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "BTW",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "DIY",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "DOA",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "DOB",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "EOF",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "EOY",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "ETA",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "F2F",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "FAQ",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "FYI",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "IDK",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "ILY",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "LMK",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "May",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "OMG",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "OMW",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "TBA",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "TBC",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "TBH",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "TTL",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "UFO",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "USA",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "ace",
     "frenchWord": ""
   },
@@ -148,10 +44,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "arc",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "arm",
     "frenchWord": ""
   },
@@ -173,14 +65,6 @@
   },
   {
     "englishWord": "bat",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "bay",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "bby",
     "frenchWord": ""
   },
   {
@@ -224,10 +108,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "bra",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "bug",
     "frenchWord": ""
   },
@@ -253,10 +133,6 @@
   },
   {
     "englishWord": "can",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "cap",
     "frenchWord": ""
   },
   {
@@ -289,10 +165,6 @@
   },
   {
     "englishWord": "cut",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "dad",
     "frenchWord": ""
   },
   {
@@ -373,10 +245,6 @@
   },
   {
     "englishWord": "fix",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "fkn",
     "frenchWord": ""
   },
   {
@@ -552,10 +420,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "lid",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "lie",
     "frenchWord": ""
   },
@@ -612,14 +476,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "mug",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "mum",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "net",
     "frenchWord": ""
   },
@@ -629,10 +485,6 @@
   },
   {
     "englishWord": "now",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "nvm",
     "frenchWord": ""
   },
   {
@@ -812,10 +664,6 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "sum",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "sun",
     "frenchWord": ""
   },
@@ -840,19 +688,11 @@
     "frenchWord": ""
   },
   {
-    "englishWord": "tee",
-    "frenchWord": ""
-  },
-  {
     "englishWord": "ten",
     "frenchWord": ""
   },
   {
     "englishWord": "the",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "thx",
     "frenchWord": ""
   },
   {
@@ -892,6 +732,14 @@
     "frenchWord": ""
   },
   {
+    "englishWord": "UFO",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "USA",
+    "frenchWord": ""
+  },
+  {
     "englishWord": "use",
     "frenchWord": ""
   },
@@ -905,10 +753,6 @@
   },
   {
     "englishWord": "way",
-    "frenchWord": ""
-  },
-  {
-    "englishWord": "wbu",
     "frenchWord": ""
   },
   {
@@ -949,6 +793,162 @@
   },
   {
     "englishWord": "zoo",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bay",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "sum",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "arc",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBH",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BTW",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "FYI",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "IDK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BFF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "fkn",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "wbu",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "OMW",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "OMG",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "thx",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TTL",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "BRB",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "F2F",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "FAQ",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bby",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "EOY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "EOF",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "nvm",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "LMK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ILY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "AKA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "AFK",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "TBC",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DOA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DOB",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "ETA",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "DIY",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "May",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mum",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "dad",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "tee",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "bra",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "cap",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "mug",
+    "frenchWord": ""
+  },
+  {
+    "englishWord": "lid",
     "frenchWord": ""
   }
 ]
