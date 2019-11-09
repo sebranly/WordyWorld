@@ -34,9 +34,12 @@ const About: React.FC<AboutProps> = _props => {
     );
   };
 
-  const libraries = ["native-base", "node-emoji", "react-native"].map(v =>
-    renderLibrary(v)
-  );
+  const libraries = [
+    "emoji-from-text",
+    "native-base",
+    "node-emoji",
+    "react-native"
+  ].map(v => renderLibrary(v));
 
   return (
     <Container>
