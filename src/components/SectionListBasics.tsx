@@ -8,12 +8,14 @@ import { pluralize } from "../helpers/strings";
 import { SelectedLettersText } from "./SelectedLettersText";
 
 /*
+  TODO: fix if possible
   React-native does not support dynamic imports apparently
   See https://github.com/facebook/react-native/issues/2481#issuecomment-299074154
 */
 const DATA: any = {
   letterCountIs2: require("../data/words/2-letters.json"),
-  letterCountIs3: require("../data/words/3-letters.json")
+  letterCountIs3: require("../data/words/3-letters.json"),
+  letterCountIs4: require("../data/words/4-letters.json")
 };
 
 export interface SectionListBasicsProps {
