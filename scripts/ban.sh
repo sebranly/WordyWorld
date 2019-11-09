@@ -51,7 +51,7 @@ FORBIDDEN=(
   toEqual
   toHaveBeen
 
-  # Offensive/racist words
+  # Offensive words/racial slurs
   #
   # These words only appear once, in this script, in order to ban them from the whole codebase,
   # that includes words being automatically generated through a spreadsheet, that can be automatically
