@@ -15,7 +15,13 @@ import { SelectedLettersText } from "./SelectedLettersText";
 const DATA: any = {
   letterCountIs2: require("../data/words/2-letters.json"),
   letterCountIs3: require("../data/words/3-letters.json"),
-  letterCountIs4: require("../data/words/4-letters.json")
+  letterCountIs4: require("../data/words/4-letters.json"),
+  letterCountIs5: require("../data/words/5-letters.json"),
+  letterCountIs6: require("../data/words/6-letters.json"),
+  letterCountIs7: require("../data/words/7-letters.json"),
+  letterCountIs8: require("../data/words/8-letters.json"),
+  letterCountIs9: require("../data/words/9-letters.json"),
+  letterCountIs10: require("../data/words/10-letters.json")
 };
 
 export interface SectionListBasicsProps {

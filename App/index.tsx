@@ -45,7 +45,11 @@ const App: React.FC<AppProps> = _props => {
 
   // Setup
   const isAbout = screen === Screen.About;
-  const Component = isAbout ? <About /> : <SectionListBasics letterCount={4} />;
+  const Component = isAbout ? (
+    <About />
+  ) : (
+    <SectionListBasics letterCount={10} />
+  );
 
   // Markup
   return (
