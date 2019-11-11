@@ -6,7 +6,7 @@ import renderer from "react-test-renderer";
 import { Emoji } from "../Emoji";
 
 it("renders without crashing", () => {
-  const props = { style: {}, text: "pizza" };
+  const props = { text: "pizza" };
   const rendered = renderer.create(<Emoji {...props} />).toJSON();
   expect(rendered).not.toBeNull();
 });

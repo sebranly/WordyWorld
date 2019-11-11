@@ -4,7 +4,7 @@ import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Internal
 import { Emoji } from "./Emoji";
-import { pluralize } from "../helpers/strings";
+import { getXLetterWordsSections } from "../helpers/index";
 import { SelectedLettersText } from "./SelectedLettersText";
 
 /*
@@ -24,57 +24,25 @@ const DATA: any = {
   letterCountIs10: require("../data/words/10-letters.json")
 };
 
-export interface SectionListBasicsProps {
+export interface ResultsProps {
   letterCount?: number;
 }
 
-const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
+const Results: React.FC<ResultsProps> = props => {
   // Hooks
   const [searchText, setSearchText] = React.useState("");
   const [isSearch, setIsSearch] = React.useState(false);
 
   const { letterCount } = props;
 
-  const getXLetterWordsSections = (jsonObject: any) => {
-    const allMixedUpWords = isSearch
-      ? jsonObject.filter((wordObject: any) =>
-          wordObject.englishWord.toLowerCase().includes(searchText)
-        )
-      : jsonObject;
-
-    const allSortedWords: any[] = [];
-    let currentGroupOfWords: any = [];
-    let currentLetter = 97;
-
-    allMixedUpWords.forEach((wordObject: any) => {
-      const firstEnglishLetter = wordObject.englishWord[0].toLowerCase();
-      if (firstEnglishLetter === String.fromCharCode(currentLetter)) {
-        currentGroupOfWords.push(wordObject.englishWord);
-      } else {
-        if (currentGroupOfWords.length > 0) {
-          allSortedWords.push(currentGroupOfWords);
-        }
-        currentGroupOfWords = [wordObject.englishWord];
-        currentLetter = firstEnglishLetter.charCodeAt(0);
-      }
-    });
-
-    if (currentGroupOfWords.length > 0) {
-      allSortedWords.push(currentGroupOfWords);
-    }
-
-    return allSortedWords.map(groupOfWords => {
-      const letterSection = groupOfWords[0][0].toUpperCase();
-      return {
-        title: `${letterSection} (${pluralize("word", groupOfWords.length)})`,
-        data: groupOfWords
-      };
-    });
-  };
-
   const key = `letterCountIs${letterCount}`;
   const jsonObject = DATA[key];
-  const xLetterWordsSections = getXLetterWordsSections(jsonObject);
+  const xLetterWordsSections = getXLetterWordsSections(
+    jsonObject,
+    isSearch,
+    searchText
+  );
+
   const occurrencesLetters = isSearch ? searchText : undefined;
 
   return (
@@ -84,12 +52,10 @@ const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
         placeholder="Search for a word..."
         onChangeText={text => {
           const trimmedText = text.trim();
-          if (trimmedText.length > 0) {
-            setSearchText(trimmedText.toLowerCase());
-            setIsSearch(true);
-          } else {
-            setIsSearch(false);
-          }
+          const hasLength = trimmedText.length > 0;
+
+          if (hasLength) setSearchText(trimmedText.toLowerCase());
+          setIsSearch(hasLength);
         }}
         style={styles.searchBar}
       />
@@ -126,7 +92,7 @@ const SectionListBasics: React.FC<SectionListBasicsProps> = props => {
   );
 };
 
-SectionListBasics.defaultProps = {
+Results.defaultProps = {
   letterCount: 2
 };
 
@@ -172,4 +138,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export { SectionListBasics };
+export { Results };

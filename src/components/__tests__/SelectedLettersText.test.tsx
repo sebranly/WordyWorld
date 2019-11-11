@@ -6,7 +6,7 @@ import renderer from "react-test-renderer";
 import { SelectedLettersText } from "../SelectedLettersText";
 
 it("renders without crashing", () => {
-  const props = { style: {}, text: "" };
+  const props = { text: "" };
   const rendered = renderer.create(<SelectedLettersText {...props} />).toJSON();
   expect(rendered).not.toBeNull();
 });

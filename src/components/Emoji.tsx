@@ -6,7 +6,7 @@ import get from "lodash/get";
 import { Text } from "react-native";
 
 export interface EmojiProps {
-  style: any;
+  style?: any;
   text: string;
 }
 

@@ -3,9 +3,9 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 // Internal
-import { SectionListBasics } from "../SectionListBasics";
+import { Results } from "../Results";
 
 it("renders without crashing", () => {
-  const rendered = renderer.create(<SectionListBasics />).toJSON();
+  const rendered = renderer.create(<Results />).toJSON();
   expect(rendered).not.toBeNull();
 });
