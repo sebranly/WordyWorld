@@ -1,6 +1,7 @@
 // Vendor
 import sortBy from "lodash/sortBy";
 
+// Internal
 import { pluralize } from "./strings";
 
 const getResultsCount = (results: any) => {

@@ -6,7 +6,7 @@ import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 import { Emoji } from "./Emoji";
 import { getResults, getResultsCount } from "../helpers/results";
 import { SelectedLettersText } from "./SelectedLettersText";
-import { ALL_WORDS } from "../config/settings";
+import { ALL_WORDS, MIN_SEARCH_LETTER_COUNT } from "../config/settings";
 
 export interface ResultsProps {}
 
@@ -22,10 +22,10 @@ const Results: React.FC<ResultsProps> = props => {
   const areEmptyResults = results.length === 0;
   const emptyResultsText = isSearch
     ? "Your search has no results"
-    : "Please type at least 2 letters";
+    : `Please type at least ${MIN_SEARCH_LETTER_COUNT} letters`;
 
   const placeholder = `Search for a word among ${ALL_WORDS.length} words...`;
-  const titleSuffix = !isSearch ? "" : ` (${totalResultsCount})`;
+  const titleSuffix = isSearch ? ` (${totalResultsCount})` : "";
   const title = `Results View${titleSuffix}`;
 
   return (
@@ -35,7 +35,7 @@ const Results: React.FC<ResultsProps> = props => {
         placeholder={placeholder}
         onChangeText={text => {
           const trimmedText = text.trim();
-          const hasLength = trimmedText.length > 1;
+          const hasLength = trimmedText.length >= MIN_SEARCH_LETTER_COUNT;
 
           if (hasLength) setSearchText(trimmedText.toLowerCase());
           setIsSearch(hasLength);
