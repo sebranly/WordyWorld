@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 export interface SelectedLettersTextProps {
   letters?: string;
-  style: any;
+  style?: any;
   text: string;
 }
 

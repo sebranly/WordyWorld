@@ -9,8 +9,8 @@ import { StyleSheet } from "react-native";
 // Internal
 import { About } from "../src/components/About";
 import { Footer } from "../src/components/Footer";
+import { Results } from "../src/components/Results";
 import { Screen } from "../src/types/enum";
-import { SectionListBasics } from "../src/components/SectionListBasics";
 import { HEADER_Y, IS_TEST } from "../src/config/settings";
 
 export interface AppProps {}
@@ -45,11 +45,7 @@ const App: React.FC<AppProps> = _props => {
 
   // Setup
   const isAbout = screen === Screen.About;
-  const Component = isAbout ? (
-    <About />
-  ) : (
-    <SectionListBasics letterCount={10} />
-  );
+  const Component = isAbout ? <About /> : <Results />;
 
   // Markup
   return (
