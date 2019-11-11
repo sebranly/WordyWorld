@@ -1,7 +1,7 @@
 enum Screen {
   About,
-  Config,
-  Explore
+  Explore,
+  Game
 }
 
 export { Screen };

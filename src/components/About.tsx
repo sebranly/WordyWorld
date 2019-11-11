@@ -38,7 +38,8 @@ const About: React.FC<AboutProps> = _props => {
     "emoji-from-text",
     "native-base",
     "node-emoji",
-    "react-native"
+    "react-native",
+    "react-native-easy-grid"
   ].map(v => renderLibrary(v));
 
   return (
