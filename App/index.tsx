@@ -54,7 +54,7 @@ const App: React.FC<AppProps> = _props => {
     <Container style={styles.container}>
       {isAbout && <About />}
       {isExplore && <Results />}
-      {isGame && <Game />}
+      {isGame && <Game word={"splash"} />}
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );

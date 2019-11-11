@@ -6,7 +6,7 @@ import renderer from "react-test-renderer";
 import { Game } from "../Game";
 
 it("renders without crashing", () => {
-  const props = {};
+  const props = { word: "test" };
   const rendered = renderer.create(<Game {...props} />).toJSON();
   expect(rendered).not.toBeNull();
 });
