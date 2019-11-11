@@ -5,8 +5,9 @@ import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Internal
 import { Emoji } from "./Emoji";
-import { getXLetterWordsSections } from "../helpers/index";
+import { getResults, getResultsCount } from "../helpers/results";
 import { SelectedLettersText } from "./SelectedLettersText";
+import { MIN_LETTER_COUNT, MAX_LETTER_COUNT } from "../config/settings";
 
 /*
   TODO: fix if possible
@@ -32,26 +33,32 @@ const Results: React.FC<ResultsProps> = props => {
   const [searchText, setSearchText] = React.useState("");
   const [isSearch, setIsSearch] = React.useState(false);
 
-  const jsonObjectTemp = [2, 3, 4, 5, 6, 7, 8, 9, 10].map(v => {
+  const allLetterCounts = Array.from(
+    { length: MAX_LETTER_COUNT },
+    (v, k) => k + 1
+  ).filter(v => v >= MIN_LETTER_COUNT);
+
+  const jsonObjectTemp = allLetterCounts.map(v => {
     const key = `letterCountIs${v}`;
     return DATA[key];
   });
 
   const jsonObject = flatten(jsonObjectTemp);
-
-  const xLetterWordsSections = isSearch
-    ? getXLetterWordsSections(jsonObject, searchText)
-    : [];
-
+  const results = isSearch ? getResults(jsonObject, searchText) : [];
   const occurrencesLetters = isSearch ? searchText : undefined;
-  const areEmptyResults = xLetterWordsSections.length > 0;
+  const totalResultsCount = getResultsCount(results);
+
+  const areEmptyResults = results.length === 0;
   const emptyResultsText = isSearch
     ? "Your search has no results"
     : "Please type at least 2 letters";
 
+  const titleSuffix = !isSearch ? "" : ` (${totalResultsCount})`;
+  const title = `Results View${titleSuffix}`;
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Results View</Text>
+      <Text style={styles.title}>{title}</Text>
       <TextInput
         placeholder="Search for a word..."
         onChangeText={text => {
@@ -64,8 +71,10 @@ const Results: React.FC<ResultsProps> = props => {
         style={styles.searchBar}
       />
       {areEmptyResults ? (
+        <Text style={styles.emptyResults}>{emptyResultsText}</Text>
+      ) : (
         <SectionList
-          sections={xLetterWordsSections}
+          sections={results}
           renderItem={({ item }) => {
             return (
               <View style={styles.inlineWrapper}>
@@ -83,8 +92,6 @@ const Results: React.FC<ResultsProps> = props => {
           )}
           keyExtractor={(_item, index) => index.toString()}
         />
-      ) : (
-        <Text>{emptyResultsText}</Text>
       )}
     </View>
   );
@@ -97,9 +104,18 @@ const styles = StyleSheet.create({
   emoji: {
     paddingTop: 4
   },
+  emptyResults: {
+    paddingLeft: 10
+  },
   inlineWrapper: {
     flex: 1,
     flexDirection: "row"
+  },
+  item: {
+    fontSize: 18
+  },
+  noResult: {
+    paddingLeft: 10
   },
   searchBar: {
     fontSize: 16,
@@ -107,15 +123,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
     paddingLeft: 10,
     paddingBottom: 10
-  },
-  noResult: {
-    paddingLeft: 10
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    paddingBottom: 10,
-    textAlign: "center"
   },
   sectionHeader: {
     color: "white",
@@ -127,8 +134,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     backgroundColor: "black"
   },
-  item: {
-    fontSize: 18
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    paddingBottom: 10,
+    textAlign: "center"
   }
 });
 

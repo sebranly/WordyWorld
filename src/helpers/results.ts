@@ -3,9 +3,21 @@ import sortBy from "lodash/sortBy";
 
 import { pluralize } from "./strings";
 
+const getResultsCount = (results: any) => {
+  const reducer = (accumulator: number, currentValue: any) => {
+    return accumulator + currentValue.data.length;
+  };
+
+  const count = results.reduce(reducer, 0);
+  return count;
+};
+
 // TODO: add unit tests
-const getXLetterWordsSections = (jsonObject: any, searchText: string) => {
-  const sortedJsonObject = sortBy(jsonObject, ["englishWord"]);
+const getResults = (jsonObject: any, searchText: string) => {
+  const sortedJsonObject = sortBy(jsonObject, [
+    word => word.englishWord.toLowerCase()
+  ]);
+
   const allMixedUpWords = sortedJsonObject.filter((wordObject: any) =>
     wordObject.englishWord.toLowerCase().includes(searchText)
   );
@@ -32,13 +44,15 @@ const getXLetterWordsSections = (jsonObject: any, searchText: string) => {
     allSortedWords.push(currentGroupOfWords);
   }
 
-  return allSortedWords.map(groupOfWords => {
+  const results = allSortedWords.map(groupOfWords => {
     const letterSection = groupOfWords[0][0].toUpperCase();
     return {
       title: `${letterSection} (${pluralize("word", groupOfWords.length)})`,
       data: groupOfWords
     };
   });
+
+  return results;
 };
 
-export { getXLetterWordsSections };
+export { getResults, getResultsCount };
