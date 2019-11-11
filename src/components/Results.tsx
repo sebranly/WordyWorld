@@ -1,5 +1,6 @@
 // Vendor
 import * as React from "react";
+import flatten from "lodash/flatten";
 import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Internal
@@ -24,42 +25,45 @@ const DATA: any = {
   letterCountIs10: require("../data/words/10-letters.json")
 };
 
-export interface ResultsProps {
-  letterCount?: number;
-}
+export interface ResultsProps {}
 
 const Results: React.FC<ResultsProps> = props => {
   // Hooks
   const [searchText, setSearchText] = React.useState("");
   const [isSearch, setIsSearch] = React.useState(false);
 
-  const { letterCount } = props;
+  const jsonObjectTemp = [2, 3, 4, 5, 6, 7, 8, 9, 10].map(v => {
+    const key = `letterCountIs${v}`;
+    return DATA[key];
+  });
 
-  const key = `letterCountIs${letterCount}`;
-  const jsonObject = DATA[key];
-  const xLetterWordsSections = getXLetterWordsSections(
-    jsonObject,
-    isSearch,
-    searchText
-  );
+  const jsonObject = flatten(jsonObjectTemp);
+
+  const xLetterWordsSections = isSearch
+    ? getXLetterWordsSections(jsonObject, searchText)
+    : [];
 
   const occurrencesLetters = isSearch ? searchText : undefined;
+  const areEmptyResults = xLetterWordsSections.length > 0;
+  const emptyResultsText = isSearch
+    ? "Your search has no results"
+    : "Please type at least 2 letters";
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{`${letterCount}-letter words`}</Text>
+      <Text style={styles.title}>Results View</Text>
       <TextInput
         placeholder="Search for a word..."
         onChangeText={text => {
           const trimmedText = text.trim();
-          const hasLength = trimmedText.length > 0;
+          const hasLength = trimmedText.length > 1;
 
           if (hasLength) setSearchText(trimmedText.toLowerCase());
           setIsSearch(hasLength);
         }}
         style={styles.searchBar}
       />
-      {xLetterWordsSections.length ? (
+      {areEmptyResults ? (
         <SectionList
           sections={xLetterWordsSections}
           renderItem={({ item }) => {
@@ -80,20 +84,10 @@ const Results: React.FC<ResultsProps> = props => {
           keyExtractor={(_item, index) => index.toString()}
         />
       ) : (
-        <Text style={styles.noResult}>
-          {`No word was found for your search.${
-            isSearch && letterCount && searchText.length > letterCount
-              ? ` This view is for ${letterCount}-letter words only.`
-              : ""
-          }`}
-        </Text>
+        <Text>{emptyResultsText}</Text>
       )}
     </View>
   );
-};
-
-Results.defaultProps = {
-  letterCount: 2
 };
 
 const styles = StyleSheet.create({

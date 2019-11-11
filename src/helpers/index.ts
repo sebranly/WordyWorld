@@ -1,17 +1,14 @@
-// Internal
+// Vendor
+import sortBy from "lodash/sortBy";
+
 import { pluralize } from "./strings";
 
 // TODO: add unit tests
-const getXLetterWordsSections = (
-  jsonObject: any,
-  isSearch: boolean,
-  searchText: string
-) => {
-  const allMixedUpWords = isSearch
-    ? jsonObject.filter((wordObject: any) =>
-        wordObject.englishWord.toLowerCase().includes(searchText)
-      )
-    : jsonObject;
+const getXLetterWordsSections = (jsonObject: any, searchText: string) => {
+  const sortedJsonObject = sortBy(jsonObject, ["englishWord"]);
+  const allMixedUpWords = sortedJsonObject.filter((wordObject: any) =>
+    wordObject.englishWord.toLowerCase().includes(searchText)
+  );
 
   const allSortedWords: any[] = [];
   let currentGroupOfWords: any = [];
@@ -25,6 +22,7 @@ const getXLetterWordsSections = (
       if (currentGroupOfWords.length > 0) {
         allSortedWords.push(currentGroupOfWords);
       }
+
       currentGroupOfWords = [wordObject.englishWord];
       currentLetter = firstEnglishLetter.charCodeAt(0);
     }
