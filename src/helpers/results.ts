@@ -13,8 +13,8 @@ const getResultsCount = (results: any) => {
 };
 
 // TODO: add unit tests
-const getResults = (jsonObject: any, searchText: string) => {
-  const sortedJsonObject = sortBy(jsonObject, [
+const getResults = (jsonArray: any[], searchText: string) => {
+  const sortedJsonObject = sortBy(jsonArray, [
     word => word.englishWord.toLowerCase()
   ]);
 

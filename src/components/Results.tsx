@@ -1,30 +1,16 @@
 // Vendor
 import * as React from "react";
-import flatten from "lodash/flatten";
 import { SectionList, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Internal
 import { Emoji } from "./Emoji";
 import { getResults, getResultsCount } from "../helpers/results";
 import { SelectedLettersText } from "./SelectedLettersText";
-import { MIN_LETTER_COUNT, MAX_LETTER_COUNT } from "../config/settings";
-
-/*
-  TODO: fix if possible
-  React-native does not support dynamic imports apparently
-  See https://github.com/facebook/react-native/issues/2481#issuecomment-299074154
-*/
-const DATA: any = {
-  letterCountIs2: require("../data/words/2-letters.json"),
-  letterCountIs3: require("../data/words/3-letters.json"),
-  letterCountIs4: require("../data/words/4-letters.json"),
-  letterCountIs5: require("../data/words/5-letters.json"),
-  letterCountIs6: require("../data/words/6-letters.json"),
-  letterCountIs7: require("../data/words/7-letters.json"),
-  letterCountIs8: require("../data/words/8-letters.json"),
-  letterCountIs9: require("../data/words/9-letters.json"),
-  letterCountIs10: require("../data/words/10-letters.json")
-};
+import {
+  ALL_WORDS,
+  MIN_LETTER_COUNT,
+  MAX_LETTER_COUNT
+} from "../config/settings";
 
 export interface ResultsProps {}
 
@@ -33,18 +19,7 @@ const Results: React.FC<ResultsProps> = props => {
   const [searchText, setSearchText] = React.useState("");
   const [isSearch, setIsSearch] = React.useState(false);
 
-  const allLetterCounts = Array.from(
-    { length: MAX_LETTER_COUNT },
-    (v, k) => k + 1
-  ).filter(v => v >= MIN_LETTER_COUNT);
-
-  const jsonObjectTemp = allLetterCounts.map(v => {
-    const key = `letterCountIs${v}`;
-    return DATA[key];
-  });
-
-  const jsonObject = flatten(jsonObjectTemp);
-  const results = isSearch ? getResults(jsonObject, searchText) : [];
+  const results = isSearch ? getResults(ALL_WORDS, searchText) : [];
   const occurrencesLetters = isSearch ? searchText : undefined;
   const totalResultsCount = getResultsCount(results);
 
