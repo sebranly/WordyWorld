@@ -9,16 +9,16 @@
   "devDependencies": {
     "@types/jest": "^24.0.25",
     "@types/node-emoji": "^1.8.1",
-    "@types/react": "16.8.3",
-    "@types/react-native": "0.60.0",
-    "@types/react-test-renderer": "16.8.3",
+    "@types/react": "^16.9.0",
+    "@types/react-native": "^0.60.27",
+    "@types/react-test-renderer": "^16.9.0",
     "babel-preset-expo": "^7.1.0",
     "csv-parse": "^4.8.3",
     "expo-cli": "^3.11.3",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "jest-expo": "^35.0.0",
-    "react-test-renderer": "16.8.3"
+    "react-test-renderer": "^16.9.0"
   },
   "main": "node_modules/expo/AppEntry.js",
   "repository": {
@@ -52,9 +52,9 @@
     "lodash": "^4.17.15",
     "native-base": "^2.13.8",
     "node-emoji": "^1.10.0",
-    "react": "16.8.3",
-    "react-dom": "16.8.3",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-native": "^0.61.0",
     "react-native-web": "^0.11.7"
   }
 }
