@@ -9,6 +9,7 @@ import { StyleSheet } from "react-native";
 // Internal
 import { About } from "../src/components/About";
 import { Footer } from "../src/components/Footer";
+import { Game } from "../src/components/Game";
 import { Results } from "../src/components/Results";
 import { Screen } from "../src/types/enum";
 import { HEADER_Y, IS_TEST } from "../src/config/settings";
@@ -18,7 +19,7 @@ export interface AppProps {}
 const App: React.FC<AppProps> = _props => {
   // Hooks
   const [isReady, setIsReady] = React.useState(false);
-  const [screen, setScreen] = React.useState(Screen.Explore);
+  const [screen, setScreen] = React.useState(Screen.Game);
 
   // Life-cycle
   React.useEffect(() => {
@@ -45,12 +46,15 @@ const App: React.FC<AppProps> = _props => {
 
   // Setup
   const isAbout = screen === Screen.About;
-  const Component = isAbout ? <About /> : <Results />;
+  const isExplore = screen === Screen.Explore;
+  const isGame = screen === Screen.Game;
 
   // Markup
   return (
     <Container style={styles.container}>
-      {Component}
+      {isAbout && <About />}
+      {isExplore && <Results />}
+      {isGame && <Game word={"splash"} />}
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );

@@ -33,9 +33,9 @@ const Footer: React.FC<FooterProps> = props => {
         text = "About";
         break;
 
-      case Screen.Config:
-        iconName = "ios-settings";
-        text = "Configuration";
+      case Screen.Game:
+        iconName = "ios-play-circle";
+        text = "Play";
         break;
 
       case Screen.Explore:
@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = props => {
     );
   };
 
-  const buttons = [Screen.Config, Screen.Explore, Screen.About].map(v =>
+  const buttons = [Screen.Explore, Screen.Game, Screen.About].map(v =>
     renderButton(v)
   );
 

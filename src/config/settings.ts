@@ -4,12 +4,15 @@ import flatten from "lodash/flatten";
 // Internal
 import { getFromEnv } from "../helpers/env";
 
+export const HEADER_Y = 25;
 export const MAX_LETTER_COUNT = 10;
 export const MIN_LETTER_COUNT = 2;
 export const MIN_SEARCH_LETTER_COUNT = 2;
+
 export const NODE_ENV = getFromEnv("NODE_ENV") || "development";
-export const HEADER_Y = 25;
 export const IS_TEST = NODE_ENV === "test";
+
+export const GAME_ROWS = 6;
 
 /*
   TODO: fix if possible
@@ -30,7 +33,7 @@ const DATA: any = {
 
 const allLetterCounts = Array.from(
   { length: MAX_LETTER_COUNT },
-  (v, k) => k + 1
+  (_v, k) => k + 1
 ).filter(v => v >= MIN_LETTER_COUNT);
 
 const jsonArrayTemp = allLetterCounts.map(v => {
