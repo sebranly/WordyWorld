@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "WordyWorld",
-    "slug": "WordyWorld",
-    "privacy": "public",
+    "slug": "wordy-world",
+    "privacy": "unlisted",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
