@@ -12,6 +12,7 @@ import {
   Text,
   Thumbnail
 } from "native-base";
+import { Constants } from "expo";
 import { Linking, StyleSheet } from "react-native";
 
 // Internal
@@ -25,6 +26,7 @@ const About: React.FC<AboutProps> = _props => {
   const authorAvatar = "https://avatars1.githubusercontent.com/u/25478895";
   const authorUrl = `https://github.com/${author}`;
   const currentYear = new Date(Date.now()).getFullYear();
+  const version = Constants.manifest.version;
 
   const renderLibrary = (library: string) => {
     return (
@@ -51,6 +53,9 @@ const About: React.FC<AboutProps> = _props => {
           </Separator>
           <ListItem>
             <Text>{`Created in 2018 - ${currentYear}`}</Text>
+          </ListItem>
+          <ListItem>
+            <Text>{`Version ${version}`}</Text>
           </ListItem>
           <ListItem
             onPress={() => {
