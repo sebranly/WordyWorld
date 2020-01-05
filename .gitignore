@@ -27,3 +27,6 @@ web-report/
 
 # macOS
 .DS_Store
+
+# Files containing API keys
+app.json
