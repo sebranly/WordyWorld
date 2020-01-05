@@ -12,7 +12,7 @@ import {
   Text,
   Thumbnail
 } from "native-base";
-import { Constants } from "expo";
+import Constants from "expo-constants";
 import get from "lodash/get";
 import { Linking, StyleSheet } from "react-native";
 
