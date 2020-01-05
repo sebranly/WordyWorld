@@ -8,6 +8,10 @@ Even if you don't develop apps, you can help me by reporting issues on [this lin
 
 If you develop apps or have some skills in React/React Native/CSS/TypeScript/etc., you can help me by contributing to this project. Both new features and bug fixes are accepted.
 
+### Setup
+
+- `app.json` is not being tracked on purpose by git (added to `.gitignore`) as it may contain API keys. After cloning the repository, run `cp app.json.example app.json` from the root.
+
 ### Git workflow
 
 - First, fork this repository so that you have a copy of it.
