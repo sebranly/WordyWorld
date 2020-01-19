@@ -6,6 +6,10 @@ module.exports = {
   },
   transformIgnorePatterns: [
     "node_modules/(?!(react-native" +
+      "|@unimodules" +
+      "|expo-asset" +
+      "|expo-constants" +
+      "|expo-font" +
       "|native-base-shoutem-theme" +
       "|react-native-drawer" +
       "|react-native-easy-grid" +
