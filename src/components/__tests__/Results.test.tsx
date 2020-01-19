@@ -1,11 +1,12 @@
 // Vendor
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react-native";
 
 // Internal
 import { Results } from "../Results";
 
-it("renders without crashing", () => {
-  const rendered = renderer.create(<Results />).toJSON();
-  expect(rendered).not.toBeNull();
+it("renders", () => {
+  const { container } = render(<Results />);
+  expect(container.children.length).toBeGreaterThan(0);
+  expect(container.children).toMatchSnapshot();
 });

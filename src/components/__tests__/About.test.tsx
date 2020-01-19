@@ -1,12 +1,13 @@
 // Vendor
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react-native";
 
 // Internal
 import { About } from "../About";
 
-it("renders without crashing", () => {
+it("renders", () => {
   const props = {};
-  const rendered = renderer.create(<About {...props} />).toJSON();
-  expect(rendered).not.toBeNull();
+  const { container } = render(<About {...props} />);
+  expect(container.children.length).toBeGreaterThan(0);
+  expect(container.children).toMatchSnapshot();
 });
