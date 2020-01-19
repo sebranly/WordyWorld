@@ -1,3 +1,6 @@
+// Mocks
+jest.mock("expo-constants", () => ({ expoVersion: "36" }));
+
 // Vendor
 import React from "react";
 import renderer from "react-test-renderer";
