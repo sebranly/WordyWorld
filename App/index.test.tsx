@@ -5,8 +5,9 @@ import renderer from "react-test-renderer";
 // Internal
 import App from "./index";
 
-it("renders without crashing", () => {
+it("renders", () => {
   jest.useFakeTimers();
   const rendered = renderer.create(<App />).toJSON();
   expect(rendered).not.toBeNull();
+  expect(rendered).toMatchSnapshot();
 });

@@ -5,7 +5,8 @@ import renderer from "react-test-renderer";
 // Internal
 import { Results } from "../Results";
 
-it("renders without crashing", () => {
+it("renders", () => {
   const rendered = renderer.create(<Results />).toJSON();
   expect(rendered).not.toBeNull();
+  expect(rendered).toMatchSnapshot();
 });
