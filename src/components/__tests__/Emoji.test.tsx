@@ -1,13 +1,13 @@
 // Vendor
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react-native";
 
 // Internal
 import { Emoji } from "../Emoji";
 
 it("renders", () => {
   const props = { text: "pizza" };
-  const rendered = renderer.create(<Emoji {...props} />).toJSON();
-  expect(rendered).not.toBeNull();
-  expect(rendered).toMatchSnapshot();
+  const { container } = render(<Emoji {...props} />);
+  expect(container.children.length).toBeGreaterThan(0);
+  expect(container.children).toMatchSnapshot();
 });

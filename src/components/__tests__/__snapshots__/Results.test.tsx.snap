@@ -1,49 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <Text
+Array [
+  <View
     style={
       Object {
-        "fontSize": 20,
-        "fontWeight": "bold",
-        "paddingBottom": 10,
-        "textAlign": "center",
+        "flex": 1,
       }
     }
   >
-    Results View
-  </Text>
-  <TextInput
-    allowFontScaling={true}
-    onChangeText={[Function]}
-    placeholder="Search for a word among 1645 words..."
-    rejectResponderTermination={true}
-    style={
-      Object {
-        "borderColor": "black",
-        "fontSize": 16,
-        "paddingBottom": 10,
-        "paddingLeft": 10,
-        "textAlign": "left",
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "paddingBottom": 10,
+          "textAlign": "center",
+        }
       }
-    }
-    underlineColorAndroid="transparent"
-  />
-  <Text
-    style={
-      Object {
-        "paddingLeft": 10,
+    >
+      Results View
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      placeholder="Search for a word among 1645 words..."
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "black",
+          "fontSize": 16,
+          "paddingBottom": 10,
+          "paddingLeft": 10,
+          "textAlign": "left",
+        }
       }
-    }
-  >
-    Please type at least 2 letters
-  </Text>
-</View>
+      underlineColorAndroid="transparent"
+    />
+    <Text
+      style={
+        Object {
+          "paddingLeft": 10,
+        }
+      }
+    >
+      Please type at least 2 letters
+    </Text>
+  </View>,
+]
 `;

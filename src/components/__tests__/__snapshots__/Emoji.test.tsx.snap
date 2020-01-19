@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders 1`] = `
-<Text>
-  🍕
-</Text>
+Array [
+  <Text>
+    🍕
+  </Text>,
+]
 `;
