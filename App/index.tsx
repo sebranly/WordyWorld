@@ -12,7 +12,7 @@ import { Footer } from "../src/components/Footer";
 import { Game } from "../src/components/Game";
 import { Results } from "../src/components/Results";
 import { Screen } from "../src/types/enum";
-import { HEADER_Y, IS_TEST } from "../src/config/settings";
+import { HEADER_Y } from "../src/config/settings";
 
 export interface AppProps {}
 
@@ -37,7 +37,7 @@ const App: React.FC<AppProps> = _props => {
   }, []); // Empty array leads to same behavior as `componentDidMount` (if it was a class)
 
   // Short-circuit
-  if (!isReady && !IS_TEST) return <AppLoading />;
+  if (!isReady) return <AppLoading />;
 
   // Handlers
   const changeScreen = (screen: Screen) => {
