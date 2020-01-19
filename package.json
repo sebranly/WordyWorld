@@ -22,7 +22,7 @@
     "jest": "^24.9.0",
     "jest-expo": "^36.0.1",
     "react-test-renderer": "^16.9.0",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.5"
   },
   "main": "node_modules/expo/AppEntry.js",
   "repository": {
