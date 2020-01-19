@@ -12,7 +12,6 @@ import {
   Text,
   Thumbnail
 } from "native-base";
-import get from "lodash/get";
 import { Linking, StyleSheet } from "react-native";
 
 // Internal
@@ -36,6 +35,7 @@ const About: React.FC<AboutProps> = _props => {
   };
 
   const libraries = [
+    "@testing-library/react-native",
     "emoji-from-text",
     "native-base",
     "node-emoji",

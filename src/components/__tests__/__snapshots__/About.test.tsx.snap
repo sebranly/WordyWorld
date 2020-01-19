@@ -382,6 +382,41 @@ Array [
               }
               uppercase={false}
             >
+              @testing-library/react-native
+            </Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          underlayColor="#DDD"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0.5,
+                "borderColor": "#c9c9c9",
+                "flexDirection": "row",
+                "marginLeft": 16,
+                "paddingBottom": 13,
+                "paddingRight": 16,
+                "paddingTop": 13,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "color": "#000",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                }
+              }
+              uppercase={false}
+            >
               emoji-from-text
             </Text>
           </View>
