@@ -1,13 +1,13 @@
 // Vendor
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react-native";
 
 // Internal
 import { SelectedLettersText } from "../SelectedLettersText";
 
 it("renders", () => {
-  const props = { text: "" };
-  const rendered = renderer.create(<SelectedLettersText {...props} />).toJSON();
-  expect(rendered).not.toBeNull();
-  expect(rendered).toMatchSnapshot();
+  const props = { text: "Test" };
+  const { container } = render(<SelectedLettersText {...props} />);
+  expect(container.children.length).toBeGreaterThan(0);
+  expect(container.children).toMatchSnapshot();
 });
