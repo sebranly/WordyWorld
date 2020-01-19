@@ -21,11 +21,13 @@ const SelectedLettersText: React.FC<SelectedLettersTextProps> = props => {
   }
 
   const allTexts = [
-    <Text style={styles.textStyle}>{text.substring(0, firstIndex)}</Text>,
-    <Text style={[styles.textStyle, styles.occurrence]}>
+    <Text key="before" style={styles.textStyle}>
+      {text.substring(0, firstIndex)}
+    </Text>,
+    <Text key="text" style={[styles.textStyle, styles.occurrence]}>
       {text.substring(firstIndex, firstIndex + letters.length)}
     </Text>,
-    <Text style={styles.textStyle}>
+    <Text key="after" style={styles.textStyle}>
       {text.substring(firstIndex + letters.length)}
     </Text>
   ];
