@@ -3,5 +3,15 @@ module.exports = {
   preset: "@testing-library/react-native",
   transform: {
     "\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-  }
+  },
+  transformIgnorePatterns: [
+    "node_modules/(?!(react-native" +
+      "|native-base-shoutem-theme" +
+      "|react-native-drawer" +
+      "|react-native-easy-grid" +
+      "|react-native-iphone-x-helper" +
+      "|react-native-keyboard-aware-scroll-view" +
+      "|react-native-vector-icons" +
+      ")/)"
+  ]
 };

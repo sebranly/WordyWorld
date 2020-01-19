@@ -1,13 +1,13 @@
 // Vendor
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react-native";
 
 // Internal
 import { Game } from "../Game";
 
 it("renders", () => {
   const props = { word: "test" };
-  const rendered = renderer.create(<Game {...props} />).toJSON();
-  expect(rendered).not.toBeNull();
-  expect(rendered).toMatchSnapshot();
+  const { container } = render(<Game {...props} />);
+  expect(container.children.length).toBeGreaterThan(0);
+  expect(container.children).toMatchSnapshot();
 });

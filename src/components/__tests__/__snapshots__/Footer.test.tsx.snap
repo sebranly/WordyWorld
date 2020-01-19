@@ -1,204 +1,182 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#F8F8F8",
-      "borderColor": "#cbcbcb",
-      "borderTopWidth": 0.5,
-      "elevation": 3,
-      "flexDirection": "row",
-      "height": 55,
-      "justifyContent": "center",
-      "left": 0,
-      "paddingBottom": 0,
-      "right": 0,
-    }
-  }
->
+Array [
   <View
     style={
       Object {
-        "alignSelf": "stretch",
-        "backgroundColor": undefined,
-        "flex": 1,
+        "backgroundColor": "#F8F8F8",
+        "borderColor": "#cbcbcb",
+        "borderTopWidth": 0.5,
+        "elevation": 3,
         "flexDirection": "row",
-        "justifyContent": "space-between",
+        "height": 55,
+        "justifyContent": "center",
+        "left": 0,
+        "paddingBottom": 0,
+        "right": 0,
       }
     }
   >
     <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "alignSelf": "center",
-          "backgroundColor": "transparent",
-          "borderBottomWidth": null,
-          "borderColor": null,
-          "borderLeftWidth": null,
-          "borderRadius": 5,
-          "borderRightWidth": null,
-          "borderTopWidth": null,
-          "borderWidth": undefined,
-          "elevation": 0,
+          "alignSelf": "stretch",
+          "backgroundColor": undefined,
           "flex": 1,
-          "flexDirection": "column",
-          "height": null,
-          "justifyContent": "center",
-          "opacity": 1,
-          "paddingBottom": 6,
-          "paddingTop": 6,
-          "shadowColor": null,
-          "shadowOffset": null,
-          "shadowOpacity": null,
-          "shadowRadius": null,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
         }
       }
     >
-      <Text
+      <TouchableOpacity
+        active={false}
+        activeOpacity={0.5}
         style={
           Object {
+            "alignItems": "center",
+            "alignSelf": "center",
             "backgroundColor": "transparent",
-            "color": "#6b6b6b",
-            "fontFamily": "System",
-            "fontSize": 14,
-            "lineHeight": 16,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "paddingLeft": 16,
-            "paddingRight": 16,
+            "borderBottomWidth": null,
+            "borderColor": null,
+            "borderLeftWidth": null,
+            "borderRadius": 5,
+            "borderRightWidth": null,
+            "borderTopWidth": null,
+            "borderWidth": undefined,
+            "elevation": 0,
+            "flex": 1,
+            "flexDirection": "column",
+            "height": null,
+            "justifyContent": "center",
+            "paddingBottom": 6,
+            "paddingTop": 6,
+            "shadowColor": null,
+            "shadowOffset": null,
+            "shadowOpacity": null,
+            "shadowRadius": null,
           }
         }
-        uppercase={false}
+        vertical={true}
       >
-        Explore
-      </Text>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "alignSelf": "center",
-          "backgroundColor": "transparent",
-          "borderBottomWidth": null,
-          "borderColor": null,
-          "borderLeftWidth": null,
-          "borderRadius": 5,
-          "borderRightWidth": null,
-          "borderTopWidth": null,
-          "borderWidth": undefined,
-          "elevation": 0,
-          "flex": 1,
-          "flexDirection": "column",
-          "height": null,
-          "justifyContent": "center",
-          "opacity": 1,
-          "paddingBottom": 6,
-          "paddingTop": 6,
-          "shadowColor": null,
-          "shadowOffset": null,
-          "shadowOpacity": null,
-          "shadowRadius": null,
-        }
-      }
-    >
-      <Text
+        <Text
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#6b6b6b",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "lineHeight": 16,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+            }
+          }
+          uppercase={false}
+        >
+          Explore
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        active={false}
+        activeOpacity={0.5}
         style={
           Object {
+            "alignItems": "center",
+            "alignSelf": "center",
             "backgroundColor": "transparent",
-            "color": "#6b6b6b",
-            "fontFamily": "System",
-            "fontSize": 14,
-            "lineHeight": 16,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "paddingLeft": 16,
-            "paddingRight": 16,
+            "borderBottomWidth": null,
+            "borderColor": null,
+            "borderLeftWidth": null,
+            "borderRadius": 5,
+            "borderRightWidth": null,
+            "borderTopWidth": null,
+            "borderWidth": undefined,
+            "elevation": 0,
+            "flex": 1,
+            "flexDirection": "column",
+            "height": null,
+            "justifyContent": "center",
+            "paddingBottom": 6,
+            "paddingTop": 6,
+            "shadowColor": null,
+            "shadowOffset": null,
+            "shadowOpacity": null,
+            "shadowRadius": null,
           }
         }
-        uppercase={false}
+        vertical={true}
       >
-        Play
-      </Text>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "alignSelf": "center",
-          "backgroundColor": "#cde1f9",
-          "borderBottomWidth": null,
-          "borderColor": null,
-          "borderLeftWidth": null,
-          "borderRadius": 5,
-          "borderRightWidth": null,
-          "borderTopWidth": null,
-          "borderWidth": undefined,
-          "elevation": 0,
-          "flex": 1,
-          "flexDirection": "column",
-          "height": null,
-          "justifyContent": "center",
-          "opacity": 1,
-          "paddingBottom": 6,
-          "paddingTop": 6,
-          "shadowColor": null,
-          "shadowOffset": null,
-          "shadowOpacity": null,
-          "shadowRadius": null,
-        }
-      }
-    >
-      <Text
+        <Text
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#6b6b6b",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "lineHeight": 16,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+            }
+          }
+          uppercase={false}
+        >
+          Play
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        active={true}
+        activeOpacity={0.5}
         style={
           Object {
-            "backgroundColor": "transparent",
-            "color": "#007aff",
-            "fontFamily": "System",
-            "fontSize": 14,
-            "lineHeight": 16,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "paddingLeft": 16,
-            "paddingRight": 16,
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "#cde1f9",
+            "borderBottomWidth": null,
+            "borderColor": null,
+            "borderLeftWidth": null,
+            "borderRadius": 5,
+            "borderRightWidth": null,
+            "borderTopWidth": null,
+            "borderWidth": undefined,
+            "elevation": 0,
+            "flex": 1,
+            "flexDirection": "column",
+            "height": null,
+            "justifyContent": "center",
+            "paddingBottom": 6,
+            "paddingTop": 6,
+            "shadowColor": null,
+            "shadowOffset": null,
+            "shadowOpacity": null,
+            "shadowRadius": null,
           }
         }
-        uppercase={false}
+        vertical={true}
       >
-        About
-      </Text>
+        <Text
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#007aff",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "lineHeight": 16,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+            }
+          }
+          uppercase={false}
+        >
+          About
+        </Text>
+      </TouchableOpacity>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
