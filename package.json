@@ -7,22 +7,22 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.8.3",
     "@testing-library/react-native": "^5.0.3",
-    "@types/jest": "^24.0.25",
+    "@types/jest": "^24.9.0",
     "@types/node-emoji": "^1.8.1",
     "@types/react": "^16.9.0",
-    "@types/react-native": "^0.60.15",
+    "@types/react-native": "^0.60.31",
     "@types/react-test-renderer": "^16.9.0",
     "babel-jest": "^24.9.0",
     "babel-preset-expo": "^8.0.0",
-    "csv-parse": "^4.8.3",
-    "expo-cli": "^3.11.3",
+    "csv-parse": "^4.8.5",
+    "expo-cli": "^3.11.7",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "jest-expo": "^36.0.1",
     "react-test-renderer": "^16.9.0",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.5"
   },
   "main": "node_modules/expo/AppEntry.js",
   "repository": {
