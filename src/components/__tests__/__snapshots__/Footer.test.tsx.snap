@@ -60,6 +60,38 @@ Array [
         vertical={true}
       >
         <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                Object {
+                  "color": "#6b6b6b",
+                  "fontSize": 24,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                  "paddingTop": 2,
+                },
+              ],
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
           style={
             Object {
               "backgroundColor": "transparent",
@@ -109,6 +141,38 @@ Array [
         vertical={true}
       >
         <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                Object {
+                  "color": "#6b6b6b",
+                  "fontSize": 24,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                  "paddingTop": 2,
+                },
+              ],
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
           style={
             Object {
               "backgroundColor": "transparent",
@@ -157,6 +221,38 @@ Array [
         }
         vertical={true}
       >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                Object {
+                  "color": "#007aff",
+                  "fontSize": 24,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                  "paddingTop": 2,
+                },
+              ],
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
         <Text
           style={
             Object {

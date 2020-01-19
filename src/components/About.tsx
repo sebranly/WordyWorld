@@ -14,9 +14,6 @@ import {
 } from "native-base";
 import { Linking, StyleSheet } from "react-native";
 
-// Internal
-import { IS_TEST } from "../config/settings";
-
 export interface AboutProps {}
 
 const About: React.FC<AboutProps> = _props => {
@@ -61,11 +58,9 @@ const About: React.FC<AboutProps> = _props => {
               Linking.openURL(`${authorUrl}/WordyWorld`);
             }}
           >
-            {!IS_TEST && (
-              <Left style={styles.flex1}>
-                <Icon name="ios-git-network" />
-              </Left>
-            )}
+            <Left style={styles.flex1}>
+              <Icon name="ios-git-network" />
+            </Left>
             <Text style={styles.flex4}>Project's GitHub</Text>
           </ListItem>
           <Separator bordered>

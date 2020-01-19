@@ -10,7 +10,6 @@ import {
 
 // Internal
 import { Screen } from "../types/enum";
-import { IS_TEST } from "../config/settings";
 
 export interface FooterProps {
   changeScreen: (screen: Screen) => void;
@@ -52,7 +51,7 @@ const Footer: React.FC<FooterProps> = props => {
         active={isActive}
         onPress={() => changeScreen(buttonScreen)}
       >
-        {!IS_TEST && <Icon name={iconName} />}
+        <Icon name={iconName} />
         <Text>{text}</Text>
       </Button>
     );
