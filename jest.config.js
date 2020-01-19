@@ -6,6 +6,7 @@ module.exports = {
       "|@unimodules" +
       "|expo" +
       "|expo-asset" +
+      "|expo-constants" +
       "|expo-file-system" +
       "|expo-font" +
       "|expo-location" +

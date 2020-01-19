@@ -1,3 +1,6 @@
+// Mocks
+jest.mock("expo-constants", () => ({ manifest: { version: "1.2.3" } }));
+
 // Vendor
 import React from "react";
 import { render } from "@testing-library/react-native";

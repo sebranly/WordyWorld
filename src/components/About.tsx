@@ -12,6 +12,8 @@ import {
   Text,
   Thumbnail
 } from "native-base";
+import Constants from "expo-constants";
+import get from "lodash/get";
 import { Linking, StyleSheet } from "react-native";
 
 export interface AboutProps {}
@@ -22,6 +24,7 @@ const About: React.FC<AboutProps> = _props => {
   const authorAvatar = "https://avatars1.githubusercontent.com/u/25478895";
   const authorUrl = `https://github.com/${author}`;
   const currentYear = new Date(Date.now()).getFullYear();
+  const version = get(Constants, "manifest.version", "unknown");
 
   const renderLibrary = (library: string) => {
     return (
@@ -51,7 +54,7 @@ const About: React.FC<AboutProps> = _props => {
             <Text>{`Created in 2018 - ${currentYear}`}</Text>
           </ListItem>
           <ListItem>
-            <Text>{`Version 1.0.0`}</Text>
+            <Text>{`Version ${version}`}</Text>
           </ListItem>
           <ListItem
             onPress={() => {
