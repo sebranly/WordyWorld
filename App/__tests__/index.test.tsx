@@ -1,5 +1,5 @@
 // Mocks
-jest.mock("expo", () => ({ AppLoading: "AppLoading" }));
+jest.mock("expo", () => ({}));
 jest.mock("@expo/vector-icons", () => ({}));
 
 // Vendor
