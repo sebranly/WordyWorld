@@ -14,11 +14,16 @@ import { Results } from "../src/components/Results";
 import { Screen } from "../src/types/enum";
 import { HEADER_Y } from "../src/config/settings";
 
-export interface AppProps {}
+export interface AppProps {
+  initialReady?: boolean;
+}
 
-const App: React.FC<AppProps> = _props => {
+const App: React.FC<AppProps> = props => {
+  // Setup
+  const { initialReady } = props;
+
   // Hooks
-  const [isReady, setIsReady] = React.useState(false);
+  const [isReady, setIsReady] = React.useState(initialReady);
   const [screen, setScreen] = React.useState(Screen.Game);
 
   // Life-cycle
@@ -58,6 +63,10 @@ const App: React.FC<AppProps> = _props => {
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );
+};
+
+App.defaultProps = {
+  initialReady: false
 };
 
 const styles = StyleSheet.create({
