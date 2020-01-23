@@ -11,7 +11,7 @@
     "@testing-library/react-native": "^5.0.3",
     "@types/jest": "^24.9.0",
     "@types/node-emoji": "^1.8.1",
-    "@types/react": "^16.9.0",
+    "@types/react": "^16.9.19",
     "@types/react-native": "^0.60.31",
     "@types/react-test-renderer": "^16.9.0",
     "babel-jest": "^24.9.0",
