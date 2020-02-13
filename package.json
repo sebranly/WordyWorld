@@ -18,7 +18,7 @@
     "babel-preset-expo": "^8.0.0",
     "csv-parse": "^4.8.5",
     "expo-cli": "^3.11.7",
-    "husky": "^4.0.10",
+    "husky": "^4.2.3",
     "jest": "^24.9.0",
     "jest-expo": "^36.0.1",
     "react-test-renderer": "^16.9.0",
