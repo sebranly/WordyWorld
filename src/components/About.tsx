@@ -13,7 +13,6 @@ import {
   Thumbnail
 } from "native-base";
 import Constants from "expo-constants";
-import get from "lodash/get";
 import { Linking, StyleSheet } from "react-native";
 
 export interface AboutProps {}
@@ -24,7 +23,7 @@ const About: React.FC<AboutProps> = _props => {
   const authorAvatar = "https://avatars1.githubusercontent.com/u/25478895";
   const authorUrl = `https://github.com/${author}`;
   const currentYear = new Date(Date.now()).getFullYear();
-  const version = get(Constants, "manifest.version", "unknown");
+  const version = Constants.manifest.version ?? "unknown";
 
   const renderLibrary = (library: string) => {
     return (
