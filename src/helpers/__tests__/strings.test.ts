@@ -2,6 +2,7 @@
 import {
   areAnagrams,
   decomposeWord,
+  findAdditionWordConnections,
   findWordConnections,
   pluralize
 } from "../strings";
@@ -11,6 +12,7 @@ describe("strings helper", () => {
   it("exports the following helpers", () => {
     expect(typeof areAnagrams).toBe("function");
     expect(typeof decomposeWord).toBe("function");
+    expect(typeof findAdditionWordConnections).toBe("function");
     expect(typeof findWordConnections).toBe("function");
     expect(typeof pluralize).toBe("function");
   });
@@ -79,6 +81,67 @@ describe("strings helper", () => {
     it("handles words with a letter appearing several times", () => {
       result = decomposeWord("attack");
       expect(result).toStrictEqual({ a: 2, t: 2, c: 1, k: 1 });
+    });
+  });
+
+  describe("findAdditionWordConnections", () => {
+    // TODO: fix any
+    let result: any;
+
+    it("returns empty if any string is empty", () => {
+      result = findAdditionWordConnections("", "");
+      expect(result).toStrictEqual([]);
+
+      result = findAdditionWordConnections("a", "");
+      expect(result).toStrictEqual([]);
+
+      result = findAdditionWordConnections("", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns empty if same word is provided", () => {
+      result = findAdditionWordConnections("a", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns connections when applicable", () => {
+      result = findAdditionWordConnections("earth", "hearth");
+      expect(result).toStrictEqual([
+        { character: "h", position: 0, type: WordConnection.Addition }
+      ]);
+
+      result = findAdditionWordConnections("heart", "hearth");
+      expect(result).toStrictEqual([
+        { character: "h", position: 5, type: WordConnection.Addition }
+      ]);
+
+      result = findAdditionWordConnections("ten", "then");
+      expect(result).toStrictEqual([
+        {
+          character: "h",
+          position: 1,
+          type: WordConnection.Addition
+        }
+      ]);
+
+      result = findAdditionWordConnections("god", "good");
+      expect(result).toStrictEqual([
+        {
+          character: "o",
+          position: 1,
+          type: WordConnection.Addition
+        },
+        {
+          character: "o",
+          position: 2,
+          type: WordConnection.Addition
+        }
+      ]);
+    });
+
+    it("returns empty if no word connection", () => {
+      result = findAdditionWordConnections("word", "sentence");
+      expect(result).toStrictEqual([]);
     });
   });
 
