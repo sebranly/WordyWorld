@@ -20,6 +20,7 @@ const findWordConnections = (word1: string, word2: string) => {
     });
   }
 
+  // TODO: I think we can improve it with short-circuits everywhere as they have no intersection
   const additionConnections = findAdditionWordConnections(word1, word2);
   const deletionConnections = findDeletionWordConnections(word1, word2);
   const replacementConnections = findReplacementWordConnections(word1, word2);
