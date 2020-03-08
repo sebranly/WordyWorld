@@ -53,7 +53,11 @@ const decomposeWord = (word: string) => {
   return occurrences;
 };
 
-const findAdditionWordConnections = (word1: string, word2: string) => {
+const findAdditionWordConnections = (
+  word1: string,
+  word2: string,
+  type = WordConnection.Addition
+) => {
   if (!word1 || !word2) return [];
   if (word1 === word2) return [];
 
@@ -70,15 +74,21 @@ const findAdditionWordConnections = (word1: string, word2: string) => {
     const newWord2 = `${beginning}${end}`;
 
     if (word1 === newWord2) {
+      const characterObject =
+        type === WordConnection.Addition ? { character: word2[i] } : {};
       wordConnections.push({
-        character: word2[i],
+        ...characterObject,
         position: i,
-        type: WordConnection.Addition
+        type
       });
     }
   }
 
   return wordConnections;
+};
+
+const findDeletionWordConnections = (word1: string, word2: string) => {
+  return findAdditionWordConnections(word2, word1, WordConnection.Deletion);
 };
 
 const findReplacementWordConnections = (word1: string, word2: string) => {
@@ -114,6 +124,7 @@ export {
   areAnagrams,
   decomposeWord,
   findAdditionWordConnections,
+  findDeletionWordConnections,
   findReplacementWordConnections,
   findWordConnections,
   pluralize

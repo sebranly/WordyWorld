@@ -3,6 +3,7 @@ import {
   areAnagrams,
   decomposeWord,
   findAdditionWordConnections,
+  findDeletionWordConnections,
   findReplacementWordConnections,
   findWordConnections,
   pluralize
@@ -14,6 +15,7 @@ describe("strings helper", () => {
     expect(typeof areAnagrams).toBe("function");
     expect(typeof decomposeWord).toBe("function");
     expect(typeof findAdditionWordConnections).toBe("function");
+    expect(typeof findDeletionWordConnections).toBe("function");
     expect(typeof findReplacementWordConnections).toBe("function");
     expect(typeof findWordConnections).toBe("function");
     expect(typeof pluralize).toBe("function");
@@ -143,6 +145,61 @@ describe("strings helper", () => {
 
     it("returns empty if no word connection", () => {
       result = findAdditionWordConnections("word", "sentence");
+      expect(result).toStrictEqual([]);
+    });
+  });
+
+  describe("findDeletionWordConnections", () => {
+    // TODO: fix any
+    let result: any;
+
+    it("returns empty if any string is empty", () => {
+      result = findDeletionWordConnections("", "");
+      expect(result).toStrictEqual([]);
+
+      result = findDeletionWordConnections("a", "");
+      expect(result).toStrictEqual([]);
+
+      result = findDeletionWordConnections("", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns empty if same word is provided", () => {
+      result = findDeletionWordConnections("a", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns connections when applicable", () => {
+      result = findDeletionWordConnections("hearth", "earth");
+      expect(result).toStrictEqual([
+        { position: 0, type: WordConnection.Deletion }
+      ]);
+
+      result = findDeletionWordConnections("hearth", "heart");
+      expect(result).toStrictEqual([
+        { position: 5, type: WordConnection.Deletion }
+      ]);
+
+      result = findDeletionWordConnections("then", "ten");
+      expect(result).toStrictEqual([
+        { position: 1, type: WordConnection.Deletion }
+      ]);
+
+      result = findDeletionWordConnections("good", "god");
+      expect(result).toStrictEqual([
+        {
+          position: 1,
+          type: WordConnection.Deletion
+        },
+        {
+          position: 2,
+          type: WordConnection.Deletion
+        }
+      ]);
+    });
+
+    it("returns empty if no word connection", () => {
+      result = findDeletionWordConnections("sentence", "word");
       expect(result).toStrictEqual([]);
     });
   });
