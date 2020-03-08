@@ -2,4 +2,3 @@
 set -e
 
 ./scripts/ban.sh
-npm run test
