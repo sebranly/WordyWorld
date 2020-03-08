@@ -62,8 +62,7 @@ const findAdditionWordConnections = (
   if (word1 === word2) return [];
 
   // TODO: same
-  const absLengthDiff = Math.abs(word1.length - word2.length);
-  if (absLengthDiff !== 1) return [];
+  if (word1.length + 1 !== word2.length) return [];
 
   // TODO: type it
   const wordConnections: any[] = [];
