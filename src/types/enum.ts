@@ -7,6 +7,7 @@ enum Screen {
 enum WordConnection {
   Addition,
   Anagram,
+  Replacement,
   Same
 }
 

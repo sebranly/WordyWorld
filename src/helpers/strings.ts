@@ -81,6 +81,32 @@ const findAdditionWordConnections = (word1: string, word2: string) => {
   return wordConnections;
 };
 
+const findReplacementWordConnections = (word1: string, word2: string) => {
+  if (!word1 || !word2) return [];
+  if (word1 === word2) return [];
+  if (word1.length !== word2.length) return [];
+
+  // TODO: type it
+  const wordConnections: any[] = [];
+
+  for (let i = 0; i < word2.length; i++) {
+    const beginning = word2.slice(0, i);
+    const middle = word1[i];
+    const end = word2.slice(i + 1);
+    const newWord2 = `${beginning}${middle}${end}`;
+
+    if (word1 === newWord2) {
+      wordConnections.push({
+        character: word2[i],
+        position: i,
+        type: WordConnection.Replacement
+      });
+    }
+  }
+
+  return wordConnections;
+};
+
 const pluralize = (word: string, count: number) =>
   count === 1 ? `${count} ${word}` : `${count} ${word}s`;
 
@@ -88,6 +114,7 @@ export {
   areAnagrams,
   decomposeWord,
   findAdditionWordConnections,
+  findReplacementWordConnections,
   findWordConnections,
   pluralize
 };

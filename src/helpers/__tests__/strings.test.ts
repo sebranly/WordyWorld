@@ -3,6 +3,7 @@ import {
   areAnagrams,
   decomposeWord,
   findAdditionWordConnections,
+  findReplacementWordConnections,
   findWordConnections,
   pluralize
 } from "../strings";
@@ -13,6 +14,7 @@ describe("strings helper", () => {
     expect(typeof areAnagrams).toBe("function");
     expect(typeof decomposeWord).toBe("function");
     expect(typeof findAdditionWordConnections).toBe("function");
+    expect(typeof findReplacementWordConnections).toBe("function");
     expect(typeof findWordConnections).toBe("function");
     expect(typeof pluralize).toBe("function");
   });
@@ -141,6 +143,49 @@ describe("strings helper", () => {
 
     it("returns empty if no word connection", () => {
       result = findAdditionWordConnections("word", "sentence");
+      expect(result).toStrictEqual([]);
+    });
+  });
+
+  describe("findReplacementWordConnections", () => {
+    // TODO: fix any
+    let result: any;
+
+    it("returns empty if any string is empty", () => {
+      result = findReplacementWordConnections("", "");
+      expect(result).toStrictEqual([]);
+
+      result = findReplacementWordConnections("a", "");
+      expect(result).toStrictEqual([]);
+
+      result = findReplacementWordConnections("", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns empty if same word is provided", () => {
+      result = findReplacementWordConnections("a", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns connections when applicable", () => {
+      result = findReplacementWordConnections("bar", "car");
+      expect(result).toStrictEqual([
+        { character: "c", position: 0, type: WordConnection.Replacement }
+      ]);
+
+      result = findReplacementWordConnections("dig", "dog");
+      expect(result).toStrictEqual([
+        { character: "o", position: 1, type: WordConnection.Replacement }
+      ]);
+
+      result = findReplacementWordConnections("car", "cat");
+      expect(result).toStrictEqual([
+        { character: "t", position: 2, type: WordConnection.Replacement }
+      ]);
+    });
+
+    it("returns empty if no word connection", () => {
+      result = findReplacementWordConnections("word", "sentence");
       expect(result).toStrictEqual([]);
     });
   });
