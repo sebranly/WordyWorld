@@ -4,4 +4,9 @@ enum Screen {
   Game
 }
 
-export { Screen };
+enum WordConnection {
+  Anagram,
+  Same
+}
+
+export { Screen, WordConnection };

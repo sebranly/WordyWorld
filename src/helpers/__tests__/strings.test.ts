@@ -1,10 +1,17 @@
 // Internal
-import { areAnagrams, decomposeWord, pluralize } from "../strings";
+import {
+  areAnagrams,
+  decomposeWord,
+  findWordConnections,
+  pluralize
+} from "../strings";
+import { WordConnection } from "../../types/enum";
 
 describe("strings helper", () => {
   it("exports the following helpers", () => {
     expect(typeof areAnagrams).toBe("function");
     expect(typeof decomposeWord).toBe("function");
+    expect(typeof findWordConnections).toBe("function");
     expect(typeof pluralize).toBe("function");
   });
 
@@ -72,6 +79,40 @@ describe("strings helper", () => {
     it("handles words with a letter appearing several times", () => {
       result = decomposeWord("attack");
       expect(result).toStrictEqual({ a: 2, t: 2, c: 1, k: 1 });
+    });
+  });
+
+  describe("findWordConnections", () => {
+    // TODO: fix any
+    let result: any;
+
+    it("returns empty if any string is empty", () => {
+      result = findWordConnections("", "");
+      expect(result).toStrictEqual([]);
+
+      result = findWordConnections("a", "");
+      expect(result).toStrictEqual([]);
+
+      result = findWordConnections("", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns Same if same word is provided", () => {
+      result = findWordConnections("a", "a");
+      expect(result).toStrictEqual([{ type: WordConnection.Same }]);
+
+      result = findWordConnections("word", "word");
+      expect(result).toStrictEqual([{ type: WordConnection.Same }]);
+    });
+
+    it("returns Anagram is words are anagrams", () => {
+      result = findWordConnections("dog", "god");
+      expect(result).toStrictEqual([{ type: WordConnection.Anagram }]);
+    });
+
+    it("returns empty if no word connection", () => {
+      result = findWordConnections("word", "sentence");
+      expect(result).toStrictEqual([]);
     });
   });
 

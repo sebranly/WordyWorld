@@ -1,10 +1,26 @@
 // Vendor
 import isEqual from "lodash/isEqual";
 
+// Internal
+import { WordConnection } from "../types/enum";
+
 const findWordConnections = (word1: string, word2: string) => {
-  if (word1 === word2) return [];
-  // TODO:
-  // return [];
+  if (!word1 || !word2) return [];
+
+  if (word1 === word2) {
+    return [{ type: WordConnection.Same }];
+  }
+
+  // TODO: type it
+  const wordConnections: any[] = [];
+
+  if (areAnagrams(word1, word2)) {
+    wordConnections.push({
+      type: WordConnection.Anagram
+    });
+  }
+
+  return wordConnections;
 };
 
 const areAnagrams = (word1: string, word2: string) => {
@@ -38,4 +54,4 @@ const decomposeWord = (word: string) => {
 const pluralize = (word: string, count: number) =>
   count === 1 ? `${count} ${word}` : `${count} ${word}s`;
 
-export { areAnagrams, decomposeWord, pluralize };
+export { areAnagrams, decomposeWord, findWordConnections, pluralize };
