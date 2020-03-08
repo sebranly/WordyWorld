@@ -20,6 +20,16 @@ const findWordConnections = (word1: string, word2: string) => {
     });
   }
 
+  const additionConnections = findAdditionWordConnections(word1, word2);
+  const deletionConnections = findDeletionWordConnections(word1, word2);
+  const replacementConnections = findReplacementWordConnections(word1, word2);
+
+  wordConnections.push(
+    ...additionConnections,
+    ...deletionConnections,
+    ...replacementConnections
+  );
+
   return wordConnections;
 };
 

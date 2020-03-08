@@ -270,9 +270,30 @@ describe("strings helper", () => {
       expect(result).toStrictEqual([{ type: WordConnection.Same }]);
     });
 
-    it("returns Anagram is words are anagrams", () => {
+    it("returns Anagram when applicable", () => {
       result = findWordConnections("dog", "god");
       expect(result).toStrictEqual([{ type: WordConnection.Anagram }]);
+    });
+
+    it("returns Addition when applicable", () => {
+      result = findWordConnections("ten", "then");
+      expect(result).toStrictEqual([
+        { character: "h", position: 1, type: WordConnection.Addition }
+      ]);
+    });
+
+    it("returns Deletion when applicable", () => {
+      result = findWordConnections("then", "ten");
+      expect(result).toStrictEqual([
+        { position: 1, type: WordConnection.Deletion }
+      ]);
+    });
+
+    it("returns Replacement when applicable", () => {
+      result = findWordConnections("bar", "car");
+      expect(result).toStrictEqual([
+        { character: "c", position: 0, type: WordConnection.Replacement }
+      ]);
     });
 
     it("returns empty if no word connection", () => {
