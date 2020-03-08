@@ -84,8 +84,8 @@ const findAdditionWordConnections = (
     const newWord2 = `${beginning}${end}`;
 
     if (word1 === newWord2) {
-      const characterObject =
-        type === WordConnection.Addition ? { character: word2[i] } : {};
+      const isAddition = type === WordConnection.Addition;
+      const characterObject = isAddition ? { character: word2[i] } : {};
       wordConnections.push({
         ...characterObject,
         position: i,
