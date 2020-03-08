@@ -11,6 +11,9 @@ const areAnagrams = (word1: string, word2: string) => {
   if (!word1 || !word2) return false;
   if (word1 === word2) return false;
 
+  // TODO: verify if it's faster thanks to this
+  if (word1.length !== word2.length) return false;
+
   const decomposition1 = decomposeWord(word1);
   const decomposition2 = decomposeWord(word2);
 
