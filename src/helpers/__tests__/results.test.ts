@@ -1,7 +1,7 @@
 // Internal
 import { getResults, getResultsCount } from "../results";
 
-describe("results helper", () => {
+describe("results helpers", () => {
   it("exports the following helpers", () => {
     expect(typeof getResults).toBe("function");
     expect(typeof getResultsCount).toBe("function");

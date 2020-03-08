@@ -1,7 +1,7 @@
 // Internal
 import { getLetterScore } from "../score";
 
-describe("score helper", () => {
+describe("score helpers", () => {
   it("exports the following helpers", () => {
     expect(typeof getLetterScore).toBe("function");
   });

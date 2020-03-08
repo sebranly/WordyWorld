@@ -10,7 +10,7 @@ import {
 } from "../strings";
 import { WordConnection } from "../../types/enum";
 
-describe("strings helper", () => {
+describe("strings helpers", () => {
   it("exports the following helpers", () => {
     expect(typeof areAnagrams).toBe("function");
     expect(typeof decomposeWord).toBe("function");
