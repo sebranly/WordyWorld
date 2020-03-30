@@ -15,7 +15,7 @@
     "@types/react-native": "^0.60.31",
     "@types/react-test-renderer": "^16.9.2",
     "babel-jest": "^25.1.0",
-    "babel-preset-expo": "^8.0.0",
+    "babel-preset-expo": "^8.1.0",
     "csv-parse": "^4.8.5",
     "expo-cli": "^3.13.1",
     "husky": "^4.2.3",
