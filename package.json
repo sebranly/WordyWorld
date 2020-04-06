@@ -19,7 +19,7 @@
     "csv-parse": "^4.8.5",
     "expo-cli": "^3.13.1",
     "husky": "^4.2.3",
-    "jest": "^25.1.0",
+    "jest": "^25.2.7",
     "jest-expo": "^36.0.1",
     "react-test-renderer": "^16.9.0",
     "typescript": "^3.7.5"
