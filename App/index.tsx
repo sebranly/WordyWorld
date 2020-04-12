@@ -26,7 +26,7 @@ const App: React.FC<AppProps> = (props) => {
 
   // Hooks
   const [isReady, setIsReady] = React.useState(initialReady);
-  const [screen, setScreen] = React.useState(Screen.Game);
+  const [screen, setScreen] = React.useState(Screen.About);
 
   // Life-cycle
   React.useEffect(() => {
