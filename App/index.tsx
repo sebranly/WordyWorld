@@ -1,6 +1,7 @@
 // Vendor
 import * as Font from "expo-font";
 import * as React from "react";
+import cloneDeep from "lodash/cloneDeep";
 import { AppLoading } from "expo";
 import { Container } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
@@ -12,13 +13,13 @@ import { Footer } from "../src/components/Footer";
 import { Game } from "../src/components/Game";
 import { Results } from "../src/components/Results";
 import { Screen } from "../src/types/enum";
-import { HEADER_Y } from "../src/config/settings";
+import { ALL_WORDS, HEADER_Y } from "../src/config/settings";
 
 export interface AppProps {
   initialReady?: boolean;
 }
 
-const App: React.FC<AppProps> = props => {
+const App: React.FC<AppProps> = (props) => {
   // Setup
   const { initialReady } = props;
 
@@ -32,7 +33,7 @@ const App: React.FC<AppProps> = props => {
       await Font.loadAsync({
         Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
         Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
-        ...Ionicons.font
+        ...Ionicons.font,
       });
 
       setIsReady(true);
@@ -53,28 +54,29 @@ const App: React.FC<AppProps> = props => {
   const isAbout = screen === Screen.About;
   const isExplore = screen === Screen.Explore;
   const isGame = screen === Screen.Game;
+  const allWords = cloneDeep(ALL_WORDS);
 
   // Markup
   return (
     <Container style={styles.container}>
       {isAbout && <About />}
       {isExplore && <Results />}
-      {isGame && <Game word={"splash"} />}
+      {isGame && <Game words={allWords} />}
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );
 };
 
 App.defaultProps = {
-  initialReady: false
+  initialReady: false,
 };
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     flex: 1,
-    paddingTop: HEADER_Y
-  }
+    paddingTop: HEADER_Y,
+  },
 });
 
 export default App;

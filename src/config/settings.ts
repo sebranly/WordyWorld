@@ -1,6 +1,9 @@
 // Vendor
 import flatten from "lodash/flatten";
 
+// Internal
+import { Word } from "../types/interfaces";
+
 export const HEADER_Y = 25;
 export const MAX_LETTER_COUNT = 10;
 export const MIN_LETTER_COUNT = 2;
@@ -22,17 +25,17 @@ const DATA: any = {
   letterCountIs7: require("../data/words/7-letters.json"),
   letterCountIs8: require("../data/words/8-letters.json"),
   letterCountIs9: require("../data/words/9-letters.json"),
-  letterCountIs10: require("../data/words/10-letters.json")
+  letterCountIs10: require("../data/words/10-letters.json"),
 };
 
 const allLetterCounts = Array.from(
   { length: MAX_LETTER_COUNT },
   (_v, k) => k + 1
-).filter(v => v >= MIN_LETTER_COUNT);
+).filter((v) => v >= MIN_LETTER_COUNT);
 
-const jsonArrayTemp = allLetterCounts.map(v => {
+const jsonArrayTemp = allLetterCounts.map((v) => {
   const key = `letterCountIs${v}`;
   return DATA[key];
 });
 
-export const ALL_WORDS = flatten(jsonArrayTemp);
+export const ALL_WORDS = flatten(jsonArrayTemp) as Word[];

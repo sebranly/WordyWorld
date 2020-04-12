@@ -1,20 +1,28 @@
 // Vendor
 import * as React from "react";
+import random from "lodash/random";
 import { Col, Grid, Row } from "react-native-easy-grid";
-import { Container, StyleProvider } from "native-base";
+import { Container } from "native-base";
 import { StyleSheet, View } from "react-native";
 import { Text } from "react-native";
 
 // Internal
+import { Word } from "../types/interfaces";
 import { GAME_ROWS } from "../config/settings";
 
 export interface GameProps {
   style?: any;
-  word: string;
+  words: Word[];
 }
 
-const Game: React.FC<GameProps> = props => {
-  const { word } = props;
+const Game: React.FC<GameProps> = (props) => {
+  // Setup
+  const { words } = props;
+  const wordIndex = random(words.length - 1);
+  const initialWord = words[wordIndex];
+
+  // Hooks
+  const [word, _setWord] = React.useState(initialWord);
 
   const renderRow = (indexRow: number, last?: boolean) => {
     const renderColumn = (letter: string, indexCol: number) => {
@@ -32,7 +40,7 @@ const Game: React.FC<GameProps> = props => {
     };
 
     const renderColumns = () => {
-      const letters = word.split("");
+      const letters = word.englishWord.split("");
       const columns = letters.map((v, i) => renderColumn(v, i));
       return columns;
     };
@@ -54,7 +62,10 @@ const Game: React.FC<GameProps> = props => {
       <Text style={styles.title}>Game</Text>
       <Grid style={styles.grid}>{renderRows()}</Grid>
       <View style={styles.example}>
-        <Text>Example</Text>
+        <Text>{`Words: ${words.length}`}</Text>
+        <Text>{`Words[${wordIndex}]: ${JSON.stringify(
+          words[wordIndex]
+        )}`}</Text>
       </View>
     </Container>
   );
@@ -63,24 +74,24 @@ const Game: React.FC<GameProps> = props => {
 const styles = StyleSheet.create({
   cell: {
     backgroundColor: "grey",
-    margin: 2
+    margin: 2,
   },
   example: {
     backgroundColor: "yellow",
-    flex: 1
+    flex: 1,
   },
   grid: {
-    flex: 3
+    flex: 3,
   },
   text: { fontSize: 30 },
   title: {
-    textAlign: "center"
+    textAlign: "center",
   },
   viewText: {
     alignItems: "center",
     flex: 1,
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  },
 });
 
 export { Game };

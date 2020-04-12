@@ -102,16 +102,6 @@ Array [
               }
             }
           />
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
         </View>
         <View
           style={
@@ -121,85 +111,6 @@ Array [
             }
           }
         >
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-              "flexDirection": "row",
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
           <View
             style={
               Object {
@@ -309,16 +220,6 @@ Array [
               }
             }
           />
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
         </View>
         <View
           style={
@@ -338,6 +239,55 @@ Array [
               }
             }
           />
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
           <View
             style={
               Object {
@@ -453,7 +403,7 @@ Array [
                   }
                 }
               >
-                p
+                t
               </Text>
             </View>
           </View>
@@ -483,7 +433,7 @@ Array [
                   }
                 }
               >
-                l
+                o
               </Text>
             </View>
           </View>
@@ -513,7 +463,7 @@ Array [
                   }
                 }
               >
-                a
+                v
               </Text>
             </View>
           </View>
@@ -543,37 +493,7 @@ Array [
                   }
                 }
               >
-                s
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flex": 1,
-                  "justifyContent": "center",
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 30,
-                  }
-                }
-              >
-                h
+                e
               </Text>
             </View>
           </View>
@@ -588,7 +508,10 @@ Array [
         }
       >
         <Text>
-          Example
+          Words: 1645
+        </Text>
+        <Text>
+          Words[1299]: {"englishWord":"stove","frenchWord":""}
         </Text>
       </View>
     </View>
