@@ -1,3 +1,6 @@
+// Internal
+import { Word } from "../types/interfaces";
+
 const getLetterScore = (character: string) => {
   if (character.length !== 1) return 0;
 
@@ -15,4 +18,19 @@ const getLetterScore = (character: string) => {
   return 0;
 };
 
-export { getLetterScore };
+const getWordScore = (word: Word) => {
+  const letters = word.englishWord;
+  const lettersScore = letters
+    .split("")
+    .map((letter) => getLetterScore(letter));
+
+  const reducer = (accumulator: number, currentValue: number) => {
+    return accumulator + currentValue;
+  };
+
+  const score = lettersScore.reduce(reducer, 0);
+
+  return score;
+};
+
+export { getLetterScore, getWordScore };

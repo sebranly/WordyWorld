@@ -1,14 +1,15 @@
 // Internal
-import { getLetterScore } from "../score";
+import { getLetterScore, getWordScore } from "../score";
 
 describe("score helpers", () => {
+  let result: number;
+
   it("exports the following helpers", () => {
     expect(typeof getLetterScore).toBe("function");
+    expect(typeof getWordScore).toBe("function");
   });
 
   describe("getLetterScore", () => {
-    let result: number;
-
     it("returns 0 when not a letter", () => {
       expect(getLetterScore("")).toBe(0);
       expect(getLetterScore("word")).toBe(0);
@@ -72,6 +73,21 @@ describe("score helpers", () => {
       expect(getLetterScore("X")).toBe(8);
       expect(getLetterScore("Y")).toBe(4);
       expect(getLetterScore("Z")).toBe(10);
+    });
+  });
+
+  describe("getWordScore", () => {
+    it("returns 0 when empty strings", () => {
+      result = getWordScore({ englishWord: "", frenchWord: "" });
+      expect(result).toBe(0);
+    });
+
+    it("returns correct score for a word", () => {
+      result = getWordScore({ englishWord: "bike", frenchWord: "" });
+      expect(result).toBe(10);
+
+      result = getWordScore({ englishWord: "bike", frenchWord: "vélo" });
+      expect(result).toBe(10);
     });
   });
 });
