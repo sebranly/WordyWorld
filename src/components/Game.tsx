@@ -7,9 +7,10 @@ import { Text } from "react-native";
 
 // Internal
 import { findWordConnections } from "../helpers/strings";
+import { getWordScore } from "../helpers/score";
 import { Word } from "../types/interfaces";
 import { WordConnection } from "../types/enum";
-import { GAME_ROWS } from "../config/settings";
+import { GAME_ROWS, SPECTATOR_INTERVAL } from "../config/settings";
 
 export interface GameProps {
   allWords: Word[];
@@ -73,7 +74,7 @@ const Game: React.FC<GameProps> = (props) => {
           const newConnections = findReplacements(newWords);
           setWordsConnections(newConnections);
 
-          const additionalScore = 10;
+          const additionalScore = getWordScore(newWord);
           setScore((previousScore) => previousScore + additionalScore);
 
           if (newConnections.length === 0) setEnd(true);
@@ -91,7 +92,7 @@ const Game: React.FC<GameProps> = (props) => {
   // Life-cycle
   React.useEffect(() => {
     onSpectator(true);
-    const intervalId = setInterval(onSpectator, 5000);
+    const intervalId = setInterval(onSpectator, SPECTATOR_INTERVAL);
 
     return () => clearInterval(intervalId);
   }, []); // Empty array leads to same behavior as `componentDidMount` (if it was a class)

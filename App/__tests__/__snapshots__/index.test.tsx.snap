@@ -351,10 +351,13 @@ Array [
           Words: 2
         </Text>
         <Text>
-          Initial word: 0: {"englishWord":"car","frenchWord":"voiture"}
+          History: car
         </Text>
         <Text>
           Replacement words: cat
+        </Text>
+        <Text>
+          Score: 0
         </Text>
       </View>
     </View>
