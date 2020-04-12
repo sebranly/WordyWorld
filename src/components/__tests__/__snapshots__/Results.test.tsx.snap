@@ -23,7 +23,7 @@ Array [
     </Text>
     <TextInput
       allowFontScaling={true}
-      placeholder="Search for a word among 1645 words..."
+      placeholder="Search for a word among 2 words..."
       rejectResponderTermination={true}
       style={
         Object {

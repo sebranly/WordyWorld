@@ -3,6 +3,7 @@ import flatten from "lodash/flatten";
 
 // Internal
 import { getFromEnv } from "../helpers/env";
+import { mockWords } from "../mocks";
 import { Word } from "../types/interfaces";
 
 export const GAME_ROWS = 6;
@@ -41,4 +42,6 @@ const jsonArrayTemp = allLetterCounts.map((v) => {
   return DATA[key];
 });
 
-export const ALL_WORDS = flatten(jsonArrayTemp) as Word[];
+export const ALL_WORDS = IS_TEST
+  ? mockWords
+  : (flatten(jsonArrayTemp) as Word[]);

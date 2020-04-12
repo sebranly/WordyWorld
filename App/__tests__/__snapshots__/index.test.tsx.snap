@@ -72,25 +72,6 @@ Array [
               }
             }
           />
-        </View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-              "flexDirection": "row",
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "grey",
-                "flex": 1,
-                "flexDirection": "column",
-                "margin": 2,
-              }
-            }
-          />
           <View
             style={
               Object {
@@ -130,6 +111,16 @@ Array [
               }
             }
           />
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
         </View>
         <View
           style={
@@ -159,6 +150,16 @@ Array [
               }
             }
           />
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
         </View>
         <View
           style={
@@ -168,6 +169,55 @@ Array [
             }
           }
         >
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          />
           <View
             style={
               Object {
@@ -223,7 +273,7 @@ Array [
                   }
                 }
               >
-                A
+                c
               </Text>
             </View>
           </View>
@@ -253,7 +303,37 @@ Array [
                   }
                 }
               >
-                F
+                a
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "flex": 1,
+                "flexDirection": "column",
+                "margin": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 30,
+                  }
+                }
+              >
+                r
               </Text>
             </View>
           </View>
@@ -268,10 +348,10 @@ Array [
         }
       >
         <Text>
-          Words: 1645
+          Words: 2
         </Text>
         <Text>
-          Words[0]: {"englishWord":"AF","frenchWord":""}
+          Words[0]: {"englishWord":"car","frenchWord":"voiture"}
         </Text>
       </View>
     </View>
