@@ -19,8 +19,8 @@ const getLetterScore = (character: string) => {
 };
 
 const getWordScore = (word: Word) => {
-  const { englishWord } = word;
-  const letters = englishWord.split("");
+  const { en } = word;
+  const letters = en.split("");
   const lettersScore = letters.map((letter) => getLetterScore(letter));
 
   const reducer = (acc: number, val: number) => acc + val;

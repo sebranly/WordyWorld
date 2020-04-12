@@ -78,15 +78,15 @@ describe("score helpers", () => {
 
   describe("getWordScore", () => {
     it("returns 0 when empty strings", () => {
-      result = getWordScore({ englishWord: "", frenchWord: "" });
+      result = getWordScore({ en: "", fr: "" });
       expect(result).toBe(0);
     });
 
     it("returns correct score for a word", () => {
-      result = getWordScore({ englishWord: "bike", frenchWord: "" });
+      result = getWordScore({ en: "bike", fr: "" });
       expect(result).toBe(10);
 
-      result = getWordScore({ englishWord: "bike", frenchWord: "vélo" });
+      result = getWordScore({ en: "bike", fr: "vélo" });
       expect(result).toBe(10);
     });
   });

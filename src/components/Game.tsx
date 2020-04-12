@@ -24,13 +24,13 @@ const Game: React.FC<GameProps> = (props) => {
   const findReplacements = (words: Word[]) => {
     const word = words[words.length - 1];
 
-    const bannedWords = words.map((w) => w.englishWord);
+    const bannedWords = words.map((w) => w.en);
     const filteredWords = allWords.filter((w) => {
-      return !bannedWords.includes(w.englishWord);
+      return !bannedWords.includes(w.en);
     });
 
     const replacements = filteredWords.filter((w) => {
-      const connections = findWordConnections(word.englishWord, w.englishWord);
+      const connections = findWordConnections(word.en, w.en);
 
       const replacementsConnections = connections.filter(
         (c) => c.type === WordConnection.Replacement
@@ -103,10 +103,10 @@ const Game: React.FC<GameProps> = (props) => {
       <Grid word={words[words.length - 1]} />
       <View style={styles.example}>
         <Text>{`Words: ${allWords.length}`}</Text>
-        <Text>{`History: ${words.map((w) => w.englishWord)}`}</Text>
+        <Text>{`History: ${words.map((w) => w.en)}`}</Text>
         {!end && (
           <Text>{`Replacement words: ${wordsConnections
-            .map((w) => w.englishWord)
+            .map((w) => w.en)
             .join(" ")}`}</Text>
         )}
         {<Text>{`Score: ${score}`}</Text>}

@@ -2,8 +2,8 @@
 import { Word } from "../types/interfaces";
 
 const mockWords: Word[] = [
-  { englishWord: "car", frenchWord: "voiture" },
-  { englishWord: "cat", frenchWord: "chat" },
+  { en: "car", fr: "voiture" },
+  { en: "cat", fr: "chat" },
 ];
 
 export { mockWords };
