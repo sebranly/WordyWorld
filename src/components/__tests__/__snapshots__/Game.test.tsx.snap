@@ -66,16 +66,6 @@ Array [
             }
           }
         />
-        <View
-          style={
-            Object {
-              "backgroundColor": "grey",
-              "flex": 1,
-              "flexDirection": "column",
-              "margin": 2,
-            }
-          }
-        />
       </View>
       <View
         style={
@@ -85,65 +75,6 @@ Array [
           }
         }
       >
-        <View
-          style={
-            Object {
-              "backgroundColor": "grey",
-              "flex": 1,
-              "flexDirection": "column",
-              "margin": 2,
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "backgroundColor": "grey",
-              "flex": 1,
-              "flexDirection": "column",
-              "margin": 2,
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "backgroundColor": "grey",
-              "flex": 1,
-              "flexDirection": "column",
-              "margin": 2,
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "backgroundColor": "grey",
-              "flex": 1,
-              "flexDirection": "column",
-              "margin": 2,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "flexDirection": "row",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "grey",
-              "flex": 1,
-              "flexDirection": "column",
-              "margin": 2,
-            }
-          }
-        />
         <View
           style={
             Object {
@@ -213,16 +144,6 @@ Array [
             }
           }
         />
-        <View
-          style={
-            Object {
-              "backgroundColor": "grey",
-              "flex": 1,
-              "flexDirection": "column",
-              "margin": 2,
-            }
-          }
-        />
       </View>
       <View
         style={
@@ -242,6 +163,35 @@ Array [
             }
           }
         />
+        <View
+          style={
+            Object {
+              "backgroundColor": "grey",
+              "flex": 1,
+              "flexDirection": "column",
+              "margin": 2,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "backgroundColor": "grey",
+              "flex": 1,
+              "flexDirection": "column",
+              "margin": 2,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -307,7 +257,7 @@ Array [
                 }
               }
             >
-              t
+              c
             </Text>
           </View>
         </View>
@@ -337,7 +287,7 @@ Array [
                 }
               }
             >
-              e
+              a
             </Text>
           </View>
         </View>
@@ -367,37 +317,7 @@ Array [
                 }
               }
             >
-              s
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "grey",
-              "flex": 1,
-              "flexDirection": "column",
-              "margin": 2,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "justifyContent": "center",
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "fontSize": 30,
-                }
-              }
-            >
-              t
+              r
             </Text>
           </View>
         </View>
@@ -412,7 +332,16 @@ Array [
       }
     >
       <Text>
-        Example
+        Words: 2
+      </Text>
+      <Text>
+        History: car
+      </Text>
+      <Text>
+        Replacement words: cat
+      </Text>
+      <Text>
+        Score: 0
       </Text>
     </View>
   </View>,

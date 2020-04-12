@@ -1,12 +1,21 @@
 // Vendor
 import flatten from "lodash/flatten";
 
+// Internal
+import { getFromEnv } from "../helpers/env";
+import { mockWords } from "../mocks";
+import { Word } from "../types/interfaces";
+
+export const GAME_ROWS = 6;
 export const HEADER_Y = 25;
 export const MAX_LETTER_COUNT = 10;
 export const MIN_LETTER_COUNT = 2;
 export const MIN_SEARCH_LETTER_COUNT = 2;
 
-export const GAME_ROWS = 6;
+export const NODE_ENV = getFromEnv("NODE_ENV") || "development";
+export const IS_TEST = NODE_ENV === "test";
+
+export const SPECTATOR_INTERVAL = 5000;
 
 /*
   TODO: fix if possible
@@ -22,17 +31,19 @@ const DATA: any = {
   letterCountIs7: require("../data/words/7-letters.json"),
   letterCountIs8: require("../data/words/8-letters.json"),
   letterCountIs9: require("../data/words/9-letters.json"),
-  letterCountIs10: require("../data/words/10-letters.json")
+  letterCountIs10: require("../data/words/10-letters.json"),
 };
 
 const allLetterCounts = Array.from(
   { length: MAX_LETTER_COUNT },
   (_v, k) => k + 1
-).filter(v => v >= MIN_LETTER_COUNT);
+).filter((v) => v >= MIN_LETTER_COUNT);
 
-const jsonArrayTemp = allLetterCounts.map(v => {
+const jsonArrayTemp = allLetterCounts.map((v) => {
   const key = `letterCountIs${v}`;
   return DATA[key];
 });
 
-export const ALL_WORDS = flatten(jsonArrayTemp);
+export const ALL_WORDS = IS_TEST
+  ? mockWords
+  : (flatten(jsonArrayTemp) as Word[]);

@@ -1,6 +1,8 @@
 // Vendor
 import * as Font from "expo-font";
 import * as React from "react";
+import cloneDeep from "lodash/cloneDeep";
+import random from "lodash/random";
 import { AppLoading } from "expo";
 import { Container } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
@@ -12,19 +14,19 @@ import { Footer } from "../src/components/Footer";
 import { Game } from "../src/components/Game";
 import { Results } from "../src/components/Results";
 import { Screen } from "../src/types/enum";
-import { HEADER_Y } from "../src/config/settings";
+import { ALL_WORDS, HEADER_Y, IS_TEST } from "../src/config/settings";
 
 export interface AppProps {
   initialReady?: boolean;
 }
 
-const App: React.FC<AppProps> = props => {
+const App: React.FC<AppProps> = (props) => {
   // Setup
   const { initialReady } = props;
 
   // Hooks
   const [isReady, setIsReady] = React.useState(initialReady);
-  const [screen, setScreen] = React.useState(Screen.Game);
+  const [screen, setScreen] = React.useState(Screen.About);
 
   // Life-cycle
   React.useEffect(() => {
@@ -32,7 +34,7 @@ const App: React.FC<AppProps> = props => {
       await Font.loadAsync({
         Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
         Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
-        ...Ionicons.font
+        ...Ionicons.font,
       });
 
       setIsReady(true);
@@ -54,27 +56,36 @@ const App: React.FC<AppProps> = props => {
   const isExplore = screen === Screen.Explore;
   const isGame = screen === Screen.Game;
 
+  // TODO: remove 5 limit
+  const filteredWords = cloneDeep(
+    ALL_WORDS.filter((w) => w.englishWord.length < 5)
+  );
+
+  const initialWordIndex = IS_TEST ? 0 : random(filteredWords.length - 1);
+
   // Markup
   return (
     <Container style={styles.container}>
       {isAbout && <About />}
       {isExplore && <Results />}
-      {isGame && <Game word={"splash"} />}
+      {isGame && (
+        <Game allWords={filteredWords} initialWordIndex={initialWordIndex} />
+      )}
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );
 };
 
 App.defaultProps = {
-  initialReady: false
+  initialReady: false,
 };
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     flex: 1,
-    paddingTop: HEADER_Y
-  }
+    paddingTop: HEADER_Y,
+  },
 });
 
 export default App;
