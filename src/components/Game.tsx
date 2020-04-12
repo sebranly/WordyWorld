@@ -21,10 +21,10 @@ const Game: React.FC<GameProps> = (props) => {
   // Setup
   const { allWords } = props;
   const wordIndex = IS_TEST ? 0 : random(allWords.length - 1);
-  const initialWord = allWords[wordIndex];
+  const initialWords = [allWords[wordIndex]];
 
   // Hooks
-  const [word, _setWord] = React.useState(initialWord);
+  const [words, _setWords] = React.useState(initialWords);
 
   // TODO: move out
   const findReplacements = (currentWord: Word) => {
@@ -44,7 +44,7 @@ const Game: React.FC<GameProps> = (props) => {
     return replacements;
   };
 
-  const wordConnections = findReplacements(word);
+  const wordConnections = findReplacements(words[words.length - 1]);
 
   const renderRow = (indexRow: number, last?: boolean) => {
     const renderColumn = (letter: string, indexCol: number) => {
@@ -62,7 +62,9 @@ const Game: React.FC<GameProps> = (props) => {
     };
 
     const renderColumns = () => {
+      const word = words[words.length - 1];
       const letters = word.englishWord.split("");
+
       const columns = letters.map((v, i) => renderColumn(v, i));
       return columns;
     };
