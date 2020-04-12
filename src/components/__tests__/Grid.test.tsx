@@ -3,13 +3,13 @@ import React from "react";
 import { render } from "@testing-library/react-native";
 
 // Internal
-import { Game } from "../Game";
+import { Grid } from "../Grid";
 import { mockWords } from "../../mocks";
 
 it("renders", () => {
-  const props = { allWords: mockWords, initialWordIndex: 0 };
+  const props = { word: mockWords[0] };
 
-  const { container } = render(<Game {...props} />);
+  const { container } = render(<Grid {...props} />);
   expect(container.children.length).toBeGreaterThan(0);
   expect(container.children).toMatchSnapshot();
 });
