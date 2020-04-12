@@ -353,6 +353,9 @@ Array [
         <Text>
           Words[0]: {"englishWord":"car","frenchWord":"voiture"}
         </Text>
+        <Text>
+          Replacement words: cat
+        </Text>
       </View>
     </View>
     <View

@@ -7,7 +7,9 @@ import { StyleSheet, View } from "react-native";
 import { Text } from "react-native";
 
 // Internal
+import { findWordConnections } from "../helpers/strings";
 import { Word } from "../types/interfaces";
+import { WordConnection } from "../types/enum";
 import { GAME_ROWS, IS_TEST } from "../config/settings";
 
 export interface GameProps {
@@ -23,6 +25,26 @@ const Game: React.FC<GameProps> = (props) => {
 
   // Hooks
   const [word, _setWord] = React.useState(initialWord);
+
+  // TODO: move out
+  const findReplacements = (currentWord: Word) => {
+    const replacements = words.filter((w) => {
+      const connections = findWordConnections(
+        currentWord.englishWord,
+        w.englishWord
+      );
+
+      const replacementsConnections = connections.filter(
+        (c) => c.type === WordConnection.Replacement
+      );
+
+      return replacementsConnections.length > 0;
+    });
+
+    return replacements;
+  };
+
+  const wordConnections = findReplacements(word);
 
   const renderRow = (indexRow: number, last?: boolean) => {
     const renderColumn = (letter: string, indexCol: number) => {
@@ -66,6 +88,9 @@ const Game: React.FC<GameProps> = (props) => {
         <Text>{`Words[${wordIndex}]: ${JSON.stringify(
           words[wordIndex]
         )}`}</Text>
+        <Text>{`Replacement words: ${wordConnections
+          .map((w) => w.englishWord)
+          .join(" ")}`}</Text>
       </View>
     </Container>
   );
