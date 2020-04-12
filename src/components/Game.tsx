@@ -18,18 +18,6 @@ export interface GameProps {
 }
 
 const Game: React.FC<GameProps> = (props) => {
-  // Setup
-  const { allWords, initialWordIndex } = props;
-  const initialWords = [allWords[initialWordIndex]];
-  const debug = `Initial word: ${initialWordIndex}: ${JSON.stringify(
-    allWords[initialWordIndex]
-  )}`;
-
-  // Hooks
-  const [end, setEnd] = React.useState(false);
-  const [words, setWords] = React.useState(initialWords);
-  const [wordsConnections, setWordsConnections] = React.useState([] as Word[]);
-
   // TODO: move out
   const findReplacements = (currentWord: Word) => {
     const replacements = allWords.filter((w) => {
@@ -48,24 +36,51 @@ const Game: React.FC<GameProps> = (props) => {
     return replacements;
   };
 
+  // Setup
+  const { allWords, initialWordIndex } = props;
+  const initialWords = [allWords[initialWordIndex]];
+
+  // Hooks
+  const [end, setEnd] = React.useState(false);
+  const [words, setWords] = React.useState(initialWords);
+  const [wordsConnections, setWordsConnections] = React.useState([] as Word[]);
+
   // Handlers
   const onSpectator = (initial = false) => {
-    const word = words[words.length - 1];
-    const connections = findReplacements(word);
+    /**
+     * @external https://stackoverflow.com/questions/53395147/use-react-hook-to-implement-a-self-increment-counter
+     * Previous value of the hook state is needed as only first render knows it otherwise
+     *
+     * TODO: can the setState hooks be cleaned up?
+     */
+    setWords((words) => {
+      const word = words[words.length - 1];
+      const connections = findReplacements(word);
 
-    if (connections.length > 0) {
-      setWordsConnections(connections);
-      if (!initial) setWords([...words, connections[0]]);
-    } else {
-      setEnd(true);
-    }
+      if (initial) {
+        setWordsConnections(connections);
+        if (connections.length === 0) setEnd(true);
+      } else {
+        if (connections.length > 0) {
+          const newWord = connections[0];
+          const newConnections = findReplacements(newWord);
+          setWordsConnections(newConnections);
+
+          return [...words, newWord];
+        } else {
+          setEnd(true);
+        }
+      }
+
+      return words;
+    });
   };
 
   // Life-cycle
   React.useEffect(() => {
     onSpectator(true);
-
     const intervalId = setInterval(onSpectator, 5000);
+
     return () => clearInterval(intervalId);
   }, []); // Empty array leads to same behavior as `componentDidMount` (if it was a class)
 
@@ -111,7 +126,6 @@ const Game: React.FC<GameProps> = (props) => {
       <View style={styles.example}>
         <Text>{`Words: ${allWords.length}`}</Text>
         <Text>{`History: ${words.map((w) => w.englishWord)}`}</Text>
-        <Text>{debug}</Text>
         {!end && (
           <Text>{`Replacement words: ${wordsConnections
             .map((w) => w.englishWord)
