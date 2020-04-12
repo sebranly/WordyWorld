@@ -47,6 +47,7 @@ const Game: React.FC<GameProps> = (props) => {
 
   // Hooks
   const [end, setEnd] = React.useState(false);
+  const [score, setScore] = React.useState(0);
   const [words, setWords] = React.useState(initialWords);
   const [wordsConnections, setWordsConnections] = React.useState([] as Word[]);
 
@@ -71,6 +72,9 @@ const Game: React.FC<GameProps> = (props) => {
 
           const newConnections = findReplacements(newWords);
           setWordsConnections(newConnections);
+
+          const additionalScore = 10;
+          setScore((previousScore) => previousScore + additionalScore);
 
           if (newConnections.length === 0) setEnd(true);
 
@@ -139,6 +143,7 @@ const Game: React.FC<GameProps> = (props) => {
             .map((w) => w.englishWord)
             .join(" ")}`}</Text>
         )}
+        {<Text>{`Score: ${score}`}</Text>}
         {end && <Text>Game Over</Text>}
       </View>
     </Container>
