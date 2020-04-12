@@ -64,10 +64,9 @@ const Game: React.FC<GameProps> = (props) => {
   // Life-cycle
   React.useEffect(() => {
     onSpectator(true);
-    // const timer = setTimeout(() => {
-    //   onSpectator();
-    // }, 5000);
-    // return () => clearTimeout(timer);
+
+    const intervalId = setInterval(onSpectator, 5000);
+    return () => clearInterval(intervalId);
   }, []); // Empty array leads to same behavior as `componentDidMount` (if it was a class)
 
   const renderRow = (indexRow: number, last?: boolean) => {
@@ -111,6 +110,7 @@ const Game: React.FC<GameProps> = (props) => {
       <Grid style={styles.grid}>{renderRows()}</Grid>
       <View style={styles.example}>
         <Text>{`Words: ${allWords.length}`}</Text>
+        <Text>{`History: ${words.map((w) => w.englishWord)}`}</Text>
         <Text>{debug}</Text>
         {!end && (
           <Text>{`Replacement words: ${wordsConnections
