@@ -8,7 +8,7 @@ import { Text } from "react-native";
 
 // Internal
 import { Word } from "../types/interfaces";
-import { GAME_ROWS } from "../config/settings";
+import { GAME_ROWS, IS_TEST } from "../config/settings";
 
 export interface GameProps {
   style?: any;
@@ -18,7 +18,7 @@ export interface GameProps {
 const Game: React.FC<GameProps> = (props) => {
   // Setup
   const { words } = props;
-  const wordIndex = random(words.length - 1);
+  const wordIndex = IS_TEST ? 0 : random(words.length - 1);
   const initialWord = words[wordIndex];
 
   // Hooks
