@@ -19,15 +19,11 @@ const getLetterScore = (character: string) => {
 };
 
 const getWordScore = (word: Word) => {
-  const letters = word.englishWord;
-  const lettersScore = letters
-    .split("")
-    .map((letter) => getLetterScore(letter));
+  const { englishWord } = word;
+  const letters = englishWord.split("");
+  const lettersScore = letters.map((letter) => getLetterScore(letter));
 
-  const reducer = (accumulator: number, currentValue: number) => {
-    return accumulator + currentValue;
-  };
-
+  const reducer = (acc: number, val: number) => acc + val;
   const score = lettersScore.reduce(reducer, 0);
 
   return score;

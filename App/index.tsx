@@ -57,8 +57,11 @@ const App: React.FC<AppProps> = (props) => {
   const isGame = screen === Screen.Game;
 
   // TODO: remove 5 limit
-  const allWords = cloneDeep(ALL_WORDS.filter((w) => w.englishWord.length < 5));
-  const initialWordIndex = IS_TEST ? 0 : random(allWords.length - 1);
+  const filteredWords = cloneDeep(
+    ALL_WORDS.filter((w) => w.englishWord.length < 5)
+  );
+
+  const initialWordIndex = IS_TEST ? 0 : random(filteredWords.length - 1);
 
   // Markup
   return (
@@ -66,7 +69,7 @@ const App: React.FC<AppProps> = (props) => {
       {isAbout && <About />}
       {isExplore && <Results />}
       {isGame && (
-        <Game allWords={allWords} initialWordIndex={initialWordIndex} />
+        <Game allWords={filteredWords} initialWordIndex={initialWordIndex} />
       )}
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
