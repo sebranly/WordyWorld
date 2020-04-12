@@ -15,6 +15,8 @@ export const MIN_SEARCH_LETTER_COUNT = 2;
 export const NODE_ENV = getFromEnv("NODE_ENV") || "development";
 export const IS_TEST = NODE_ENV === "test";
 
+export const SPECTATOR_INTERVAL = 5000;
+
 /*
   TODO: fix if possible
   React-native does not support dynamic imports apparently
