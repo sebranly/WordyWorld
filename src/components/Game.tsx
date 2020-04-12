@@ -13,22 +13,22 @@ import { WordConnection } from "../types/enum";
 import { GAME_ROWS, IS_TEST } from "../config/settings";
 
 export interface GameProps {
+  allWords: Word[];
   style?: any;
-  words: Word[];
 }
 
 const Game: React.FC<GameProps> = (props) => {
   // Setup
-  const { words } = props;
-  const wordIndex = IS_TEST ? 0 : random(words.length - 1);
-  const initialWord = words[wordIndex];
+  const { allWords } = props;
+  const wordIndex = IS_TEST ? 0 : random(allWords.length - 1);
+  const initialWord = allWords[wordIndex];
 
   // Hooks
   const [word, _setWord] = React.useState(initialWord);
 
   // TODO: move out
   const findReplacements = (currentWord: Word) => {
-    const replacements = words.filter((w) => {
+    const replacements = allWords.filter((w) => {
       const connections = findWordConnections(
         currentWord.englishWord,
         w.englishWord
@@ -84,9 +84,9 @@ const Game: React.FC<GameProps> = (props) => {
       <Text style={styles.title}>Game</Text>
       <Grid style={styles.grid}>{renderRows()}</Grid>
       <View style={styles.example}>
-        <Text>{`Words: ${words.length}`}</Text>
+        <Text>{`Words: ${allWords.length}`}</Text>
         <Text>{`Words[${wordIndex}]: ${JSON.stringify(
-          words[wordIndex]
+          allWords[wordIndex]
         )}`}</Text>
         <Text>{`Replacement words: ${wordConnections
           .map((w) => w.englishWord)
