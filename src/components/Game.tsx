@@ -19,12 +19,17 @@ export interface GameProps {
 
 const Game: React.FC<GameProps> = (props) => {
   // TODO: move out
-  const findReplacements = (currentWord: Word) => {
-    const replacements = allWords.filter((w) => {
-      const connections = findWordConnections(
-        currentWord.englishWord,
-        w.englishWord
-      );
+  // words is the history of all played words. Last one is current one.
+  const findReplacements = (words: Word[]) => {
+    const word = words[words.length - 1];
+
+    const bannedWords = words.map((w) => w.englishWord);
+    const filteredWords = allWords.filter((w) => {
+      return !bannedWords.includes(w.englishWord);
+    });
+
+    const replacements = filteredWords.filter((w) => {
+      const connections = findWordConnections(word.englishWord, w.englishWord);
 
       const replacementsConnections = connections.filter(
         (c) => c.type === WordConnection.Replacement
@@ -54,8 +59,7 @@ const Game: React.FC<GameProps> = (props) => {
      * TODO: can the setState hooks be cleaned up?
      */
     setWords((words) => {
-      const word = words[words.length - 1];
-      const connections = findReplacements(word);
+      const connections = findReplacements(words);
 
       if (initial) {
         setWordsConnections(connections);
@@ -63,10 +67,14 @@ const Game: React.FC<GameProps> = (props) => {
       } else {
         if (connections.length > 0) {
           const newWord = connections[0];
-          const newConnections = findReplacements(newWord);
+          const newWords = [...words, newWord];
+
+          const newConnections = findReplacements(newWords);
           setWordsConnections(newConnections);
 
-          return [...words, newWord];
+          if (newConnections.length === 0) setEnd(true);
+
+          return newWords;
         } else {
           setEnd(true);
         }

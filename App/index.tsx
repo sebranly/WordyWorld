@@ -58,7 +58,9 @@ const App: React.FC<AppProps> = (props) => {
 
   // TODO: remove 5 limit
   const allWords = cloneDeep(ALL_WORDS.filter((w) => w.englishWord.length < 5));
-  const initialWordIndex = IS_TEST ? 0 : random(allWords.length - 1);
+  // const initialWordIndex = IS_TEST ? 0 : random(allWords.length - 1);
+  // TODO: remove hardcoded value
+  const initialWordIndex = 315;
 
   // Markup
   return (
