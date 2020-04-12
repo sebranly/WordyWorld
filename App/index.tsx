@@ -57,9 +57,7 @@ const App: React.FC<AppProps> = (props) => {
   const isGame = screen === Screen.Game;
 
   // TODO: remove 5 limit
-  const filteredWords = cloneDeep(
-    ALL_WORDS.filter((w) => w.englishWord.length < 5)
-  );
+  const filteredWords = cloneDeep(ALL_WORDS.filter((w) => w.en.length < 5));
 
   const initialWordIndex = IS_TEST ? 0 : random(filteredWords.length - 1);
 

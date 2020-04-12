@@ -1,4 +1,4 @@
 export interface Word {
-  englishWord: string;
-  frenchWord: string;
+  en: string;
+  fr: string;
 }

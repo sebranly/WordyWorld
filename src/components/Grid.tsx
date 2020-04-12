@@ -31,7 +31,7 @@ const Grid: React.FC<GridProps> = (props) => {
     };
 
     const renderColumns = () => {
-      const letters = word.englishWord.split("");
+      const letters = word.en.split("");
 
       const columns = letters.map((v, i) => renderColumn(v, i));
       return columns;
