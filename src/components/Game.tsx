@@ -1,6 +1,5 @@
 // Vendor
 import * as React from "react";
-import random from "lodash/random";
 import { Col, Grid, Row } from "react-native-easy-grid";
 import { Container } from "native-base";
 import { StyleSheet, View } from "react-native";
@@ -10,21 +9,26 @@ import { Text } from "react-native";
 import { findWordConnections } from "../helpers/strings";
 import { Word } from "../types/interfaces";
 import { WordConnection } from "../types/enum";
-import { GAME_ROWS, IS_TEST } from "../config/settings";
+import { GAME_ROWS } from "../config/settings";
 
 export interface GameProps {
   allWords: Word[];
+  initialWordIndex: number;
   style?: any;
 }
 
 const Game: React.FC<GameProps> = (props) => {
   // Setup
-  const { allWords } = props;
-  const wordIndex = IS_TEST ? 0 : random(allWords.length - 1);
-  const initialWords = [allWords[wordIndex]];
+  const { allWords, initialWordIndex } = props;
+  const initialWords = [allWords[initialWordIndex]];
+  const debug = `Initial word: ${initialWordIndex}: ${JSON.stringify(
+    allWords[initialWordIndex]
+  )}`;
 
   // Hooks
-  const [words, _setWords] = React.useState(initialWords);
+  const [end, setEnd] = React.useState(false);
+  const [words, setWords] = React.useState(initialWords);
+  const [wordsConnections, setWordsConnections] = React.useState([] as Word[]);
 
   // TODO: move out
   const findReplacements = (currentWord: Word) => {
@@ -44,7 +48,27 @@ const Game: React.FC<GameProps> = (props) => {
     return replacements;
   };
 
-  const wordConnections = findReplacements(words[words.length - 1]);
+  // Handlers
+  const onSpectator = (initial = false) => {
+    const word = words[words.length - 1];
+    const connections = findReplacements(word);
+
+    if (connections.length > 0) {
+      setWordsConnections(connections);
+      if (!initial) setWords([...words, connections[0]]);
+    } else {
+      setEnd(true);
+    }
+  };
+
+  // Life-cycle
+  React.useEffect(() => {
+    onSpectator(true);
+    // const timer = setTimeout(() => {
+    //   onSpectator();
+    // }, 5000);
+    // return () => clearTimeout(timer);
+  }, []); // Empty array leads to same behavior as `componentDidMount` (if it was a class)
 
   const renderRow = (indexRow: number, last?: boolean) => {
     const renderColumn = (letter: string, indexCol: number) => {
@@ -87,12 +111,13 @@ const Game: React.FC<GameProps> = (props) => {
       <Grid style={styles.grid}>{renderRows()}</Grid>
       <View style={styles.example}>
         <Text>{`Words: ${allWords.length}`}</Text>
-        <Text>{`Words[${wordIndex}]: ${JSON.stringify(
-          allWords[wordIndex]
-        )}`}</Text>
-        <Text>{`Replacement words: ${wordConnections
-          .map((w) => w.englishWord)
-          .join(" ")}`}</Text>
+        <Text>{debug}</Text>
+        {!end && (
+          <Text>{`Replacement words: ${wordsConnections
+            .map((w) => w.englishWord)
+            .join(" ")}`}</Text>
+        )}
+        {end && <Text>Game Over</Text>}
       </View>
     </Container>
   );

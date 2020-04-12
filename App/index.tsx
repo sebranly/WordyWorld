@@ -2,6 +2,7 @@
 import * as Font from "expo-font";
 import * as React from "react";
 import cloneDeep from "lodash/cloneDeep";
+import random from "lodash/random";
 import { AppLoading } from "expo";
 import { Container } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
@@ -13,7 +14,7 @@ import { Footer } from "../src/components/Footer";
 import { Game } from "../src/components/Game";
 import { Results } from "../src/components/Results";
 import { Screen } from "../src/types/enum";
-import { ALL_WORDS, HEADER_Y } from "../src/config/settings";
+import { ALL_WORDS, HEADER_Y, IS_TEST } from "../src/config/settings";
 
 export interface AppProps {
   initialReady?: boolean;
@@ -57,13 +58,16 @@ const App: React.FC<AppProps> = (props) => {
 
   // TODO: remove 5 limit
   const allWords = cloneDeep(ALL_WORDS.filter((w) => w.englishWord.length < 5));
+  const initialWordIndex = IS_TEST ? 0 : random(allWords.length - 1);
 
   // Markup
   return (
     <Container style={styles.container}>
       {isAbout && <About />}
       {isExplore && <Results />}
-      {isGame && <Game allWords={allWords} />}
+      {isGame && (
+        <Game allWords={allWords} initialWordIndex={initialWordIndex} />
+      )}
       <Footer changeScreen={changeScreen} screen={screen} />
     </Container>
   );

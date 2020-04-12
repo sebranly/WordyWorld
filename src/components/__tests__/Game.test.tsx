@@ -8,7 +8,7 @@ import { mockWords } from "../../mocks";
 import { Word } from "../../types/interfaces";
 
 it("renders", () => {
-  const props = { allWords: mockWords };
+  const props = { allWords: mockWords, initialWordIndex: 0 };
 
   const { container } = render(<Game {...props} />);
   expect(container.children.length).toBeGreaterThan(0);
