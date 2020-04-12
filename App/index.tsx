@@ -54,7 +54,9 @@ const App: React.FC<AppProps> = (props) => {
   const isAbout = screen === Screen.About;
   const isExplore = screen === Screen.Explore;
   const isGame = screen === Screen.Game;
-  const allWords = cloneDeep(ALL_WORDS);
+
+  // TODO: remove 5 limit
+  const allWords = cloneDeep(ALL_WORDS.filter((w) => w.englishWord.length < 5));
 
   // Markup
   return (
