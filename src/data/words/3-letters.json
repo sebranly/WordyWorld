@@ -1,27 +1,27 @@
 [
   {
     "en": "AFK",
-    "fr": ""
+    "fr": "loin du clavier"
   },
   {
     "en": "AKA",
-    "fr": ""
+    "fr": "alias"
   },
   {
     "en": "BFF",
-    "fr": ""
+    "fr": "meilleurs amis pour toujours"
   },
   {
     "en": "BRB",
-    "fr": ""
+    "fr": "je reviens tout de suite"
   },
   {
     "en": "BTW",
-    "fr": ""
+    "fr": "au fait"
   },
   {
     "en": "DIY",
-    "fr": ""
+    "fr": "à faire soi-même"
   },
   {
     "en": "DOA",
@@ -33,31 +33,31 @@
   },
   {
     "en": "EOF",
-    "fr": ""
+    "fr": "fin de fichier"
   },
   {
     "en": "EOY",
-    "fr": ""
+    "fr": "fin d'année"
   },
   {
     "en": "ETA",
-    "fr": ""
+    "fr": "Heure d'arrivée estimée"
   },
   {
     "en": "F2F",
-    "fr": ""
+    "fr": "face à face"
   },
   {
     "en": "FAQ",
-    "fr": ""
+    "fr": "foire aux questions"
   },
   {
     "en": "FYI",
-    "fr": ""
+    "fr": "Pour votre information"
   },
   {
     "en": "IDK",
-    "fr": ""
+    "fr": "Je ne sais pas"
   },
   {
     "en": "ILY",
@@ -65,171 +65,171 @@
   },
   {
     "en": "LMK",
-    "fr": ""
+    "fr": "tiens-moi au courant"
   },
   {
     "en": "May",
-    "fr": ""
+    "fr": "Mai"
   },
   {
     "en": "OMG",
-    "fr": ""
+    "fr": "oh mon dieu"
   },
   {
     "en": "OMW",
-    "fr": ""
+    "fr": "sur mon chemin"
   },
   {
     "en": "TBA",
-    "fr": ""
+    "fr": "À être annoncé"
   },
   {
     "en": "TBC",
-    "fr": ""
+    "fr": "À être confirmé"
   },
   {
     "en": "TBH",
-    "fr": ""
+    "fr": "Pour être honnête"
   },
   {
     "en": "TTL",
-    "fr": ""
+    "fr": "temps de vie"
   },
   {
     "en": "UFO",
-    "fr": ""
+    "fr": "OVNI"
   },
   {
     "en": "USA",
-    "fr": ""
+    "fr": "États-Unis"
   },
   {
     "en": "ace",
-    "fr": ""
+    "fr": "as"
   },
   {
     "en": "act",
-    "fr": ""
+    "fr": "agir"
   },
   {
     "en": "add",
-    "fr": ""
+    "fr": "ajouter"
   },
   {
     "en": "age",
-    "fr": ""
+    "fr": "âge"
   },
   {
     "en": "ago",
-    "fr": ""
+    "fr": "il y a (depuis)"
   },
   {
     "en": "aid",
-    "fr": ""
+    "fr": "aide"
   },
   {
     "en": "aim",
-    "fr": ""
+    "fr": "but"
   },
   {
     "en": "air",
-    "fr": ""
+    "fr": "air"
   },
   {
     "en": "all",
-    "fr": ""
+    "fr": "tous"
   },
   {
     "en": "and",
-    "fr": ""
+    "fr": "et"
   },
   {
     "en": "ape",
-    "fr": ""
+    "fr": "singe"
   },
   {
     "en": "arc",
-    "fr": ""
+    "fr": "arc"
   },
   {
     "en": "arm",
-    "fr": ""
+    "fr": "bras"
   },
   {
     "en": "art",
-    "fr": ""
+    "fr": "art"
   },
   {
     "en": "ask",
-    "fr": ""
+    "fr": "demander"
   },
   {
     "en": "bad",
-    "fr": ""
+    "fr": "mal"
   },
   {
     "en": "bag",
-    "fr": ""
+    "fr": "sac"
   },
   {
     "en": "bat",
-    "fr": ""
+    "fr": "chauve-souris"
   },
   {
     "en": "bay",
-    "fr": ""
+    "fr": "baie"
   },
   {
     "en": "bby",
-    "fr": ""
+    "fr": "bb"
   },
   {
     "en": "bed",
-    "fr": ""
+    "fr": "lit"
   },
   {
     "en": "bee",
-    "fr": ""
+    "fr": "abeille"
   },
   {
     "en": "beg",
-    "fr": ""
+    "fr": "mendier"
   },
   {
     "en": "bet",
-    "fr": ""
+    "fr": "parier"
   },
   {
     "en": "bid",
-    "fr": ""
+    "fr": "enchère"
   },
   {
     "en": "big",
-    "fr": ""
+    "fr": "gros"
   },
   {
     "en": "bot",
-    "fr": ""
+    "fr": "bot"
   },
   {
     "en": "bow",
-    "fr": ""
+    "fr": "arc"
   },
   {
     "en": "box",
-    "fr": ""
+    "fr": "boîte"
   },
   {
     "en": "boy",
-    "fr": ""
+    "fr": "garçon"
   },
   {
     "en": "bra",
-    "fr": ""
+    "fr": "soutien-gorge"
   },
   {
     "en": "bug",
-    "fr": ""
+    "fr": "insecte"
   },
   {
     "en": "bus",
@@ -237,15 +237,15 @@
   },
   {
     "en": "but",
-    "fr": ""
+    "fr": "mais"
   },
   {
     "en": "buy",
-    "fr": ""
+    "fr": "acheter"
   },
   {
     "en": "bye",
-    "fr": ""
+    "fr": "au revoir"
   },
   {
     "en": "cab",
@@ -253,587 +253,587 @@
   },
   {
     "en": "can",
-    "fr": ""
+    "fr": "boîte de conserve"
   },
   {
     "en": "cap",
-    "fr": ""
+    "fr": "casquette"
   },
   {
     "en": "car",
-    "fr": ""
+    "fr": "voiture"
   },
   {
     "en": "cat",
-    "fr": ""
+    "fr": "chat"
   },
   {
     "en": "cop",
-    "fr": ""
+    "fr": "flic"
   },
   {
     "en": "cot",
-    "fr": ""
+    "fr": "lit bébé"
   },
   {
     "en": "cow",
-    "fr": ""
+    "fr": "vache"
   },
   {
     "en": "cry",
-    "fr": ""
+    "fr": "pleurer"
   },
   {
     "en": "cup",
-    "fr": ""
+    "fr": "coupe"
   },
   {
     "en": "cut",
-    "fr": ""
+    "fr": "couper"
   },
   {
     "en": "dad",
-    "fr": ""
+    "fr": "papa"
   },
   {
     "en": "day",
-    "fr": ""
+    "fr": "jour"
   },
   {
     "en": "die",
-    "fr": ""
+    "fr": "mourir"
   },
   {
     "en": "dig",
-    "fr": ""
+    "fr": "creuser"
   },
   {
     "en": "dog",
-    "fr": ""
+    "fr": "chien"
   },
   {
     "en": "dot",
-    "fr": ""
+    "fr": "point"
   },
   {
     "en": "dry",
-    "fr": ""
+    "fr": "sécher"
   },
   {
     "en": "dye",
-    "fr": ""
+    "fr": "teindre"
   },
   {
     "en": "ear",
-    "fr": ""
+    "fr": "oreille"
   },
   {
     "en": "eat",
-    "fr": ""
+    "fr": "manger"
   },
   {
     "en": "egg",
-    "fr": ""
+    "fr": "oeuf"
   },
   {
     "en": "end",
-    "fr": ""
+    "fr": "fin"
   },
   {
     "en": "era",
-    "fr": ""
+    "fr": "ère"
   },
   {
     "en": "eye",
-    "fr": ""
+    "fr": "oeil"
   },
   {
     "en": "far",
-    "fr": ""
+    "fr": "loin"
   },
   {
     "en": "fat",
-    "fr": ""
+    "fr": "gras"
   },
   {
     "en": "fee",
-    "fr": ""
+    "fr": "frais"
   },
   {
     "en": "few",
-    "fr": ""
+    "fr": "peu"
   },
   {
     "en": "fit",
-    "fr": ""
+    "fr": "en forme"
   },
   {
     "en": "fix",
-    "fr": ""
+    "fr": "réparer"
   },
   {
     "en": "fkn",
-    "fr": ""
+    "fr": "putain de"
   },
   {
     "en": "flu",
-    "fr": ""
+    "fr": "grippe"
   },
   {
     "en": "fly",
-    "fr": ""
+    "fr": "mouche"
   },
   {
     "en": "fog",
-    "fr": ""
+    "fr": "brouillard"
   },
   {
     "en": "for",
-    "fr": ""
+    "fr": "pour"
   },
   {
     "en": "fox",
-    "fr": ""
+    "fr": "renard"
   },
   {
     "en": "fun",
-    "fr": ""
+    "fr": "amusement"
   },
   {
     "en": "gag",
-    "fr": ""
+    "fr": "blague"
   },
   {
     "en": "gap",
-    "fr": ""
+    "fr": "écart"
   },
   {
     "en": "gas",
-    "fr": ""
+    "fr": "gaz"
   },
   {
     "en": "gay",
-    "fr": ""
+    "fr": "gay"
   },
   {
     "en": "get",
-    "fr": ""
+    "fr": "avoir"
   },
   {
     "en": "gin",
-    "fr": ""
+    "fr": "gin"
   },
   {
     "en": "gob",
-    "fr": ""
+    "fr": "gueule"
   },
   {
     "en": "god",
-    "fr": ""
+    "fr": "dieu"
   },
   {
     "en": "gun",
-    "fr": ""
+    "fr": "pistolet"
   },
   {
     "en": "gut",
-    "fr": ""
+    "fr": "intestin"
   },
   {
     "en": "guy",
-    "fr": ""
+    "fr": "gars"
   },
   {
     "en": "hat",
-    "fr": ""
+    "fr": "chapeau"
   },
   {
     "en": "her",
-    "fr": ""
+    "fr": "sa/ses"
   },
   {
     "en": "hey",
-    "fr": ""
+    "fr": "hey"
   },
   {
     "en": "him",
-    "fr": ""
+    "fr": "lui"
   },
   {
     "en": "his",
-    "fr": ""
+    "fr": "son/ses"
   },
   {
     "en": "hit",
-    "fr": ""
+    "fr": "coup"
   },
   {
     "en": "hot",
-    "fr": ""
+    "fr": "chaud"
   },
   {
     "en": "how",
-    "fr": ""
+    "fr": "comment"
   },
   {
     "en": "hug",
-    "fr": ""
+    "fr": "serrer dans les bras"
   },
   {
     "en": "ice",
-    "fr": ""
+    "fr": "glace"
   },
   {
     "en": "icy",
-    "fr": ""
+    "fr": "glacé"
   },
   {
     "en": "ill",
-    "fr": ""
+    "fr": "souffrant"
   },
   {
     "en": "ink",
-    "fr": ""
+    "fr": "encre"
   },
   {
     "en": "inn",
-    "fr": ""
+    "fr": "auberge"
   },
   {
     "en": "its",
-    "fr": ""
+    "fr": "ses"
   },
   {
     "en": "jam",
-    "fr": ""
+    "fr": "confiture"
   },
   {
     "en": "job",
-    "fr": ""
+    "fr": "emploi"
   },
   {
     "en": "joy",
-    "fr": ""
+    "fr": "joie"
   },
   {
     "en": "key",
-    "fr": ""
+    "fr": "clé"
   },
   {
     "en": "kid",
-    "fr": ""
+    "fr": "enfant"
   },
   {
     "en": "kit",
-    "fr": ""
+    "fr": "trousse"
   },
   {
     "en": "lag",
-    "fr": ""
+    "fr": "décalage"
   },
   {
     "en": "law",
-    "fr": ""
+    "fr": "loi"
   },
   {
     "en": "lay",
-    "fr": ""
+    "fr": "allonger"
   },
   {
     "en": "leg",
-    "fr": ""
+    "fr": "jambe"
   },
   {
     "en": "let",
-    "fr": ""
+    "fr": "laisser"
   },
   {
     "en": "lid",
-    "fr": ""
+    "fr": "couvercle"
   },
   {
     "en": "lie",
-    "fr": ""
+    "fr": "mensonge"
   },
   {
     "en": "lip",
-    "fr": ""
+    "fr": "lèvre"
   },
   {
     "en": "lot",
-    "fr": ""
+    "fr": "lot"
   },
   {
     "en": "low",
-    "fr": ""
+    "fr": "bas"
   },
   {
     "en": "mad",
-    "fr": ""
+    "fr": "furieux"
   },
   {
     "en": "man",
-    "fr": ""
+    "fr": "homme"
   },
   {
     "en": "map",
-    "fr": ""
+    "fr": "carte"
   },
   {
     "en": "maw",
-    "fr": ""
+    "fr": "gueule"
   },
   {
     "en": "may",
-    "fr": ""
+    "fr": "avoir la possibilité de"
   },
   {
     "en": "men",
-    "fr": ""
+    "fr": "hommes"
   },
   {
     "en": "mix",
-    "fr": ""
+    "fr": "mélanger"
   },
   {
     "en": "mob",
-    "fr": ""
+    "fr": "foule"
   },
   {
     "en": "mom",
-    "fr": ""
+    "fr": "maman"
   },
   {
     "en": "mow",
-    "fr": ""
+    "fr": "tondre"
   },
   {
     "en": "mug",
-    "fr": ""
+    "fr": "chope"
   },
   {
     "en": "mum",
-    "fr": ""
+    "fr": "maman"
   },
   {
     "en": "net",
-    "fr": ""
+    "fr": "filet"
   },
   {
     "en": "new",
-    "fr": ""
+    "fr": "nouveau"
   },
   {
     "en": "now",
-    "fr": ""
+    "fr": "maintenant"
   },
   {
     "en": "nvm",
-    "fr": ""
+    "fr": "ça ne fait rien"
   },
   {
     "en": "oaf",
-    "fr": ""
+    "fr": "lourdaud"
   },
   {
     "en": "oil",
-    "fr": ""
+    "fr": "huile"
   },
   {
     "en": "old",
-    "fr": ""
+    "fr": "vieux"
   },
   {
     "en": "one",
-    "fr": ""
+    "fr": "un"
   },
   {
     "en": "our",
-    "fr": ""
+    "fr": "notre"
   },
   {
     "en": "out",
-    "fr": ""
+    "fr": "en dehors"
   },
   {
     "en": "own",
-    "fr": ""
+    "fr": "posséder"
   },
   {
     "en": "pan",
-    "fr": ""
+    "fr": "poêle"
   },
   {
     "en": "pay",
-    "fr": ""
+    "fr": "payer"
   },
   {
     "en": "pen",
-    "fr": ""
+    "fr": "stylo"
   },
   {
     "en": "per",
-    "fr": ""
+    "fr": "par"
   },
   {
     "en": "pet",
-    "fr": ""
+    "fr": "animal de compagnie"
   },
   {
     "en": "pie",
-    "fr": ""
+    "fr": "tarte"
   },
   {
     "en": "pig",
-    "fr": ""
+    "fr": "cochon"
   },
   {
     "en": "pot",
-    "fr": ""
+    "fr": "marmite"
   },
   {
     "en": "pub",
-    "fr": ""
+    "fr": "bistrot"
   },
   {
     "en": "put",
-    "fr": ""
+    "fr": "mettre"
   },
   {
     "en": "rat",
-    "fr": ""
+    "fr": "rat"
   },
   {
     "en": "ray",
-    "fr": ""
+    "fr": "rayon"
   },
   {
     "en": "red",
-    "fr": ""
+    "fr": "rouge"
   },
   {
     "en": "rev",
-    "fr": ""
+    "fr": "emballer le moteur"
   },
   {
     "en": "rid",
-    "fr": ""
+    "fr": "débarrasser"
   },
   {
     "en": "rod",
-    "fr": ""
+    "fr": "barre"
   },
   {
     "en": "run",
-    "fr": ""
+    "fr": "courir"
   },
   {
     "en": "sad",
-    "fr": ""
+    "fr": "triste"
   },
   {
     "en": "saw",
-    "fr": ""
+    "fr": "scie"
   },
   {
     "en": "say",
-    "fr": ""
+    "fr": "dire"
   },
   {
     "en": "sea",
-    "fr": ""
+    "fr": "mer"
   },
   {
     "en": "see",
-    "fr": ""
+    "fr": "voir"
   },
   {
     "en": "set",
-    "fr": ""
+    "fr": "installer"
   },
   {
     "en": "sew",
-    "fr": ""
+    "fr": "coudre"
   },
   {
     "en": "sex",
-    "fr": ""
+    "fr": "sexe"
   },
   {
     "en": "she",
-    "fr": ""
+    "fr": "elle"
   },
   {
     "en": "shy",
-    "fr": ""
+    "fr": "timide"
   },
   {
     "en": "sin",
-    "fr": ""
+    "fr": "péché"
   },
   {
     "en": "sir",
-    "fr": ""
+    "fr": "monsieur"
   },
   {
     "en": "sit",
-    "fr": ""
+    "fr": "asseoir"
   },
   {
     "en": "six",
-    "fr": ""
+    "fr": "six"
   },
   {
     "en": "ski",
-    "fr": ""
+    "fr": "ski"
   },
   {
     "en": "sky",
-    "fr": ""
+    "fr": "ciel"
   },
   {
     "en": "sly",
-    "fr": ""
+    "fr": "sournois"
   },
   {
     "en": "son",
-    "fr": ""
+    "fr": "fils"
   },
   {
     "en": "sow",
-    "fr": ""
+    "fr": "truie"
   },
   {
     "en": "spy",
-    "fr": ""
+    "fr": "espion"
   },
   {
     "en": "sum",
-    "fr": ""
+    "fr": "somme"
   },
   {
     "en": "sun",
-    "fr": ""
+    "fr": "soleil"
   },
   {
     "en": "tag",
-    "fr": ""
+    "fr": "étiquette"
   },
   {
     "en": "tan",
-    "fr": ""
+    "fr": "bronzer"
   },
   {
     "en": "tap",
-    "fr": ""
+    "fr": "robinet"
   },
   {
     "en": "tax",
-    "fr": ""
+    "fr": "impôt"
   },
   {
     "en": "tea",
-    "fr": ""
+    "fr": "thé"
   },
   {
     "en": "tee",
@@ -841,23 +841,23 @@
   },
   {
     "en": "ten",
-    "fr": ""
+    "fr": "dix"
   },
   {
     "en": "the",
-    "fr": ""
+    "fr": "le/la/les"
   },
   {
     "en": "thx",
-    "fr": ""
+    "fr": "cimer"
   },
   {
     "en": "tie",
-    "fr": ""
+    "fr": "cravate"
   },
   {
     "en": "tip",
-    "fr": ""
+    "fr": "pourboire"
   },
   {
     "en": "tom",
@@ -865,86 +865,86 @@
   },
   {
     "en": "too",
-    "fr": ""
+    "fr": "aussi"
   },
   {
     "en": "top",
-    "fr": ""
+    "fr": "haut"
   },
   {
     "en": "toy",
-    "fr": ""
+    "fr": "jouet"
   },
   {
     "en": "try",
-    "fr": ""
+    "fr": "essayer"
   },
   {
     "en": "tub",
-    "fr": ""
+    "fr": "baignoire"
   },
   {
     "en": "two",
-    "fr": ""
+    "fr": "deux"
   },
   {
     "en": "use",
-    "fr": ""
+    "fr": "utiliser"
   },
   {
     "en": "van",
-    "fr": ""
+    "fr": "fourgon"
   },
   {
     "en": "war",
-    "fr": ""
+    "fr": "guerre"
   },
   {
     "en": "way",
-    "fr": ""
+    "fr": "voie"
   },
   {
     "en": "wbu",
-    "fr": ""
+    "fr": "Et vous"
   },
   {
     "en": "web",
-    "fr": ""
+    "fr": "toile"
   },
   {
     "en": "wet",
-    "fr": ""
+    "fr": "humide"
   },
   {
     "en": "who",
-    "fr": ""
+    "fr": "qui"
   },
   {
     "en": "why",
-    "fr": ""
+    "fr": "pourquoi"
   },
   {
     "en": "win",
-    "fr": ""
+    "fr": "gagner"
   },
   {
     "en": "yes",
-    "fr": ""
+    "fr": "oui"
   },
   {
     "en": "yet",
-    "fr": ""
+    "fr": "encore"
   },
   {
     "en": "you",
-    "fr": ""
+    "fr": "tu/vous"
   },
   {
     "en": "zip",
-    "fr": ""
+    "fr": "fermeture éclair"
   },
   {
     "en": "zoo",
-    "fr": ""
+    "fr": "zoo"
   }
 ]
