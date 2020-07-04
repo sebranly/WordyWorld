@@ -48,6 +48,7 @@
     "test:watch": "jest --onlyChanged --watch"
   },
   "dependencies": {
+    "@react-native-community/toolbar-android": "0.1.0-rc.2",
     "emoji-from-text": "^1.1.11",
     "expo": "^38.0.0",
     "expo-constants": "~9.1.1",
