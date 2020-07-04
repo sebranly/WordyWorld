@@ -29,7 +29,7 @@ Array [
         }
       }
     >
-      <TouchableOpacity
+      <
         active={false}
         activeOpacity={0.5}
         style={
@@ -89,7 +89,7 @@ Array [
             ]
           }
         >
-          
+          
         </Text>
         <Text
           style={
@@ -109,8 +109,8 @@ Array [
         >
           Explore
         </Text>
-      </TouchableOpacity>
-      <TouchableOpacity
+      </>
+      <
         active={false}
         activeOpacity={0.5}
         style={
@@ -170,7 +170,7 @@ Array [
             ]
           }
         >
-          
+          
         </Text>
         <Text
           style={
@@ -190,8 +190,8 @@ Array [
         >
           Play
         </Text>
-      </TouchableOpacity>
-      <TouchableOpacity
+      </>
+      <
         active={true}
         activeOpacity={0.5}
         style={
@@ -251,7 +251,7 @@ Array [
             ]
           }
         >
-          
+          
         </Text>
         <Text
           style={
@@ -271,7 +271,7 @@ Array [
         >
           About
         </Text>
-      </TouchableOpacity>
+      </>
     </View>
   </View>,
 ]

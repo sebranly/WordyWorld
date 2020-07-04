@@ -84,9 +84,7 @@ Array [
             Application
           </Text>
         </View>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        <
           underlayColor="#DDD"
         >
           <View
@@ -118,10 +116,8 @@ Array [
               Created in 2018 - 2020
             </Text>
           </View>
-        </TouchableHighlight>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        </>
+        <
           underlayColor="#DDD"
         >
           <View
@@ -153,10 +149,8 @@ Array [
               Version 1.2.3
             </Text>
           </View>
-        </TouchableHighlight>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        </>
+        <
           underlayColor="#DDD"
         >
           <View
@@ -217,7 +211,7 @@ Array [
                   ]
                 }
               >
-                
+                
               </Text>
             </View>
             <Text
@@ -239,7 +233,7 @@ Array [
               Project's GitHub
             </Text>
           </View>
-        </TouchableHighlight>
+        </>
         <View
           bordered={true}
           style={
@@ -270,9 +264,7 @@ Array [
             Author
           </Text>
         </View>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        <
           underlayColor="#DDD"
         >
           <View
@@ -366,7 +358,7 @@ Array [
               </Text>
             </View>
           </View>
-        </TouchableHighlight>
+        </>
         <View
           bordered={true}
           style={
@@ -397,9 +389,7 @@ Array [
             Libraries used
           </Text>
         </View>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        <
           underlayColor="#DDD"
         >
           <View
@@ -431,10 +421,8 @@ Array [
               @testing-library/react-native
             </Text>
           </View>
-        </TouchableHighlight>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        </>
+        <
           underlayColor="#DDD"
         >
           <View
@@ -466,10 +454,8 @@ Array [
               emoji-from-text
             </Text>
           </View>
-        </TouchableHighlight>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        </>
+        <
           underlayColor="#DDD"
         >
           <View
@@ -501,10 +487,8 @@ Array [
               native-base
             </Text>
           </View>
-        </TouchableHighlight>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        </>
+        <
           underlayColor="#DDD"
         >
           <View
@@ -536,10 +520,8 @@ Array [
               node-emoji
             </Text>
           </View>
-        </TouchableHighlight>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        </>
+        <
           underlayColor="#DDD"
         >
           <View
@@ -571,10 +553,8 @@ Array [
               react-native
             </Text>
           </View>
-        </TouchableHighlight>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
+        </>
+        <
           underlayColor="#DDD"
         >
           <View
@@ -606,7 +586,7 @@ Array [
               react-native-easy-grid
             </Text>
           </View>
-        </TouchableHighlight>
+        </>
       </View>
     </ScrollView>
   </View>,
