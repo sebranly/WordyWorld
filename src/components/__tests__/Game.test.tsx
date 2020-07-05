@@ -7,6 +7,7 @@ import { Game } from "../Game";
 import { mockWords } from "../../mocks";
 
 it("renders", () => {
+  jest.useFakeTimers();
   const props = { allWords: mockWords, initialWordIndex: 0 };
 
   const { container } = render(<Game {...props} />);

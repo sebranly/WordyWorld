@@ -41,6 +41,7 @@
     "start": "expo start",
     "eject": "expo eject",
     "android": "expo start --android",
+    "init": "rm -rf node_modules && npm i && npm uninstall jest && npm i --save-dev jest && npm run test",
     "ios": "expo start --ios",
     "pre-commit": "./scripts/pre-commit.sh",
     "web": "expo start --web",
