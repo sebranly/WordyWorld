@@ -10,6 +10,7 @@ import { render } from "@testing-library/react-native";
 import App from "../index";
 
 it("renders", () => {
+  jest.useFakeTimers();
   const props = { initialReady: true };
   const { container } = render(<App {...props} />);
   expect(container.children.length).toBeGreaterThan(0);
