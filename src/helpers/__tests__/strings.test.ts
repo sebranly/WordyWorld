@@ -11,16 +11,6 @@ import {
 import { WordConnection } from "../../types/enum";
 
 describe("strings helpers", () => {
-  it("exports the following helpers", () => {
-    expect(typeof areAnagrams).toBe("function");
-    expect(typeof decomposeWord).toBe("function");
-    expect(typeof findAdditionWordConnections).toBe("function");
-    expect(typeof findDeletionWordConnections).toBe("function");
-    expect(typeof findReplacementWordConnections).toBe("function");
-    expect(typeof findWordConnections).toBe("function");
-    expect(typeof pluralize).toBe("function");
-  });
-
   describe("areAnagrams", () => {
     let result: boolean;
 
