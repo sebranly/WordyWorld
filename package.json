@@ -11,8 +11,8 @@
     "@testing-library/react-native": "^5.0.3",
     "@types/jest": "^26.0.22",
     "@types/node-emoji": "^1.8.1",
-    "@types/react": "^16.9.56",
-    "@types/react-native": "^0.62.18",
+    "@types/react": "~16.9.35",
+    "@types/react-native": "~0.63.2",
     "@types/react-test-renderer": "^16.9.5",
     "babel-jest": "^26.6.3",
     "babel-preset-expo": "^8.3.0",
@@ -20,9 +20,9 @@
     "expo-cli": "^3.28.6",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
-    "jest-expo": "^38.0.0",
+    "jest-expo": "^39.0.0",
     "react-test-renderer": "^16.14.0",
-    "typescript": "^3.9.9"
+    "typescript": "~3.9.2"
   },
   "main": "node_modules/expo/AppEntry.js",
   "repository": {
@@ -51,16 +51,16 @@
   "dependencies": {
     "@react-native-community/toolbar-android": "0.1.0-rc.2",
     "emoji-from-text": "^1.1.12",
-    "expo": "^38.0.11",
-    "expo-constants": "~9.1.1",
-    "expo-font": "^8.2.2",
+    "expo": "^39.0.0",
+    "expo-constants": "~9.2.0",
+    "expo-font": "~8.3.0",
     "lodash": "^4.17.21",
     "native-base": "2.13.8",
     "node-emoji": "^1.10.0",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.0.tar.gz",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
     "react-native-easy-grid": "^0.2.2",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.13.7"
   }
 }
