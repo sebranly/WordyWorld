@@ -4,6 +4,7 @@ import * as React from "react";
 import cloneDeep from "lodash/cloneDeep";
 import random from "lodash/random";
 import { AppLoading } from "expo";
+// TODO: import AppLoading from 'expo-app-loading';
 import { Container } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
@@ -34,7 +35,7 @@ const App: React.FC<AppProps> = (props) => {
       await Font.loadAsync({
         Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
         Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
-        ...Ionicons.font,
+        ...Ionicons.font
       });
 
       setIsReady(true);
@@ -74,15 +75,15 @@ const App: React.FC<AppProps> = (props) => {
 };
 
 App.defaultProps = {
-  initialReady: false,
+  initialReady: false
 };
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     flex: 1,
-    paddingTop: HEADER_Y,
-  },
+    paddingTop: HEADER_Y
+  }
 });
 
 export default App;
