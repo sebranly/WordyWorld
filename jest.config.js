@@ -1,6 +1,7 @@
 module.exports = {
   moduleFileExtensions: ["js", "json", "jsx", "node", "ts", "tsx"],
-  preset: "@testing-library/react-native",
+  preset: "react-native",
+  setupFilesAfterEnv: ["@testing-library/jest-native/extend-expect"],
   transformIgnorePatterns: [
     "node_modules/(?!(react-native" +
       "|@unimodules" +
