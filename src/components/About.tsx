@@ -17,7 +17,7 @@ import { Linking, StyleSheet } from "react-native";
 
 export interface AboutProps {}
 
-const About: React.FC<AboutProps> = _props => {
+const About: React.FC<AboutProps> = (_props) => {
   // Setup
   const author = "sebranly";
   const authorAvatar = "https://avatars1.githubusercontent.com/u/25478895";
@@ -40,7 +40,7 @@ const About: React.FC<AboutProps> = _props => {
     "node-emoji",
     "react-native",
     "react-native-easy-grid"
-  ].map(v => renderLibrary(v));
+  ].map((v) => renderLibrary(v));
 
   return (
     <Container>

@@ -21,6 +21,7 @@
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "jest-expo": "^38.0.0",
+    "prettier": "^2.2.1",
     "react-test-renderer": "^16.13.1",
     "typescript": "~3.9.5"
   },
@@ -39,6 +40,7 @@
   },
   "scripts": {
     "start": "expo start",
+    "pretty": "prettier --write \"./**/*.{ts,tsx,js,jsx,json}\"",
     "eject": "expo eject",
     "android": "expo start --android",
     "init": "rm -rf node_modules && npm i && npm uninstall jest && npm i --save-dev jest && npm run test",

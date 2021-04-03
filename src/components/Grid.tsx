@@ -55,17 +55,17 @@ const Grid: React.FC<GridProps> = (props) => {
 const styles = StyleSheet.create({
   cell: {
     backgroundColor: "grey",
-    margin: 2,
+    margin: 2
   },
   grid: {
-    flex: 3,
+    flex: 3
   },
   text: { fontSize: 30 },
   viewText: {
     alignItems: "center",
     flex: 1,
-    justifyContent: "center",
-  },
+    justifyContent: "center"
+  }
 });
 
 export { Grid };

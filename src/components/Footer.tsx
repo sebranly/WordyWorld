@@ -16,7 +16,7 @@ export interface FooterProps {
   screen: Screen;
 }
 
-const Footer: React.FC<FooterProps> = props => {
+const Footer: React.FC<FooterProps> = (props) => {
   // Setup
   const { changeScreen, screen } = props;
 
@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = props => {
     );
   };
 
-  const buttons = [Screen.Explore, Screen.Game, Screen.About].map(v =>
+  const buttons = [Screen.Explore, Screen.Game, Screen.About].map((v) =>
     renderButton(v)
   );
 
