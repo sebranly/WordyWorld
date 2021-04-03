@@ -119,11 +119,11 @@ const Game: React.FC<GameProps> = (props) => {
 const styles = StyleSheet.create({
   example: {
     backgroundColor: "yellow",
-    flex: 1,
+    flex: 1
   },
   title: {
-    textAlign: "center",
-  },
+    textAlign: "center"
+  }
 });
 
 export { Game };

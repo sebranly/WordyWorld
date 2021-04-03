@@ -56,7 +56,7 @@ const decomposeWord = (word: string) => {
   // TODO: fix any
   const occurrences: any = {};
 
-  letters.forEach(letter => {
+  letters.forEach((letter) => {
     if (occurrences[letter]) occurrences[letter]++;
     else occurrences[letter] = 1;
   });

@@ -8,7 +8,7 @@ export interface SelectedLettersTextProps {
   text: string;
 }
 
-const SelectedLettersText: React.FC<SelectedLettersTextProps> = props => {
+const SelectedLettersText: React.FC<SelectedLettersTextProps> = (props) => {
   const { letters, style, text } = props;
 
   if (!letters) {

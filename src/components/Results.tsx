@@ -10,7 +10,7 @@ import { ALL_WORDS, MIN_SEARCH_LETTER_COUNT } from "../config/settings";
 
 export interface ResultsProps {}
 
-const Results: React.FC<ResultsProps> = props => {
+const Results: React.FC<ResultsProps> = (props) => {
   // Hooks
   const [searchText, setSearchText] = React.useState("");
   const [isSearch, setIsSearch] = React.useState(false);
@@ -33,7 +33,7 @@ const Results: React.FC<ResultsProps> = props => {
       <Text style={styles.title}>{title}</Text>
       <TextInput
         placeholder={placeholder}
-        onChangeText={text => {
+        onChangeText={(text) => {
           const trimmedText = text.trim();
           const hasLength = trimmedText.length >= MIN_SEARCH_LETTER_COUNT;
 

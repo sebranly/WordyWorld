@@ -31,7 +31,7 @@ const DATA: any = {
   letterCountIs7: require("../data/words/7-letters.json"),
   letterCountIs8: require("../data/words/8-letters.json"),
   letterCountIs9: require("../data/words/9-letters.json"),
-  letterCountIs10: require("../data/words/10-letters.json"),
+  letterCountIs10: require("../data/words/10-letters.json")
 };
 
 const allLetterCounts = Array.from(

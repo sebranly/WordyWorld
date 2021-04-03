@@ -47,7 +47,7 @@ const getResults = (jsonArray: any[], searchText: string) => {
     const letterSection = groupOfWords[0][0].toUpperCase();
     return {
       title: `${letterSection} (${pluralize("word", groupOfWords.length)})`,
-      data: groupOfWords,
+      data: groupOfWords
     };
   });
 

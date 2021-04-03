@@ -10,7 +10,7 @@ export interface EmojiProps {
   text: string;
 }
 
-const Emoji: React.FC<EmojiProps> = props => {
+const Emoji: React.FC<EmojiProps> = (props) => {
   // Setup
   const { text } = props;
 
