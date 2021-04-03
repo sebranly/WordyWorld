@@ -52,6 +52,7 @@
     "@react-native-community/toolbar-android": "0.1.0-rc.2",
     "emoji-from-text": "^1.1.12",
     "expo": "^40.0.0",
+    "expo-app-loading": "^1.0.1",
     "expo-constants": "~9.3.3",
     "expo-font": "~8.4.0",
     "lodash": "^4.17.21",
