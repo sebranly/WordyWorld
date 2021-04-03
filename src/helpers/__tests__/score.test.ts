@@ -14,7 +14,6 @@ describe("score helpers", () => {
 
     it("returns correct mapping for lowercase letters", () => {
       expect(getLetterScore("a")).toBe(1);
-      // Test
       expect(getLetterScore("b")).toBe(3);
       expect(getLetterScore("c")).toBe(3);
       expect(getLetterScore("d")).toBe(2);
