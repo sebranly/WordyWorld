@@ -4,11 +4,6 @@ import { getLetterScore, getWordScore } from "../score";
 describe("score helpers", () => {
   let result: number;
 
-  it("exports the following helpers", () => {
-    expect(typeof getLetterScore).toBe("function");
-    expect(typeof getWordScore).toBe("function");
-  });
-
   describe("getLetterScore", () => {
     it("returns 0 when not a letter", () => {
       expect(getLetterScore("")).toBe(0);
