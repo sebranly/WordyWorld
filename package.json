@@ -18,7 +18,7 @@
     "babel-preset-expo": "^8.2.3",
     "csv-parse": "^4.10.1",
     "expo-cli": "^3.21.13",
-    "husky": "^4.2.5",
+    "husky": "^6.0.0",
     "jest": "^26.1.0",
     "jest-expo": "^38.0.0",
     "prettier": "^2.2.1",
@@ -33,11 +33,6 @@
   "bugs": {
     "url": "https://github.com/sebranly/WordyWorld/issues"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pre-commit"
-    }
-  },
   "scripts": {
     "start": "expo start",
     "pretty": "prettier --write \"./**/*.{ts,tsx,js,jsx,json}\"",
@@ -45,10 +40,10 @@
     "android": "expo start --android",
     "init": "rm -rf node_modules && npm i && npm uninstall jest && npm i --save-dev jest && npm run test",
     "ios": "expo start --ios",
-    "pre-commit": "./scripts/pre-commit.sh",
     "web": "expo start --web",
     "test": "jest",
-    "test:watch": "jest --onlyChanged --watch"
+    "test:watch": "jest --onlyChanged --watch",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@react-native-community/toolbar-android": "0.1.0-rc.2",
