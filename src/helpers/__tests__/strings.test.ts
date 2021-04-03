@@ -6,21 +6,11 @@ import {
   findDeletionWordConnections,
   findReplacementWordConnections,
   findWordConnections,
-  pluralize
+  pluralize,
 } from "../strings";
 import { WordConnection } from "../../types/enum";
 
 describe("strings helpers", () => {
-  it("exports the following helpers", () => {
-    expect(typeof areAnagrams).toBe("function");
-    expect(typeof decomposeWord).toBe("function");
-    expect(typeof findAdditionWordConnections).toBe("function");
-    expect(typeof findDeletionWordConnections).toBe("function");
-    expect(typeof findReplacementWordConnections).toBe("function");
-    expect(typeof findWordConnections).toBe("function");
-    expect(typeof pluralize).toBe("function");
-  });
-
   describe("areAnagrams", () => {
     let result: boolean;
 
@@ -111,12 +101,12 @@ describe("strings helpers", () => {
     it("returns connections when applicable", () => {
       result = findAdditionWordConnections("earth", "hearth");
       expect(result).toStrictEqual([
-        { character: "h", position: 0, type: WordConnection.Addition }
+        { character: "h", position: 0, type: WordConnection.Addition },
       ]);
 
       result = findAdditionWordConnections("heart", "hearth");
       expect(result).toStrictEqual([
-        { character: "h", position: 5, type: WordConnection.Addition }
+        { character: "h", position: 5, type: WordConnection.Addition },
       ]);
 
       result = findAdditionWordConnections("ten", "then");
@@ -124,8 +114,8 @@ describe("strings helpers", () => {
         {
           character: "h",
           position: 1,
-          type: WordConnection.Addition
-        }
+          type: WordConnection.Addition,
+        },
       ]);
 
       result = findAdditionWordConnections("god", "good");
@@ -133,13 +123,13 @@ describe("strings helpers", () => {
         {
           character: "o",
           position: 1,
-          type: WordConnection.Addition
+          type: WordConnection.Addition,
         },
         {
           character: "o",
           position: 2,
-          type: WordConnection.Addition
-        }
+          type: WordConnection.Addition,
+        },
       ]);
     });
 
@@ -172,29 +162,29 @@ describe("strings helpers", () => {
     it("returns connections when applicable", () => {
       result = findDeletionWordConnections("hearth", "earth");
       expect(result).toStrictEqual([
-        { position: 0, type: WordConnection.Deletion }
+        { position: 0, type: WordConnection.Deletion },
       ]);
 
       result = findDeletionWordConnections("hearth", "heart");
       expect(result).toStrictEqual([
-        { position: 5, type: WordConnection.Deletion }
+        { position: 5, type: WordConnection.Deletion },
       ]);
 
       result = findDeletionWordConnections("then", "ten");
       expect(result).toStrictEqual([
-        { position: 1, type: WordConnection.Deletion }
+        { position: 1, type: WordConnection.Deletion },
       ]);
 
       result = findDeletionWordConnections("good", "god");
       expect(result).toStrictEqual([
         {
           position: 1,
-          type: WordConnection.Deletion
+          type: WordConnection.Deletion,
         },
         {
           position: 2,
-          type: WordConnection.Deletion
-        }
+          type: WordConnection.Deletion,
+        },
       ]);
     });
 
@@ -227,17 +217,17 @@ describe("strings helpers", () => {
     it("returns connections when applicable", () => {
       result = findReplacementWordConnections("bar", "car");
       expect(result).toStrictEqual([
-        { character: "c", position: 0, type: WordConnection.Replacement }
+        { character: "c", position: 0, type: WordConnection.Replacement },
       ]);
 
       result = findReplacementWordConnections("dig", "dog");
       expect(result).toStrictEqual([
-        { character: "o", position: 1, type: WordConnection.Replacement }
+        { character: "o", position: 1, type: WordConnection.Replacement },
       ]);
 
       result = findReplacementWordConnections("car", "cat");
       expect(result).toStrictEqual([
-        { character: "t", position: 2, type: WordConnection.Replacement }
+        { character: "t", position: 2, type: WordConnection.Replacement },
       ]);
     });
 
@@ -278,21 +268,21 @@ describe("strings helpers", () => {
     it("returns Addition when applicable", () => {
       result = findWordConnections("ten", "then");
       expect(result).toStrictEqual([
-        { character: "h", position: 1, type: WordConnection.Addition }
+        { character: "h", position: 1, type: WordConnection.Addition },
       ]);
     });
 
     it("returns Deletion when applicable", () => {
       result = findWordConnections("then", "ten");
       expect(result).toStrictEqual([
-        { position: 1, type: WordConnection.Deletion }
+        { position: 1, type: WordConnection.Deletion },
       ]);
     });
 
     it("returns Replacement when applicable", () => {
       result = findWordConnections("bar", "car");
       expect(result).toStrictEqual([
-        { character: "c", position: 0, type: WordConnection.Replacement }
+        { character: "c", position: 0, type: WordConnection.Replacement },
       ]);
     });
 
