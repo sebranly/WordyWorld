@@ -8,7 +8,7 @@ import { Screen } from "../../types/enum";
 
 it("renders", () => {
   const props = { changeScreen: jest.fn(), screen: Screen.About };
-  const { container } = render(<Footer {...props} />);
-  expect(container.children.length).toBeGreaterThan(0);
-  expect(container.children).toMatchSnapshot();
+  const { toJSON } = render(<Footer {...props} />);
+  expect(toJSON()).not.toBeNull();
+  expect(toJSON()).toMatchSnapshot();
 });

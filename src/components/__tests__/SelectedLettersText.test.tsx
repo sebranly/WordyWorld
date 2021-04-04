@@ -7,7 +7,7 @@ import { SelectedLettersText } from "../SelectedLettersText";
 
 it("renders", () => {
   const props = { text: "Test" };
-  const { container } = render(<SelectedLettersText {...props} />);
-  expect(container.children.length).toBeGreaterThan(0);
-  expect(container.children).toMatchSnapshot();
+  const { toJSON } = render(<SelectedLettersText {...props} />);
+  expect(toJSON()).not.toBeNull();
+  expect(toJSON()).toMatchSnapshot();
 });

@@ -3,7 +3,7 @@ import * as Font from "expo-font";
 import * as React from "react";
 import cloneDeep from "lodash/cloneDeep";
 import random from "lodash/random";
-import { AppLoading } from "expo";
+import AppLoading from "expo-app-loading";
 import { Container } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";

@@ -6,7 +6,7 @@ import { render } from "@testing-library/react-native";
 import { Results } from "../Results";
 
 it("renders", () => {
-  const { container } = render(<Results />);
-  expect(container.children.length).toBeGreaterThan(0);
-  expect(container.children).toMatchSnapshot();
+  const { toJSON } = render(<Results />);
+  expect(toJSON()).not.toBeNull();
+  expect(toJSON()).toMatchSnapshot();
 });
