@@ -9,7 +9,7 @@ import { render } from "@testing-library/react-native";
 import { About } from "../About";
 
 it("renders", () => {
-  const { container } = render(<About />);
-  expect(container.children.length).toBeGreaterThan(0);
-  expect(container.children).toMatchSnapshot();
+  const { toJSON } = render(<About />);
+  expect(toJSON()).not.toBeNull();
+  expect(toJSON()).toMatchSnapshot();
 });

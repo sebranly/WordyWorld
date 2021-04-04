@@ -9,7 +9,7 @@ import { mockWords } from "../../mocks";
 it("renders", () => {
   const props = { word: mockWords[0] };
 
-  const { container } = render(<Grid {...props} />);
-  expect(container.children.length).toBeGreaterThan(0);
-  expect(container.children).toMatchSnapshot();
+  const { toJSON } = render(<Grid {...props} />);
+  expect(toJSON()).not.toBeNull();
+  expect(toJSON()).toMatchSnapshot();
 });

@@ -7,7 +7,7 @@ import { Emoji } from "../Emoji";
 
 it("renders", () => {
   const props = { text: "pizza" };
-  const { container } = render(<Emoji {...props} />);
-  expect(container.children.length).toBeGreaterThan(0);
-  expect(container.children).toMatchSnapshot();
+  const { toJSON } = render(<Emoji {...props} />);
+  expect(toJSON()).not.toBeNull();
+  expect(toJSON()).toMatchSnapshot();
 });

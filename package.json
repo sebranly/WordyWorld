@@ -8,6 +8,7 @@
   "private": true,
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@testing-library/jest-native": "^4.0.1",
     "@testing-library/react-native": "^7.2.0",
     "@types/jest": "^26.0.22",
     "@types/lodash": "^4.14.168",
@@ -45,6 +46,9 @@
     "test": "jest",
     "test:watch": "jest --onlyChanged --watch",
     "prepare": "husky install"
+  },
+  "jest": {
+    "preset": "jest-expo"
   },
   "dependencies": {
     "@react-native-community/toolbar-android": "0.1.0-rc.2",

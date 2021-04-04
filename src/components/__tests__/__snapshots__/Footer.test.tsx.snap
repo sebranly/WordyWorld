@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders 1`] = `
-Array [
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#F8F8F8",
+    }
+  }
+>
   <View
     style={
       Object {
@@ -29,9 +36,17 @@ Array [
         }
       }
     >
-      <
-        active={false}
-        activeOpacity={0.5}
+      <View
+        accessible={true}
+        focusable={true}
+        forwardedRef={[Function]}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "alignItems": "center",
@@ -49,6 +64,7 @@ Array [
             "flexDirection": "column",
             "height": null,
             "justifyContent": "center",
+            "opacity": 1,
             "paddingBottom": 6,
             "paddingTop": 6,
             "shadowColor": null,
@@ -57,7 +73,6 @@ Array [
             "shadowRadius": null,
           }
         }
-        vertical={true}
       >
         <Text
           allowFontScaling={false}
@@ -109,10 +124,18 @@ Array [
         >
           Explore
         </Text>
-      </>
-      <
-        active={false}
-        activeOpacity={0.5}
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        forwardedRef={[Function]}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "alignItems": "center",
@@ -130,6 +153,7 @@ Array [
             "flexDirection": "column",
             "height": null,
             "justifyContent": "center",
+            "opacity": 1,
             "paddingBottom": 6,
             "paddingTop": 6,
             "shadowColor": null,
@@ -138,7 +162,6 @@ Array [
             "shadowRadius": null,
           }
         }
-        vertical={true}
       >
         <Text
           allowFontScaling={false}
@@ -190,10 +213,18 @@ Array [
         >
           Play
         </Text>
-      </>
-      <
-        active={true}
-        activeOpacity={0.5}
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        forwardedRef={[Function]}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "alignItems": "center",
@@ -211,6 +242,7 @@ Array [
             "flexDirection": "column",
             "height": null,
             "justifyContent": "center",
+            "opacity": 1,
             "paddingBottom": 6,
             "paddingTop": 6,
             "shadowColor": null,
@@ -219,7 +251,6 @@ Array [
             "shadowRadius": null,
           }
         }
-        vertical={true}
       >
         <Text
           allowFontScaling={false}
@@ -271,8 +302,8 @@ Array [
         >
           About
         </Text>
-      </>
+      </View>
     </View>
-  </View>,
-]
+  </View>
+</RCTSafeAreaView>
 `;
