@@ -11,27 +11,18 @@ const findWordConnections = (word1: string, word2: string) => {
     return [{ type: WordConnection.Same }];
   }
 
-  // TODO: type it
-  const wordConnections: any[] = [];
-
   if (areAnagrams(word1, word2)) {
-    wordConnections.push({
-      type: WordConnection.Anagram
-    });
+    return [{ type: WordConnection.Anagram }];
   }
 
-  // TODO: I think we can improve it with short-circuits everywhere as they have no intersection
   const additionConnections = findAdditionWordConnections(word1, word2);
+  if (additionConnections.length) return additionConnections;
+
   const deletionConnections = findDeletionWordConnections(word1, word2);
+  if (deletionConnections.length) return deletionConnections;
+
   const replacementConnections = findReplacementWordConnections(word1, word2);
-
-  wordConnections.push(
-    ...additionConnections,
-    ...deletionConnections,
-    ...replacementConnections
-  );
-
-  return wordConnections;
+  return replacementConnections;
 };
 
 const areAnagrams = (word1: string, word2: string) => {
