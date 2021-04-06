@@ -35,8 +35,7 @@ const findWordConnections = (word1: string, word2: string) => {
 };
 
 const areAnagrams = (word1: string, word2: string) => {
-  if (isSameOrEmpty(word1, word2)) return false;
-  if (word1.length !== word2.length) return false;
+  if (isSameOrEmptyOrDiffLength(word1, word2)) return false;
 
   const decomposition1 = decomposeWord(word1);
   const decomposition2 = decomposeWord(word2);
@@ -50,8 +49,11 @@ const isSameOrEmpty = (word1: string, word2: string) => {
   return !word1 || !word2 || word1 === word2;
 };
 
+const isSameOrEmptyOrDiffLength = (word1: string, word2: string) => {
+  return isSameOrEmpty(word1, word2) || word1.length !== word2.length;
+};
+
 const decomposeWord = (word: string) => {
-  // TODO: make a function?
   const letters = word.split("");
   // TODO: fix any
   const occurrences: any = {};
@@ -70,8 +72,6 @@ const findAdditionWordConnections = (
   type = WordConnection.Addition
 ) => {
   if (isSameOrEmpty(word1, word2)) return [];
-
-  // TODO: same
   if (word1.length + 1 !== word2.length) return [];
 
   // TODO: type it
@@ -101,8 +101,7 @@ const findDeletionWordConnections = (word1: string, word2: string) => {
 };
 
 const findReplacementWordConnections = (word1: string, word2: string) => {
-  if (isSameOrEmpty(word1, word2)) return [];
-  if (word1.length !== word2.length) return [];
+  if (isSameOrEmptyOrDiffLength(word1, word2)) return [];
 
   // TODO: type it
   const wordConnections: any[] = [];
@@ -136,5 +135,6 @@ export {
   findReplacementWordConnections,
   findWordConnections,
   isSameOrEmpty,
+  isSameOrEmptyOrDiffLength,
   pluralize
 };
