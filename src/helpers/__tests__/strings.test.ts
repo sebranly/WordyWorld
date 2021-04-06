@@ -7,8 +7,8 @@ import {
   findReplacementWordConnections,
   findWordConnections,
   isEmpty,
-  isSameOrEmpty,
-  isSameOrEmptyOrDiffLength,
+  isEmptyOrSame,
+  isEmptyOrSameOrDiffLength,
   pluralize
 } from "../strings";
 import { WordConnection } from "../../types/enum";
@@ -216,41 +216,41 @@ describe("strings helpers", () => {
     });
   });
 
-  describe("isSameOrEmpty", () => {
+  describe("isEmptyOrSame", () => {
     it("returns false", () => {
-      expect(isSameOrEmpty("a", "b")).toBe(false);
-      expect(isSameOrEmpty("a", "A")).toBe(false);
-      expect(isSameOrEmpty("aa", "bb")).toBe(false);
-      expect(isSameOrEmpty("aaa", "bb")).toBe(false);
-      expect(isSameOrEmpty("aa", "bbb")).toBe(false);
+      expect(isEmptyOrSame("a", "b")).toBe(false);
+      expect(isEmptyOrSame("a", "A")).toBe(false);
+      expect(isEmptyOrSame("aa", "bb")).toBe(false);
+      expect(isEmptyOrSame("aaa", "bb")).toBe(false);
+      expect(isEmptyOrSame("aa", "bbb")).toBe(false);
     });
 
     it("returns true", () => {
-      expect(isSameOrEmpty("", "")).toBe(true);
-      expect(isSameOrEmpty("", "a")).toBe(true);
-      expect(isSameOrEmpty("a", "")).toBe(true);
-      expect(isSameOrEmpty("a", "a")).toBe(true);
-      expect(isSameOrEmpty("abc", "abc")).toBe(true);
-      expect(isSameOrEmpty("ABC", "ABC")).toBe(true);
+      expect(isEmptyOrSame("", "")).toBe(true);
+      expect(isEmptyOrSame("", "a")).toBe(true);
+      expect(isEmptyOrSame("a", "")).toBe(true);
+      expect(isEmptyOrSame("a", "a")).toBe(true);
+      expect(isEmptyOrSame("abc", "abc")).toBe(true);
+      expect(isEmptyOrSame("ABC", "ABC")).toBe(true);
     });
   });
 
-  describe("isSameOrEmptyOrDiffLength", () => {
+  describe("isEmptyOrSameOrDiffLength", () => {
     it("returns false", () => {
-      expect(isSameOrEmptyOrDiffLength("a", "b")).toBe(false);
-      expect(isSameOrEmptyOrDiffLength("a", "A")).toBe(false);
-      expect(isSameOrEmptyOrDiffLength("aa", "bb")).toBe(false);
+      expect(isEmptyOrSameOrDiffLength("a", "b")).toBe(false);
+      expect(isEmptyOrSameOrDiffLength("a", "A")).toBe(false);
+      expect(isEmptyOrSameOrDiffLength("aa", "bb")).toBe(false);
     });
 
     it("returns true", () => {
-      expect(isSameOrEmptyOrDiffLength("", "")).toBe(true);
-      expect(isSameOrEmptyOrDiffLength("", "a")).toBe(true);
-      expect(isSameOrEmptyOrDiffLength("a", "")).toBe(true);
-      expect(isSameOrEmptyOrDiffLength("a", "a")).toBe(true);
-      expect(isSameOrEmptyOrDiffLength("abc", "abc")).toBe(true);
-      expect(isSameOrEmptyOrDiffLength("ABC", "ABC")).toBe(true);
-      expect(isSameOrEmptyOrDiffLength("aaa", "bb")).toBe(true);
-      expect(isSameOrEmptyOrDiffLength("aa", "bbb")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("", "")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("", "a")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("a", "")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("a", "a")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("abc", "abc")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("ABC", "ABC")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("aaa", "bb")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("aa", "bbb")).toBe(true);
     });
   });
 
