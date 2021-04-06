@@ -1,6 +1,7 @@
 // Internal
 import {
   areAnagrams,
+  areNeighbors,
   decomposeWord,
   findAdditionWordConnections,
   findDeletionWordConnections,
@@ -57,6 +58,60 @@ describe("strings helpers", () => {
 
       // Notice how all letters of 'dog' appears in 'dogs'
       result = areAnagrams("dog", "dogs");
+      expect(result).toBe(false);
+    });
+  });
+
+  describe("areNeighbors", () => {
+    let result: boolean;
+
+    it("returns false if any string is empty", () => {
+      result = areNeighbors("", "");
+      expect(result).toBe(false);
+
+      result = areNeighbors("", "a");
+      expect(result).toBe(false);
+
+      result = areNeighbors("a", "");
+      expect(result).toBe(false);
+    });
+
+    it("returns false if same string is provided twice", () => {
+      result = areNeighbors("word", "word");
+      expect(result).toBe(false);
+    });
+
+    it("returns true if words are neighbors", () => {
+      result = areNeighbors("word", "work");
+      expect(result).toBe(true);
+
+      result = areNeighbors("worm", "work");
+      expect(result).toBe(true);
+
+      result = areNeighbors("lie", "lid");
+      expect(result).toBe(true);
+    });
+
+    it("returns false if the first letters are different", () => {
+      result = areNeighbors("dog", "god");
+      expect(result).toBe(false);
+
+      result = areNeighbors("chien", "niche");
+      expect(result).toBe(false);
+
+      result = areNeighbors("rap", "dog");
+      expect(result).toBe(false);
+
+      result = areNeighbors("mouse", "house");
+      expect(result).toBe(false);
+
+      result = areNeighbors("word", "house");
+      expect(result).toBe(false);
+
+      result = areNeighbors("dog", "good");
+      expect(result).toBe(false);
+
+      result = areNeighbors("dog", "dogs");
       expect(result).toBe(false);
     });
   });
@@ -336,6 +391,25 @@ describe("strings helpers", () => {
       result = findWordConnections("then", "ten");
       expect(result).toStrictEqual([
         { position: 1, type: WordConnection.Deletion }
+      ]);
+    });
+
+    it("returns Neighbor when applicable", () => {
+      result = findWordConnections("tsar", "tire");
+      expect(result).toStrictEqual([{ type: WordConnection.Neighbor }]);
+    });
+
+    it("returns a combination when applicable", () => {
+      result = findWordConnections("star", "stay");
+      expect(result).toStrictEqual([
+        { character: "y", position: 3, type: WordConnection.Replacement },
+        { type: WordConnection.Neighbor }
+      ]);
+
+      result = findWordConnections("ear", "era");
+      expect(result).toStrictEqual([
+        { type: WordConnection.Anagram },
+        { type: WordConnection.Neighbor }
       ]);
     });
 

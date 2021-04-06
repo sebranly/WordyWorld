@@ -5,24 +5,32 @@ import isEqual from "lodash/isEqual";
 import { WordConnection } from "../types/enum";
 
 const findWordConnections = (word1: string, word2: string) => {
+  // Obvious cases
   if (isEmpty(word1, word2)) return [];
 
   if (word1 === word2) {
     return [{ type: WordConnection.Same }];
   }
 
-  if (areAnagrams(word1, word2)) {
-    return [{ type: WordConnection.Anagram }];
-  }
-
+  // Not same length
   const additionConnections = findAdditionWordConnections(word1, word2);
   if (additionConnections.length) return additionConnections;
 
   const deletionConnections = findDeletionWordConnections(word1, word2);
   if (deletionConnections.length) return deletionConnections;
 
-  const replacementConnections = findReplacementWordConnections(word1, word2);
-  return replacementConnections;
+  // Same length
+  const wordConnections = findReplacementWordConnections(word1, word2);
+
+  if (areAnagrams(word1, word2)) {
+    wordConnections.push({ type: WordConnection.Anagram });
+  }
+
+  if (areNeighbors(word1, word2)) {
+    wordConnections.push({ type: WordConnection.Neighbor });
+  }
+
+  return wordConnections;
 };
 
 const areAnagrams = (word1: string, word2: string) => {
@@ -34,6 +42,12 @@ const areAnagrams = (word1: string, word2: string) => {
   const valid = isEqual(decomposition1, decomposition2);
 
   return valid;
+};
+
+const areNeighbors = (word1: string, word2: string) => {
+  if (isEmptyOrSameOrDiffLength(word1, word2)) return false;
+
+  return word1[0] === word2[0];
 };
 
 const isEmpty = (word1: string, word2: string) => {
@@ -124,6 +138,7 @@ const pluralize = (word: string, count: number) =>
 
 export {
   areAnagrams,
+  areNeighbors,
   decomposeWord,
   findAdditionWordConnections,
   findDeletionWordConnections,
