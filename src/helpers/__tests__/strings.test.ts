@@ -6,6 +6,7 @@ import {
   findDeletionWordConnections,
   findReplacementWordConnections,
   findWordConnections,
+  isSameOrEmpty,
   pluralize
 } from "../strings";
 import { WordConnection } from "../../types/enum";
@@ -191,6 +192,23 @@ describe("strings helpers", () => {
     it("returns empty if no word connection", () => {
       result = findDeletionWordConnections("sentence", "word");
       expect(result).toStrictEqual([]);
+    });
+  });
+
+  describe("isSameOrEmpty", () => {
+    it("returns false", () => {
+      expect(isSameOrEmpty("a", "b")).toBe(false);
+      expect(isSameOrEmpty("a", "A")).toBe(false);
+      expect(isSameOrEmpty("aa", "bb")).toBe(false);
+    });
+
+    it("returns true", () => {
+      expect(isSameOrEmpty("", "")).toBe(true);
+      expect(isSameOrEmpty("", "a")).toBe(true);
+      expect(isSameOrEmpty("a", "")).toBe(true);
+      expect(isSameOrEmpty("a", "a")).toBe(true);
+      expect(isSameOrEmpty("abc", "abc")).toBe(true);
+      expect(isSameOrEmpty("ABC", "ABC")).toBe(true);
     });
   });
 
