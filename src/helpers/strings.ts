@@ -5,7 +5,7 @@ import isEqual from "lodash/isEqual";
 import { WordConnection } from "../types/enum";
 
 const findWordConnections = (word1: string, word2: string) => {
-  if (!word1 || !word2) return [];
+  if (isEmpty(word1, word2)) return [];
 
   if (word1 === word2) {
     return [{ type: WordConnection.Same }];
@@ -45,8 +45,12 @@ const areAnagrams = (word1: string, word2: string) => {
   return valid;
 };
 
+const isEmpty = (word1: string, word2: string) => {
+  return !word1 || !word2;
+};
+
 const isSameOrEmpty = (word1: string, word2: string) => {
-  return !word1 || !word2 || word1 === word2;
+  return isEmpty(word1, word2) || word1 === word2;
 };
 
 const isSameOrEmptyOrDiffLength = (word1: string, word2: string) => {
@@ -134,6 +138,7 @@ export {
   findDeletionWordConnections,
   findReplacementWordConnections,
   findWordConnections,
+  isEmpty,
   isSameOrEmpty,
   isSameOrEmptyOrDiffLength,
   pluralize

@@ -6,6 +6,7 @@ import {
   findDeletionWordConnections,
   findReplacementWordConnections,
   findWordConnections,
+  isEmpty,
   isSameOrEmpty,
   isSameOrEmptyOrDiffLength,
   pluralize
@@ -193,6 +194,25 @@ describe("strings helpers", () => {
     it("returns empty if no word connection", () => {
       result = findDeletionWordConnections("sentence", "word");
       expect(result).toStrictEqual([]);
+    });
+  });
+
+  describe("isEmpty", () => {
+    it("returns false", () => {
+      expect(isEmpty("a", "b")).toBe(false);
+      expect(isEmpty("a", "A")).toBe(false);
+      expect(isEmpty("aa", "bb")).toBe(false);
+      expect(isEmpty("aaa", "bb")).toBe(false);
+      expect(isEmpty("aa", "bbb")).toBe(false);
+      expect(isEmpty("a", "a")).toBe(false);
+      expect(isEmpty("abc", "abc")).toBe(false);
+      expect(isEmpty("ABC", "ABC")).toBe(false);
+    });
+
+    it("returns true", () => {
+      expect(isEmpty("", "")).toBe(true);
+      expect(isEmpty("", "a")).toBe(true);
+      expect(isEmpty("a", "")).toBe(true);
     });
   });
 
