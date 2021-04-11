@@ -133,6 +133,15 @@ const findReplacementWordConnections = (word1: string, word2: string) => {
   return wordConnections;
 };
 
+const findPushPullWordConnections = (word1: string, word2: string) => {
+  if (isEmptyOrSameOrDiffLength(word1, word2)) return [];
+
+  // TODO: type it
+  const wordConnections: any[] = [];
+
+  return wordConnections;
+};
+
 const pluralize = (word: string, count: number) =>
   count === 1 ? `${count} ${word}` : `${count} ${word}s`;
 
@@ -142,6 +151,7 @@ export {
   decomposeWord,
   findAdditionWordConnections,
   findDeletionWordConnections,
+  findPushPullWordConnections,
   findReplacementWordConnections,
   findWordConnections,
   isEmpty,

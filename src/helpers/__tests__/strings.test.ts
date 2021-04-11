@@ -5,6 +5,7 @@ import {
   decomposeWord,
   findAdditionWordConnections,
   findDeletionWordConnections,
+  findPushPullWordConnections,
   findReplacementWordConnections,
   findWordConnections,
   isEmpty,
@@ -306,6 +307,32 @@ describe("strings helpers", () => {
       expect(isEmptyOrSameOrDiffLength("ABC", "ABC")).toBe(true);
       expect(isEmptyOrSameOrDiffLength("aaa", "bb")).toBe(true);
       expect(isEmptyOrSameOrDiffLength("aa", "bbb")).toBe(true);
+    });
+  });
+
+  describe("findPushPullWordConnections", () => {
+    // TODO: fix any
+    let result: any;
+
+    it("returns empty if any string is empty", () => {
+      result = findPushPullWordConnections("", "");
+      expect(result).toStrictEqual([]);
+
+      result = findPushPullWordConnections("a", "");
+      expect(result).toStrictEqual([]);
+
+      result = findPushPullWordConnections("", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns empty if same word is provided", () => {
+      result = findPushPullWordConnections("a", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns empty if no word connection", () => {
+      result = findPushPullWordConnections("word", "sentence");
+      expect(result).toStrictEqual([]);
     });
   });
 
