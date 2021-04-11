@@ -3,7 +3,10 @@ const fs = require("fs");
 const lodash = require("lodash");
 
 const pickColumns = (data) => {
-  const { ENGLISH: en, FRENCH: fr } = data;
+  const { ENGLISH: en, FRENCH: fr, "RATE 1-5": ratingStr } = data;
+  const rating = ratingStr ? parseInt(ratingStr, 10) : 0;
+
+  if (rating >= 1 && rating <= 5) return { en, fr, rating };
   return { en, fr };
 };
 

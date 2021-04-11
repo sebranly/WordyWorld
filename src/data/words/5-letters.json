@@ -8,10 +8,6 @@
     "fr": ""
   },
   {
-    "en": "FALSE",
-    "fr": ""
-  },
-  {
     "en": "March",
     "fr": ""
   },
@@ -45,7 +41,8 @@
   },
   {
     "en": "actor",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "admit",
@@ -53,11 +50,13 @@
   },
   {
     "en": "after",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "again",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "agent",
@@ -121,7 +120,8 @@
   },
   {
     "en": "angel",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "anger",
@@ -141,7 +141,8 @@
   },
   {
     "en": "apple",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "apply",
@@ -185,7 +186,8 @@
   },
   {
     "en": "bacon",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "badly",
@@ -209,7 +211,8 @@
   },
   {
     "en": "beach",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "beard",
@@ -237,15 +240,18 @@
   },
   {
     "en": "birth",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "bitch",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "black",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "blade",
@@ -297,7 +303,8 @@
   },
   {
     "en": "brain",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "brave",
@@ -309,7 +316,8 @@
   },
   {
     "en": "break",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "breed",
@@ -365,7 +373,8 @@
   },
   {
     "en": "candy",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "canoe",
@@ -425,7 +434,8 @@
   },
   {
     "en": "child",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "claim",
@@ -461,7 +471,8 @@
   },
   {
     "en": "close",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "cloth",
@@ -481,7 +492,8 @@
   },
   {
     "en": "color",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "comic",
@@ -521,7 +533,8 @@
   },
   {
     "en": "crazy",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "cream",
@@ -533,7 +546,8 @@
   },
   {
     "en": "crime",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "croak",
@@ -593,7 +607,8 @@
   },
   {
     "en": "death",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "delay",
@@ -605,7 +620,8 @@
   },
   {
     "en": "devil",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "diary",
@@ -641,7 +657,8 @@
   },
   {
     "en": "dream",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "dress",
@@ -721,11 +738,13 @@
   },
   {
     "en": "error",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "event",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "every",
@@ -733,7 +752,8 @@
   },
   {
     "en": "exact",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "exist",
@@ -745,6 +765,10 @@
   },
   {
     "en": "faith",
+    "fr": ""
+  },
+  {
+    "en": "false",
     "fr": ""
   },
   {
@@ -777,15 +801,18 @@
   },
   {
     "en": "fight",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "final",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "first",
-    "fr": "premier"
+    "fr": "premier",
+    "rating": 1
   },
   {
     "en": "flake",
@@ -849,7 +876,8 @@
   },
   {
     "en": "fruit",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "funny",
@@ -865,7 +893,8 @@
   },
   {
     "en": "ghost",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "giant",
@@ -957,7 +986,8 @@
   },
   {
     "en": "happy",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "hazel",
@@ -965,7 +995,8 @@
   },
   {
     "en": "heart",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "heavy",
@@ -981,7 +1012,8 @@
   },
   {
     "en": "hello",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "hinge",
@@ -1013,7 +1045,8 @@
   },
   {
     "en": "human",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "hurry",
@@ -1025,7 +1058,8 @@
   },
   {
     "en": "idiot",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "index",
@@ -1045,7 +1079,8 @@
   },
   {
     "en": "juice",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "khaki",
@@ -1053,7 +1088,8 @@
   },
   {
     "en": "knife",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "knock",
@@ -1081,11 +1117,13 @@
   },
   {
     "en": "later",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "laugh",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "learn",
@@ -1093,7 +1131,8 @@
   },
   {
     "en": "leave",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "lefty",
@@ -1105,7 +1144,8 @@
   },
   {
     "en": "level",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "lever",
@@ -1113,7 +1153,8 @@
   },
   {
     "en": "light",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "limit",
@@ -1145,7 +1186,8 @@
   },
   {
     "en": "lucky",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "lunar",
@@ -1153,7 +1195,8 @@
   },
   {
     "en": "lunch",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "madam",
@@ -1189,7 +1232,8 @@
   },
   {
     "en": "maybe",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "mecca",
@@ -1233,11 +1277,13 @@
   },
   {
     "en": "money",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "month",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "moody",
@@ -1253,15 +1299,18 @@
   },
   {
     "en": "mouse",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "mouth",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "music",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "naive",
@@ -1313,7 +1362,8 @@
   },
   {
     "en": "north",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "novel",
@@ -1377,11 +1427,13 @@
   },
   {
     "en": "paper",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "party",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "pause",
@@ -1389,7 +1441,8 @@
   },
   {
     "en": "peace",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "penny",
@@ -1401,7 +1454,8 @@
   },
   {
     "en": "phone",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "piece",
@@ -1425,7 +1479,8 @@
   },
   {
     "en": "plane",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "plant",
@@ -1433,7 +1488,8 @@
   },
   {
     "en": "plate",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "plump",
@@ -1525,7 +1581,8 @@
   },
   {
     "en": "quiet",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "quite",
@@ -1553,7 +1610,8 @@
   },
   {
     "en": "ready",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "rebel",
@@ -1573,7 +1631,8 @@
   },
   {
     "en": "right",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "rival",
@@ -1665,7 +1724,8 @@
   },
   {
     "en": "seven",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "shack",
@@ -1685,7 +1745,8 @@
   },
   {
     "en": "shark",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "sharp",
@@ -1821,7 +1882,8 @@
   },
   {
     "en": "smoke",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "smoky",
@@ -1865,7 +1927,8 @@
   },
   {
     "en": "south",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "space",
@@ -1909,7 +1972,8 @@
   },
   {
     "en": "spoon",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "sport",
@@ -1937,7 +2001,8 @@
   },
   {
     "en": "start",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "state",
@@ -1997,7 +2062,8 @@
   },
   {
     "en": "study",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "style",
@@ -2005,7 +2071,8 @@
   },
   {
     "en": "sugar",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "sulky",
@@ -2037,11 +2104,13 @@
   },
   {
     "en": "sword",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "table",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "taste",
@@ -2053,11 +2122,13 @@
   },
   {
     "en": "teach",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "teeth",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "tenth",
@@ -2065,7 +2136,8 @@
   },
   {
     "en": "thank",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "their",
@@ -2109,7 +2181,8 @@
   },
   {
     "en": "tiger",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "tight",
@@ -2125,7 +2198,8 @@
   },
   {
     "en": "today",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "tongs",
@@ -2133,7 +2207,8 @@
   },
   {
     "en": "tooth",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "torch",
@@ -2157,7 +2232,8 @@
   },
   {
     "en": "train",
-    "fr": "train"
+    "fr": "train",
+    "rating": 1
   },
   {
     "en": "treat",
@@ -2177,7 +2253,8 @@
   },
   {
     "en": "truck",
-    "fr": "camion"
+    "fr": "camion",
+    "rating": 1
   },
   {
     "en": "truly",
@@ -2193,7 +2270,8 @@
   },
   {
     "en": "truth",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "tummy",
@@ -2209,7 +2287,8 @@
   },
   {
     "en": "uncle",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "under",
@@ -2261,7 +2340,8 @@
   },
   {
     "en": "voice",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "waist",
@@ -2273,11 +2353,13 @@
   },
   {
     "en": "watch",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "water",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "weary",
@@ -2301,7 +2383,8 @@
   },
   {
     "en": "where",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "which",
@@ -2317,7 +2400,8 @@
   },
   {
     "en": "white",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "whole",
@@ -2337,15 +2421,18 @@
   },
   {
     "en": "woman",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "women",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "world",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "worry",
@@ -2377,7 +2464,8 @@
   },
   {
     "en": "young",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "youth",

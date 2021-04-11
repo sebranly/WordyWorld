@@ -37,15 +37,18 @@
   },
   {
     "en": "be",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "by",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "do",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "ex",
@@ -53,43 +56,53 @@
   },
   {
     "en": "go",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "he",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "hi",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "if",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "in",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "it",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "me",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "my",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "no",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "of",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "oh",
@@ -97,7 +110,8 @@
   },
   {
     "en": "ok",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "on",
@@ -105,7 +119,8 @@
   },
   {
     "en": "or",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   },
   {
     "en": "pm",
@@ -129,6 +144,7 @@
   },
   {
     "en": "we",
-    "fr": ""
+    "fr": "",
+    "rating": 1
   }
 ]
