@@ -455,6 +455,13 @@ describe("strings helpers", () => {
       expect(result).toStrictEqual([{ type: WordConnection.Neighbor }]);
     });
 
+    it("returns PushPull when applicable", () => {
+      result = findWordConnections("ice", "mic");
+      expect(result).toStrictEqual([
+        { character: "m", position: 0, type: WordConnection.PushPull }
+      ]);
+    });
+
     it("returns a combination when applicable", () => {
       result = findWordConnections("star", "stay");
       expect(result).toStrictEqual([
@@ -467,6 +474,8 @@ describe("strings helpers", () => {
         { type: WordConnection.Anagram },
         { type: WordConnection.Neighbor }
       ]);
+
+      // TODO: add combinations with PushPull
     });
 
     it("returns Replacement when applicable", () => {

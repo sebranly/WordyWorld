@@ -23,12 +23,16 @@ const findWordConnections = (word1: string, word2: string) => {
   const wordConnections = findReplacementWordConnections(word1, word2);
 
   if (areAnagrams(word1, word2)) {
+    // TODO: need word2
     wordConnections.push({ type: WordConnection.Anagram });
   }
 
   if (areNeighbors(word1, word2)) {
+    // TODO: need word2
     wordConnections.push({ type: WordConnection.Neighbor });
   }
+
+  wordConnections.push(...findPushPullWordConnections(word1, word2));
 
   return wordConnections;
 };
