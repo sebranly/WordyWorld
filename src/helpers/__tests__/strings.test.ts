@@ -5,6 +5,7 @@ import {
   decomposeWord,
   findAdditionWordConnections,
   findDeletionWordConnections,
+  findPushPullWordConnections,
   findReplacementWordConnections,
   findWordConnections,
   isEmpty,
@@ -309,6 +310,64 @@ describe("strings helpers", () => {
     });
   });
 
+  describe("findPushPullWordConnections", () => {
+    // TODO: fix any
+    let result: any;
+
+    it("returns empty if any string is empty", () => {
+      result = findPushPullWordConnections("", "");
+      expect(result).toStrictEqual([]);
+
+      result = findPushPullWordConnections("a", "");
+      expect(result).toStrictEqual([]);
+
+      result = findPushPullWordConnections("", "a");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns empty if any string is 1-char long", () => {
+      result = findPushPullWordConnections("a", "b");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns empty if same word is provided", () => {
+      result = findPushPullWordConnections("a", "a");
+      expect(result).toStrictEqual([]);
+
+      result = findPushPullWordConnections("ab", "ab");
+      expect(result).toStrictEqual([]);
+    });
+
+    it("returns connections when applicable", () => {
+      result = findPushPullWordConnections("ice", "mic");
+      expect(result).toStrictEqual([
+        { character: "m", position: 0, type: WordConnection.PushPull }
+      ]);
+
+      result = findPushPullWordConnections("mic", "ice");
+      expect(result).toStrictEqual([
+        { character: "e", position: 2, type: WordConnection.PushPull }
+      ]);
+
+      result = findPushPullWordConnections("omo", "mom");
+      expect(result).toStrictEqual([
+        { character: "m", position: 0, type: WordConnection.PushPull },
+        { character: "m", position: 2, type: WordConnection.PushPull }
+      ]);
+
+      result = findPushPullWordConnections("mom", "omo");
+      expect(result).toStrictEqual([
+        { character: "o", position: 0, type: WordConnection.PushPull },
+        { character: "o", position: 2, type: WordConnection.PushPull }
+      ]);
+    });
+
+    it("returns empty if no word connection", () => {
+      result = findPushPullWordConnections("word", "sentence");
+      expect(result).toStrictEqual([]);
+    });
+  });
+
   describe("findReplacementWordConnections", () => {
     // TODO: fix any
     let result: any;
@@ -399,6 +458,13 @@ describe("strings helpers", () => {
       expect(result).toStrictEqual([{ type: WordConnection.Neighbor }]);
     });
 
+    it("returns PushPull when applicable", () => {
+      result = findWordConnections("ice", "mic");
+      expect(result).toStrictEqual([
+        { character: "m", position: 0, type: WordConnection.PushPull }
+      ]);
+    });
+
     it("returns a combination when applicable", () => {
       result = findWordConnections("star", "stay");
       expect(result).toStrictEqual([
@@ -411,6 +477,8 @@ describe("strings helpers", () => {
         { type: WordConnection.Anagram },
         { type: WordConnection.Neighbor }
       ]);
+
+      // TODO: add combinations with PushPull
     });
 
     it("returns Replacement when applicable", () => {

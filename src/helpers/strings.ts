@@ -23,12 +23,16 @@ const findWordConnections = (word1: string, word2: string) => {
   const wordConnections = findReplacementWordConnections(word1, word2);
 
   if (areAnagrams(word1, word2)) {
+    // TODO: need word2
     wordConnections.push({ type: WordConnection.Anagram });
   }
 
   if (areNeighbors(word1, word2)) {
+    // TODO: need word2
     wordConnections.push({ type: WordConnection.Neighbor });
   }
+
+  wordConnections.push(...findPushPullWordConnections(word1, word2));
 
   return wordConnections;
 };
@@ -133,6 +137,47 @@ const findReplacementWordConnections = (word1: string, word2: string) => {
   return wordConnections;
 };
 
+const findPushPullWordConnections = (word1: string, word2: string) => {
+  if (isEmptyOrSameOrDiffLength(word1, word2)) return [];
+  if (word1.length === 1 || word2.length === 1) return [];
+
+  const { length } = word2;
+  const lengthMinusOne = length - 1;
+
+  // TODO: type it
+  const wordConnections: any[] = [];
+  const beg = word1.slice(0, lengthMinusOne);
+  const end = word1.slice(-lengthMinusOne);
+
+  const pullWord = `${end}${word2[lengthMinusOne]}`;
+  const pushWord = `${word2[0]}${beg}`;
+
+  const isPullWord = pullWord === word2;
+  const isPushWord = pushWord === word2;
+
+  const pushConnection = {
+    character: word2[0],
+    position: 0,
+    type: WordConnection.PushPull
+  };
+
+  const pullConnection = {
+    character: word2[lengthMinusOne],
+    position: lengthMinusOne,
+    type: WordConnection.PushPull
+  };
+
+  if (isPushWord && isPullWord) {
+    return [pushConnection, pullConnection];
+  } else if (isPushWord) {
+    return [pushConnection];
+  } else if (isPullWord) {
+    return [pullConnection];
+  }
+
+  return wordConnections;
+};
+
 const pluralize = (word: string, count: number) =>
   count === 1 ? `${count} ${word}` : `${count} ${word}s`;
 
@@ -142,6 +187,7 @@ export {
   decomposeWord,
   findAdditionWordConnections,
   findDeletionWordConnections,
+  findPushPullWordConnections,
   findReplacementWordConnections,
   findWordConnections,
   isEmpty,
