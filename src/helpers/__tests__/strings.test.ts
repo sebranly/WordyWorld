@@ -1,11 +1,15 @@
 // Internal
 import {
   areAnagrams,
+  areNeighbors,
   decomposeWord,
   findAdditionWordConnections,
   findDeletionWordConnections,
   findReplacementWordConnections,
   findWordConnections,
+  isEmpty,
+  isEmptyOrSame,
+  isEmptyOrSameOrDiffLength,
   pluralize
 } from "../strings";
 import { WordConnection } from "../../types/enum";
@@ -54,6 +58,60 @@ describe("strings helpers", () => {
 
       // Notice how all letters of 'dog' appears in 'dogs'
       result = areAnagrams("dog", "dogs");
+      expect(result).toBe(false);
+    });
+  });
+
+  describe("areNeighbors", () => {
+    let result: boolean;
+
+    it("returns false if any string is empty", () => {
+      result = areNeighbors("", "");
+      expect(result).toBe(false);
+
+      result = areNeighbors("", "a");
+      expect(result).toBe(false);
+
+      result = areNeighbors("a", "");
+      expect(result).toBe(false);
+    });
+
+    it("returns false if same string is provided twice", () => {
+      result = areNeighbors("word", "word");
+      expect(result).toBe(false);
+    });
+
+    it("returns true if words are neighbors", () => {
+      result = areNeighbors("word", "work");
+      expect(result).toBe(true);
+
+      result = areNeighbors("worm", "work");
+      expect(result).toBe(true);
+
+      result = areNeighbors("lie", "lid");
+      expect(result).toBe(true);
+    });
+
+    it("returns false if the first letters are different", () => {
+      result = areNeighbors("dog", "god");
+      expect(result).toBe(false);
+
+      result = areNeighbors("chien", "niche");
+      expect(result).toBe(false);
+
+      result = areNeighbors("rap", "dog");
+      expect(result).toBe(false);
+
+      result = areNeighbors("mouse", "house");
+      expect(result).toBe(false);
+
+      result = areNeighbors("word", "house");
+      expect(result).toBe(false);
+
+      result = areNeighbors("dog", "good");
+      expect(result).toBe(false);
+
+      result = areNeighbors("dog", "dogs");
       expect(result).toBe(false);
     });
   });
@@ -194,6 +252,63 @@ describe("strings helpers", () => {
     });
   });
 
+  describe("isEmpty", () => {
+    it("returns false", () => {
+      expect(isEmpty("a", "b")).toBe(false);
+      expect(isEmpty("a", "A")).toBe(false);
+      expect(isEmpty("aa", "bb")).toBe(false);
+      expect(isEmpty("aaa", "bb")).toBe(false);
+      expect(isEmpty("aa", "bbb")).toBe(false);
+      expect(isEmpty("a", "a")).toBe(false);
+      expect(isEmpty("abc", "abc")).toBe(false);
+      expect(isEmpty("ABC", "ABC")).toBe(false);
+    });
+
+    it("returns true", () => {
+      expect(isEmpty("", "")).toBe(true);
+      expect(isEmpty("", "a")).toBe(true);
+      expect(isEmpty("a", "")).toBe(true);
+    });
+  });
+
+  describe("isEmptyOrSame", () => {
+    it("returns false", () => {
+      expect(isEmptyOrSame("a", "b")).toBe(false);
+      expect(isEmptyOrSame("a", "A")).toBe(false);
+      expect(isEmptyOrSame("aa", "bb")).toBe(false);
+      expect(isEmptyOrSame("aaa", "bb")).toBe(false);
+      expect(isEmptyOrSame("aa", "bbb")).toBe(false);
+    });
+
+    it("returns true", () => {
+      expect(isEmptyOrSame("", "")).toBe(true);
+      expect(isEmptyOrSame("", "a")).toBe(true);
+      expect(isEmptyOrSame("a", "")).toBe(true);
+      expect(isEmptyOrSame("a", "a")).toBe(true);
+      expect(isEmptyOrSame("abc", "abc")).toBe(true);
+      expect(isEmptyOrSame("ABC", "ABC")).toBe(true);
+    });
+  });
+
+  describe("isEmptyOrSameOrDiffLength", () => {
+    it("returns false", () => {
+      expect(isEmptyOrSameOrDiffLength("a", "b")).toBe(false);
+      expect(isEmptyOrSameOrDiffLength("a", "A")).toBe(false);
+      expect(isEmptyOrSameOrDiffLength("aa", "bb")).toBe(false);
+    });
+
+    it("returns true", () => {
+      expect(isEmptyOrSameOrDiffLength("", "")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("", "a")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("a", "")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("a", "a")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("abc", "abc")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("ABC", "ABC")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("aaa", "bb")).toBe(true);
+      expect(isEmptyOrSameOrDiffLength("aa", "bbb")).toBe(true);
+    });
+  });
+
   describe("findReplacementWordConnections", () => {
     // TODO: fix any
     let result: any;
@@ -276,6 +391,25 @@ describe("strings helpers", () => {
       result = findWordConnections("then", "ten");
       expect(result).toStrictEqual([
         { position: 1, type: WordConnection.Deletion }
+      ]);
+    });
+
+    it("returns Neighbor when applicable", () => {
+      result = findWordConnections("tsar", "tire");
+      expect(result).toStrictEqual([{ type: WordConnection.Neighbor }]);
+    });
+
+    it("returns a combination when applicable", () => {
+      result = findWordConnections("star", "stay");
+      expect(result).toStrictEqual([
+        { character: "y", position: 3, type: WordConnection.Replacement },
+        { type: WordConnection.Neighbor }
+      ]);
+
+      result = findWordConnections("ear", "era");
+      expect(result).toStrictEqual([
+        { type: WordConnection.Anagram },
+        { type: WordConnection.Neighbor }
       ]);
     });
 

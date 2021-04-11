@@ -5,42 +5,36 @@ import isEqual from "lodash/isEqual";
 import { WordConnection } from "../types/enum";
 
 const findWordConnections = (word1: string, word2: string) => {
-  if (!word1 || !word2) return [];
+  // Obvious cases
+  if (isEmpty(word1, word2)) return [];
 
   if (word1 === word2) {
     return [{ type: WordConnection.Same }];
   }
 
-  // TODO: type it
-  const wordConnections: any[] = [];
+  // Not same length
+  const additionConnections = findAdditionWordConnections(word1, word2);
+  if (additionConnections.length) return additionConnections;
+
+  const deletionConnections = findDeletionWordConnections(word1, word2);
+  if (deletionConnections.length) return deletionConnections;
+
+  // Same length
+  const wordConnections = findReplacementWordConnections(word1, word2);
 
   if (areAnagrams(word1, word2)) {
-    wordConnections.push({
-      type: WordConnection.Anagram
-    });
+    wordConnections.push({ type: WordConnection.Anagram });
   }
 
-  // TODO: I think we can improve it with short-circuits everywhere as they have no intersection
-  const additionConnections = findAdditionWordConnections(word1, word2);
-  const deletionConnections = findDeletionWordConnections(word1, word2);
-  const replacementConnections = findReplacementWordConnections(word1, word2);
-
-  wordConnections.push(
-    ...additionConnections,
-    ...deletionConnections,
-    ...replacementConnections
-  );
+  if (areNeighbors(word1, word2)) {
+    wordConnections.push({ type: WordConnection.Neighbor });
+  }
 
   return wordConnections;
 };
 
 const areAnagrams = (word1: string, word2: string) => {
-  // TODO: make a function for next 2?
-  if (!word1 || !word2) return false;
-  if (word1 === word2) return false;
-
-  // TODO: verify if it's faster thanks to this
-  if (word1.length !== word2.length) return false;
+  if (isEmptyOrSameOrDiffLength(word1, word2)) return false;
 
   const decomposition1 = decomposeWord(word1);
   const decomposition2 = decomposeWord(word2);
@@ -50,8 +44,25 @@ const areAnagrams = (word1: string, word2: string) => {
   return valid;
 };
 
+const areNeighbors = (word1: string, word2: string) => {
+  if (isEmptyOrSameOrDiffLength(word1, word2)) return false;
+
+  return word1[0] === word2[0];
+};
+
+const isEmpty = (word1: string, word2: string) => {
+  return !word1 || !word2;
+};
+
+const isEmptyOrSame = (word1: string, word2: string) => {
+  return isEmpty(word1, word2) || word1 === word2;
+};
+
+const isEmptyOrSameOrDiffLength = (word1: string, word2: string) => {
+  return isEmptyOrSame(word1, word2) || word1.length !== word2.length;
+};
+
 const decomposeWord = (word: string) => {
-  // TODO: make a function?
   const letters = word.split("");
   // TODO: fix any
   const occurrences: any = {};
@@ -69,10 +80,7 @@ const findAdditionWordConnections = (
   word2: string,
   type = WordConnection.Addition
 ) => {
-  if (!word1 || !word2) return [];
-  if (word1 === word2) return [];
-
-  // TODO: same
+  if (isEmptyOrSame(word1, word2)) return [];
   if (word1.length + 1 !== word2.length) return [];
 
   // TODO: type it
@@ -102,9 +110,7 @@ const findDeletionWordConnections = (word1: string, word2: string) => {
 };
 
 const findReplacementWordConnections = (word1: string, word2: string) => {
-  if (!word1 || !word2) return [];
-  if (word1 === word2) return [];
-  if (word1.length !== word2.length) return [];
+  if (isEmptyOrSameOrDiffLength(word1, word2)) return [];
 
   // TODO: type it
   const wordConnections: any[] = [];
@@ -132,10 +138,14 @@ const pluralize = (word: string, count: number) =>
 
 export {
   areAnagrams,
+  areNeighbors,
   decomposeWord,
   findAdditionWordConnections,
   findDeletionWordConnections,
   findReplacementWordConnections,
   findWordConnections,
+  isEmpty,
+  isEmptyOrSame,
+  isEmptyOrSameOrDiffLength,
   pluralize
 };
