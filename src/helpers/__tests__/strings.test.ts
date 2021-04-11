@@ -325,9 +325,38 @@ describe("strings helpers", () => {
       expect(result).toStrictEqual([]);
     });
 
+    it("returns empty if any string is 1-char long", () => {
+      result = findPushPullWordConnections("a", "b");
+      expect(result).toStrictEqual([]);
+    });
+
     it("returns empty if same word is provided", () => {
       result = findPushPullWordConnections("a", "a");
       expect(result).toStrictEqual([]);
+    });
+
+    it("returns connections when applicable", () => {
+      result = findPushPullWordConnections("ice", "mic");
+      expect(result).toStrictEqual([
+        { character: "m", position: 0, type: WordConnection.PushPull }
+      ]);
+
+      result = findPushPullWordConnections("mic", "ice");
+      expect(result).toStrictEqual([
+        { character: "e", position: 2, type: WordConnection.PushPull }
+      ]);
+
+      result = findPushPullWordConnections("omo", "mom");
+      expect(result).toStrictEqual([
+        { character: "m", position: 0, type: WordConnection.PushPull },
+        { character: "m", position: 2, type: WordConnection.PushPull }
+      ]);
+
+      result = findPushPullWordConnections("mom", "omo");
+      expect(result).toStrictEqual([
+        { character: "o", position: 0, type: WordConnection.PushPull },
+        { character: "o", position: 2, type: WordConnection.PushPull }
+      ]);
     });
 
     it("returns empty if no word connection", () => {

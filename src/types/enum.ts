@@ -9,6 +9,7 @@ enum WordConnection {
   Anagram,
   Deletion,
   Neighbor,
+  PushPull,
   Replacement,
   Same
 }
