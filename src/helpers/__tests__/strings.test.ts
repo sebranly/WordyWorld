@@ -333,6 +333,9 @@ describe("strings helpers", () => {
     it("returns empty if same word is provided", () => {
       result = findPushPullWordConnections("a", "a");
       expect(result).toStrictEqual([]);
+
+      result = findPushPullWordConnections("ab", "ab");
+      expect(result).toStrictEqual([]);
     });
 
     it("returns connections when applicable", () => {
